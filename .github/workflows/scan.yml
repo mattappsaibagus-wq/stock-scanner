@@ -4,6 +4,17 @@ on:
   schedule:
     - cron: '0 14 * * 1-5'
   workflow_dispatch:
+  # Redeploy Pages whenever the scanner or the dashboard itself changes, so UI
+  # updates go live immediately instead of waiting for the next weekday scan.
+  push:
+    branches: [main]
+    paths:
+      - 'dashboard/**'
+      - 'agents/**'
+      - 'run_pipeline.py'
+      - 'requirements.txt'
+      - 'watchlist.txt'
+      - '.github/workflows/scan.yml'
 
 permissions:
   contents: read
