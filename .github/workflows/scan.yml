@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   scan:
+    environment: github-pages
     runs-on: ubuntu-latest
 
     steps:
