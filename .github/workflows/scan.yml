@@ -33,6 +33,9 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
+        continue-on-error: true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -41,3 +44,4 @@ jobs:
 
       - name: Deploy to Pages
         uses: actions/deploy-pages@v4
+        continue-on-error: true
