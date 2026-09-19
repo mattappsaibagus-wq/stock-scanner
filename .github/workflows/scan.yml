@@ -5,6 +5,11 @@ on:
     - cron: '0 14 * * 1-5'
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   scan:
     runs-on: ubuntu-latest
@@ -35,7 +40,6 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
-        continue-on-error: true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -44,4 +48,3 @@ jobs:
 
       - name: Deploy to Pages
         uses: actions/deploy-pages@v4
-        continue-on-error: true
