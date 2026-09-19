@@ -57,6 +57,30 @@ def main():
     recommendations = advisor.consolidate(all_results)
     print(f"[Kaito Detector] Generated {len(recommendations)} recommendations")
 
+    # Attach the per-agent evidence behind each recommendation so the dashboard
+    # can open a signal "folder" and show what actually drove the call.
+    details_by_symbol = {}
+    for result in all_results:
+        symbol = result.get("symbol")
+        if not symbol:
+            continue
+        details_by_symbol.setdefault(symbol, []).append({
+            "agent": result.get("agent"),
+            "confidence": result.get("confidence"),
+            "alert": bool(result.get("alert")),
+            "signals": result.get("signals", []),
+            "price": result.get("price"),
+            "indicators": result.get("indicators"),
+            "fundamentals": result.get("fundamentals"),
+            "timestamp": result.get("timestamp"),
+        })
+
+    for recommendation in recommendations:
+        recommendation["details"] = details_by_symbol.get(recommendation["symbol"], [])
+
+    with_details = sum(1 for r in recommendations if r.get("details"))
+    print(f"[Kaito Detector] Attached agent details to {with_details}/{len(recommendations)} recommendations")
+
     report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "symbols_scanned": symbols,
