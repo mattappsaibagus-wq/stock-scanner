@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaito Detector</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0f;
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 1px solid #222;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2em;
+            color: #00d4aa;
+            letter-spacing: -0.5px;
+        }
+        .subtitle { color: #888; font-size: 0.9em; margin-top: 8px; }
+        .stats {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        .stat-card {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 15px 20px;
+            flex: 1;
+            min-width: 140px;
+            text-align: center;
+        }
+        .stat-value { font-size: 1.8em; font-weight: 700; color: #00d4aa; }
+        .stat-label { color: #888; font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; }
+        .signal-list { display: flex; flex-direction: column; gap: 12px; }
+        .signal-card {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 18px;
+            transition: border-color 0.2s;
+        }
+        .signal-card.buy { border-left: 4px solid #00d4aa; }
+        .signal-card.sell { border-left: 4px solid #ff4444; }
+        .signal-card.watch { border-left: 4px solid #ffaa00; }
+        .signal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .signal-symbol { font-size: 1.3em; font-weight: 700; }
+        .signal-action {
+            font-size: 0.8em;
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .action-buy { background: rgba(0,212,170,0.2); color: #00d4aa; }
+        .action-sell { background: rgba(255,68,68,0.2); color: #ff4444; }
+        .action-watch { background: rgba(255,170,0,0.2); color: #ffaa00; }
+        .confidence-bar {
+            width: 100%;
+            height: 6px;
+            background: #222;
+            border-radius: 3px;
+            margin: 8px 0;
+            overflow: hidden;
+        }
+        .confidence-fill { height: 100%; background: #00d4aa; border-radius: 3px; transition: width 0.3s; }
+        .signal-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 8px;
+        }
+        .refresh-btn {
+            display: block;
+            width: 100%;
+            background: #00d4aa;
+            color: #0a0a0f;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .refresh-btn:hover { opacity: 0.9; }
+        .loading { text-align: center; padding: 40px; color: #888; }
+        .error { color: #ff4444; text-align: center; padding: 20px; }
+        .generated-time { text-align: center; color: #666; font-size: 0.8em; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kaito Detector</h1>
+            <p class="subtitle">Stock Early-Move Scanner</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="total-signals">--</div>
+                <div class="stat-label">Signals</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="buy-count">--</div>
+                <div class="stat-label">Buy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="watch-count">--</div>
+                <div class="stat-label">Watch</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="sell-count">--</div>
+                <div class="stat-label">Sell</div>
+            </div>
+        </div>
+
+        <div id="signal-container">
+            <div class="loading">Loading signals...</div>
+        </div>
+
+        <button class="refresh-btn" onclick="loadData()">Refresh Signals</button>
+        <div class="generated-time" id="generated-time">--</div>
+    </div>
+
+    <script>
+        async function loadData() {
+            const container = document.getElementById('signal-container');
+            const genTime = document.getElementById('generated-time');
+
+            try {
+                const response = await fetch('data.json');
+                if (!response.ok) throw new Error('Failed to load data');
+
+                const data = await response.json();
+
+                genTime.textContent = 'Generated: ' + (data.generated_at || 'Unknown');
+
+                const recs = data.recommendations || [];
+                document.getElementById('total-signals').textContent = recs.length;
+                document.getElementById('buy-count').textContent = recs.filter(r => r.action === 'BUY').length;
+                document.getElementById('watch-count').textContent = recs.filter(r => r.action === 'WATCH').length;
+                document.getElementById('sell-count').textContent = recs.filter(r => r.action === 'SELL').length;
+
+                if (recs.length === 0) {
+                    container.innerHTML = '<div class="loading">No signals at this time. Check back later.</div>';
+                    return;
+                }
+
+                container.innerHTML = recs.map(rec => {
+                    const actionClass = rec.action.toLowerCase();
+                    const confPct = Math.round(rec.confidence * 100);
+                    return `
+                        <div class="signal-card ${actionClass}">
+                            <div class="signal-header">
+                                <span class="signal-symbol">${rec.symbol}</span>
+                                <span class="signal-action action-${actionClass}">${rec.action}</span>
+                            </div>
+                            <div class="confidence-bar">
+                                <div class="confidence-fill" style="width: ${confPct}%"></div>
+                            </div>
+                            <div class="signal-meta">
+                                <span>Confidence: ${confPct}%</span>
+                                <span>Signals: ${rec.signal_count}</span>
+                                <span>Agents: ${rec.agents.join(', ')}</span>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            } catch (err) {
+                container.innerHTML = '<div class="error">Error loading data: ' + err.message + '</div>';
+            }
+        }
+
+        loadData();
+        setInterval(loadData, 60000);
+    </script>
+</body>
+</html>

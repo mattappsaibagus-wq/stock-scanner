@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-09-19T11:47:18.597068+00:00",
+  "recommendations": [
+    {
+      "symbol": "NFLX",
+      "action": "SELL",
+      "confidence": 1.0,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "momentum_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent"
+      ],
+      "timestamp": "2026-09-19T11:47:18.597043+00:00"
+    },
+    {
+      "symbol": "NVDA",
+      "action": "BUY",
+      "confidence": 0.94,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-19T11:47:18.596997+00:00"
+    },
+    {
+      "symbol": "AMD",
+      "action": "WATCH",
+      "confidence": 0.87,
+      "signal_count": 5,
+      "alerts": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-19T11:47:18.597014+00:00"
+    },
+    {
+      "symbol": "AAPL",
+      "action": "WATCH",
+      "confidence": 0.75,
+      "signal_count": 1,
+      "alerts": [
+        "momentum_agent"
+      ],
+      "agents": [
+        "momentum_agent"
+      ],
+      "timestamp": "2026-09-19T11:47:18.596949+00:00"
+    },
+    {
+      "symbol": "META",
+      "action": "SELL",
+      "confidence": 0.74,
+      "signal_count": 3,
+      "alerts": [
+        "momentum_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent"
+      ],
+      "timestamp": "2026-09-19T11:47:18.597029+00:00"
+    },
+    {
+      "symbol": "TSLA",
+      "action": "WATCH",
+      "confidence": 0.62,
+      "signal_count": 2,
+      "alerts": [
+        "momentum_agent"
+      ],
+      "agents": [
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-19T11:47:18.596980+00:00"
+    }
+  ],
+  "total_recommendations": 6
+}
