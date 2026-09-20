@@ -63,3 +63,12 @@ jobs:
 
       - name: Deploy to Pages
         uses: actions/deploy-pages@v4
+
+      - name: Trigger Render redeploy (keeps mirror site fresh)
+        if: ${{ env.RENDER_DEPLOY_HOOK != '' }}
+        env:
+          RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: |
+          curl -fsS -X POST "$RENDER_DEPLOY_HOOK" \
+            && echo "Render deploy triggered" \
+            || echo "WARN: Render deploy hook failed (non-fatal - Pages deploy already succeeded)"
