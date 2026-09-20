@@ -72,15 +72,21 @@ def get_data_dir():
 
 
 def fetch_yf_history(symbol, period="5d", interval="5m"):
-    try:
-        import yfinance as yf
-        ticker = yf.Ticker(symbol)
-        hist = ticker.history(period=period, interval=interval)
-        if hist.empty:
-            return _fetch_simple_history(symbol, period=period)
-        return hist
-    except Exception:
-        return _fetch_simple_history(symbol, period=period)
+    """Fetch history with polite pacing and retries so large watchlists (60+ symbols)
+    scanned back-to-back don't trip Yahoo's burst rate limiting (HTTP 429)."""
+    import time
+    for attempt in range(3):
+        try:
+            # Pacing between Yahoo calls; back off progressively on retries.
+            time.sleep(0.3 * (attempt + 1))
+            import yfinance as yf
+            ticker = yf.Ticker(symbol)
+            hist = ticker.history(period=period, interval=interval)
+            if hist is not None and not hist.empty:
+                return hist
+        except Exception:
+            pass
+    return _fetch_simple_history(symbol, period=period)
 
 
 def _fetch_simple_history(symbol, period="5d"):

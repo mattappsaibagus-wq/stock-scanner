@@ -10,6 +10,7 @@ a signals report that powers the web dashboard.
 import json
 import os
 import sys
+import time
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -39,7 +40,9 @@ def main():
     learning_loop = LearningLoop()
 
     all_results = []
-    for symbol in symbols:
+    for idx, symbol in enumerate(symbols):
+        if idx:
+            time.sleep(0.25)  # pace requests so Yahoo doesn't rate-limit long watchlists
         print(f"[Kaito Detector] Scanning {symbol}...")
 
         early_result = early_detector.analyze(symbol)
