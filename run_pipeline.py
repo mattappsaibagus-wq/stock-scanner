@@ -16,6 +16,7 @@ from datetime import datetime, timezone
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from agents.base_agent import get_data_dir, load_watchlist, save_json, load_json
+from agents.symbol_names import get_display_name
 from agents.early_detector import EarlyDetectorAgent
 from agents.momentum_agent import MomentumAgent
 from agents.news_scanner import NewsScannerAgent
@@ -79,6 +80,7 @@ def main():
         })
 
     for recommendation in recommendations:
+        recommendation.update(get_display_name(recommendation["symbol"]))
         recommendation["details"] = details_by_symbol.get(recommendation["symbol"], [])
 
     with_details = sum(1 for r in recommendations if r.get("details"))

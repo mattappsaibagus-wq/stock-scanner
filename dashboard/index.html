@@ -529,6 +529,15 @@
         transform-origin: left center;
         transition: transform .25s var(--ease);
     }
+    .sym-name {
+        font-size: .8rem;
+        color: var(--muted);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .sym-name .n-jp { font-weight: 600; }
+    .sym-name .n-en { color: var(--faint); }
     .sym-sub {
         display: flex;
         align-items: center;
@@ -832,6 +841,7 @@
         .brand-sub { display: none; }
         .card-head { gap: 10px; padding: 13px 13px 13px 16px; }
         .sym-t { font-size: 1.08rem; }
+        .sym-name .n-en { display: none; }
         .row-end { gap: 9px; }
         .ring { width: 38px; height: 38px; }
         .ring svg { width: 38px; height: 38px; }
@@ -1258,6 +1268,8 @@
                 ? rec.details.filter(function (d) { return d && typeof d === 'object'; })
                 : [];
 
+            var fullName = [rec.name_jp, rec.name].filter(Boolean).join(' · ');
+            if (fullName) blocks.push('<div class="sec-title">' + html(fullName) + '</div>');
             blocks.push('<div class="note">' + ICON.spark + '<span>' + html(rationale(rec)) + '</span></div>');
 
             blocks.push(metricGrid([
@@ -1336,6 +1348,15 @@
             var agents = stringList(rec.agents);
             var signals = Number(rec.signal_count) || 0;
             var isOpen = rawSymbol !== '' && state.open === rawSymbol;
+            var jpName = String(rec.name_jp || '');
+            var enName = String(rec.name || '');
+            var nameHtml = '';
+            if (jpName || enName) {
+                nameHtml = '<span class="sym-name">'
+                    + (jpName ? '<span class="n-jp">' + html(jpName) + '</span>' : '')
+                    + (enName && enName !== jpName ? '<span class="n-en">' + (jpName ? ' · ' : '') + html(enName) + '</span>' : '')
+                    + '</span>';
+            }
             var sub = (agents.length ? agents.length + (agents.length === 1 ? ' agent' : ' agents') : 'agent stack pending')
                 + ' · ' + signals + (signals === 1 ? ' signal' : ' signals');
             return ''
@@ -1345,6 +1366,7 @@
                 + '  <button class="card-head" type="button" aria-expanded="' + isOpen + '" aria-controls="panel-' + symbol + '">'
                 + '    <span class="sym">'
                 + '      <span class="sym-t">' + symbol + '</span>'
+                + nameHtml
                 + '      <span class="sym-sub">' + html(sub) + '</span>'
                 + '    </span>'
                 + '    <span class="row-end">'
@@ -1376,7 +1398,10 @@
             });
             if (query) {
                 list = list.filter(function (rec) {
-                    return String(rec.symbol || '').toUpperCase().indexOf(query) !== -1;
+                    var sym = String(rec.symbol || '').toUpperCase();
+                    var en = String(rec.name || '').toUpperCase();
+                    var jp = String(rec.name_jp || '');
+                    return sym.indexOf(query) !== -1 || en.indexOf(query) !== -1 || jp.indexOf(query) !== -1;
                 });
             }
             list = list.slice();
