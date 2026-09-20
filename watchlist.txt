@@ -1,3 +1,12 @@
+# ============================================================
+# Kaito Detector watchlist
+#  - Lines starting with '#' are comments; blank lines ignored.
+#  - Tickers are uppercased on load. US tickers as-is.
+#  - Tokyo Stock Exchange tickers use the Yahoo '.T' suffix (prices in JPY).
+#  - All symbols validated against yfinance 5m/5d + 1d/1mo fetches.
+# ============================================================
+
+# ---------- US — core mega caps (original set) ----------
 AAPL
 MSFT
 GOOGL
@@ -8,3 +17,65 @@ META
 NFLX
 AMZN
 SPY
+
+# ---------- US — large-cap growth ----------
+CRM
+ADBE
+NOW
+INTU
+UBER
+ABNB
+PLTR
+CRWD
+AXON
+ANET
+MU
+VRT
+
+# ---------- US — mid-cap growth / momentum names ----------
+DDOG
+ZS
+NET
+SNOW
+DUOL
+HOOD
+CELH
+ARM
+APP
+RKLB
+
+# ---------- Japan — mega caps (¥14T-41T: Toyota, Sony, Keyence, SoftBank G, Fast Retailing, Tokyo Electron, Murata, Hitachi, MUFG, NTT, Takeda, Advantest) ----------
+7203.T
+6758.T
+6861.T
+9984.T
+9983.T
+8035.T
+6981.T
+6501.T
+8306.T
+9432.T
+4502.T
+6857.T
+
+# ---------- Japan — mid/large growth (DISCO, SCREEN, Tokyo Seimitsu, Ebara, Renesas, Nidec, SBI Holdings, IHI, Fujikura, Recruit, CyberAgent) ----------
+6146.T
+7735.T
+7729.T
+6361.T
+6723.T
+6594.T
+8473.T
+7013.T
+5803.T
+6098.T
+4751.T
+
+# ---------- Japan — small-cap potential (Mercari, Money Forward, Plaid, Sansan, Socionext, PeptiDream, IPS) ----------
+4385.T
+3994.T
+4165.T
+4443.T
+6526.T
+4587.T
+4390.T

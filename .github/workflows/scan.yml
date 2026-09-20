@@ -2,7 +2,10 @@ name: Stock Scan
 
 on:
   schedule:
+    # US session: 14:00 UTC Mon-Fri (10:00 ET, after Tokyo close same day)
     - cron: '0 14 * * 1-5'
+    # Tokyo session open: 00:00 UTC Mon-Fri (09:00 JST)
+    - cron: '0 0 * * 1-5'
   workflow_dispatch:
   # Redeploy Pages whenever the scanner or the dashboard itself changes, so UI
   # updates go live immediately instead of waiting for the next weekday scan.

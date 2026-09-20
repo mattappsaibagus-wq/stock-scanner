@@ -1069,7 +1069,13 @@
             return String(Math.round(v));
         }
 
-        function money(n) { var v = Number(n); return isFinite(v) && v ? '$' + v.toFixed(2) : '--'; }
+        function money(n, sym) {
+            var v = Number(n);
+            if (!isFinite(v) || !v) return '--';
+            // Tokyo tickers (".T") quote in JPY: no decimals, thousands separators.
+            if (sym && /\.T$/i.test(String(sym))) return '\u00A5' + v.toLocaleString('en-US', { maximumFractionDigits: 0 });
+            return '$' + v.toFixed(2);
+        }
 
         function fixed(n, digits) { var v = Number(n); return isFinite(v) ? v.toFixed(digits) : '--'; }
 
@@ -1244,6 +1250,7 @@
 
         function buildDetails(rec) {
             var blocks = [];
+            var sym = rec.symbol;
             var conf = clamp01(rec.confidence);
             var alerts = stringList(rec.alerts);
             var agents = stringList(rec.agents);
@@ -1266,10 +1273,10 @@
             if (priced) {
                 var p = priced.price;
                 blocks.push('<div class="sec-title">Price snapshot</div>' + metricGrid([
-                    ['Last', money(p.close)],
+                    ['Last', money(p.close, sym)],
                     ['Change', signed(p.change_pct), Number(p.change_pct) >= 0 ? 'pos' : 'neg'],
-                    ['Session high', money(p.high)],
-                    ['Session low', money(p.low)],
+                    ['Session high', money(p.high, sym)],
+                    ['Session low', money(p.low, sym)],
                     ['Volume', num(p.volume)]
                 ]));
             }
@@ -1293,8 +1300,8 @@
                 blocks.push('<div class="sec-title">Technicals</div>' + metricGrid([
                     ['RSI (14)', tech.rsi == null ? '--' : fixed(tech.rsi, 1)],
                     ['MACD', html(String(tech.macd_signal || '--'))],
-                    ['SMA 20', money(tech.sma20)],
-                    ['SMA 50', money(tech.sma50)]
+                    ['SMA 20', money(tech.sma20, sym)],
+                    ['SMA 50', money(tech.sma50, sym)]
                 ]));
             }
 
