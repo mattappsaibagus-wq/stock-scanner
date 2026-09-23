@@ -89,8 +89,18 @@ def get_data_dir():
 
 def fetch_yf_history(symbol, period="5d", interval="5m"):
     """Fetch history with polite pacing and retries so large watchlists (60+ symbols)
-    scanned back-to-back don't trip Yahoo's burst rate limiting (HTTP 429)."""
+    scanned back-to-back don't trip Yahoo's burst rate limiting (HTTP 429).
+
+    Cached per (symbol, period, interval) for the lifetime of the process so
+    agents that want the same window of history don't each issue their own
+    network call.
+    """
+    key = (symbol, period, interval)
+    if key in _HISTORY_CACHE:
+        return _HISTORY_CACHE[key]
+
     import time
+    hist = None
     for attempt in range(3):
         try:
             # Pacing between Yahoo calls; back off progressively on retries.
@@ -99,10 +109,37 @@ def fetch_yf_history(symbol, period="5d", interval="5m"):
             ticker = yf.Ticker(symbol)
             hist = ticker.history(period=period, interval=interval)
             if hist is not None and not hist.empty:
-                return hist
+                break
         except Exception:
-            pass
-    return _fetch_simple_history(symbol, period=period)
+            hist = None
+    if hist is None or hist.empty:
+        hist = _fetch_simple_history(symbol, period=period)
+
+    _HISTORY_CACHE[key] = hist
+    return hist
+
+
+_HISTORY_CACHE = {}
+_INFO_CACHE = {}
+
+
+def fetch_yf_info(symbol):
+    """Fetch (and cache) yfinance's `.info` dict for a symbol.
+
+    Several agents (due diligence, sentiment) want fundamentals/analyst data
+    for the same symbol in the same run; caching avoids duplicate network
+    round-trips against the same slow endpoint.
+    """
+    if symbol in _INFO_CACHE:
+        return _INFO_CACHE[symbol]
+    try:
+        import yfinance as yf
+        ticker = yf.Ticker(symbol)
+        info = ticker.info or {}
+    except Exception:
+        info = {}
+    _INFO_CACHE[symbol] = info
+    return info
 
 
 def _fetch_simple_history(symbol, period="5d"):

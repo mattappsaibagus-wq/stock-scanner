@@ -905,10 +905,11 @@
     <section class="hero">
         <div>
             <h1>Signal Intelligence</h1>
-            <p>Four independent agents sweep price action, volume anomalies, momentum, news sentiment and fundamentals — the advisor distils them into ranked Buy / Watch / Sell calls. Tap a row to open its dossier.</p>
+            <p>Seven specialized agents sweep price action, momentum, chart patterns, sector relative strength, analyst sentiment, news and fundamentals across Japanese and US markets — a regime-aware, self-learning advisor distils them into ranked Buy / Watch / Sell calls. Tap a row to open its dossier.</p>
         </div>
         <div class="hero-meta">
             <span class="chip">Updated <strong id="chip-updated">--</strong></span>
+            <span class="chip" id="chip-regime-wrap" style="display:none">Regime <strong id="chip-regime">--</strong></span>
             <span class="chip">Auto <strong>60s</strong></span>
         </div>
     </section>
@@ -995,7 +996,10 @@
             early_detector: { label: 'Early Detector', short: 'ED', accent: 'var(--brand)' },
             momentum_agent: { label: 'Momentum Agent', short: 'MO', accent: 'var(--brand-2)' },
             news_scanner:   { label: 'News Scanner',   short: 'NW', accent: 'var(--watch)' },
-            dd_agent:       { label: 'Due Diligence',  short: 'DD', accent: 'var(--buy)' }
+            dd_agent:       { label: 'Due Diligence',  short: 'DD', accent: 'var(--buy)' },
+            pattern_agent:  { label: 'Pattern Agent',  short: 'PA', accent: 'var(--brand)' },
+            sector_agent:   { label: 'Sector Agent',   short: 'SC', accent: 'var(--brand-2)' },
+            sentiment_agent:{ label: 'Analyst Sentiment', short: 'AS', accent: 'var(--buy)' }
         };
 
         var SIGNALS = {
@@ -1013,7 +1017,20 @@
             potential_undervalued: 'Undervalued P/E',
             potentially_overvalued: 'Rich P/E',
             quality_momentum: 'Quality momentum',
-            low_float: 'Low float'
+            low_float: 'Low float',
+            breakout: 'Breakout',
+            breakdown: 'Breakdown',
+            bullish_engulfing: 'Bullish engulfing',
+            bearish_engulfing: 'Bearish engulfing',
+            support_bounce: 'Support bounce',
+            relative_strength_bullish: 'Outperforming sector',
+            relative_strength_bearish: 'Underperforming sector',
+            analyst_consensus_bullish: 'Analyst consensus: Buy',
+            analyst_consensus_bearish: 'Analyst consensus: Sell',
+            analyst_upgrade_trend: 'Analyst upgrades trending',
+            analyst_downgrade_trend: 'Analyst downgrades trending',
+            price_target_upside: 'Price target upside',
+            price_target_downside: 'Price target downside'
         };
 
         var ACTION_LABEL = { BUY: 'Buy', WATCH: 'Watch', SELL: 'Sell' };
@@ -1031,6 +1048,7 @@
         ['signal-container', 'live-region', 'total-signals', 'buy-count', 'watch-count', 'sell-count',
          'count-all', 'count-buy', 'count-watch', 'count-sell', 'search', 'search-wrap', 'search-clear',
          'sort-btn', 'segment-glider', 'refresh-btn', 'status-text', 'status-dot', 'chip-updated',
+         'chip-regime', 'chip-regime-wrap',
          'foot-count', 'loader-line'].forEach(function (id) {
             dom[id.replace(/-([a-z])/g, function (m, c) { return c.toUpperCase(); })] = document.getElementById(id);
         });
@@ -1625,6 +1643,17 @@
                     state.recs = recs;
                     state.generatedAt = (data && data.generated_at) || null;
                     state.lastLoaded = Date.now();
+                    if (dom.chipRegimeWrap) {
+                        var regime = data && data.regime && data.regime.regime;
+                        if (regime) {
+                            var regimeLabel = { risk_on: 'Risk-On', neutral: 'Neutral', risk_off: 'Risk-Off' }[regime] || regime;
+                            dom.chipRegime.textContent = regimeLabel;
+                            dom.chipRegimeWrap.style.display = '';
+                            if (data.regime.reason) dom.chipRegimeWrap.title = data.regime.reason;
+                        } else {
+                            dom.chipRegimeWrap.style.display = 'none';
+                        }
+                    }
                     if (state.open) {
                         var stillThere = recs.some(function (r) { return String(r.symbol || '') === state.open; });
                         if (!stillThere) state.open = null;

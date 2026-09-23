@@ -3,14 +3,20 @@ from agents.base_agent import BaseAgent
 
 
 class NewsScannerAgent(BaseAgent):
-    """Scans recent news articles for sentiment analysis."""
+    """Scans recent real news headlines for sentiment and key event keywords.
+
+    Only ever scores real, fetched articles. If a fetch fails, this agent
+    emits no signal at all rather than falling back to invented headlines -
+    a fabricated headline that happens to read "bullish" would otherwise
+    silently push a BUY/SELL recommendation on made-up evidence.
+    """
 
     name = "news_scanner"
     description = "Scans news for sentiment and key events"
 
     def __init__(self, config=None):
         super().__init__(config)
-        self.max_articles = config.get("max_articles", 5) if config else 5
+        self.max_articles = config.get("max_articles", 6) if config else 6
 
     def analyze(self, symbol, data=None):
         articles = self._fetch_news(symbol)
@@ -20,11 +26,12 @@ class NewsScannerAgent(BaseAgent):
         sentiments = []
         keywords = []
         for article in articles[:self.max_articles]:
-            sentiment = self._sentiment_score(article.get("title", "") + " " + article.get("description", ""))
-            sentiments.append(sentiment)
-            for kw in ["earnings", "upgrade", "downgrade", "FDA", "approval", "launch", "partnership", "lawsuit", "recall"]:
-                text = (article.get("title", "") + " " + article.get("description", "")).lower()
-                if kw.lower() in text:
+            text = (article.get("title", "") + " " + article.get("description", ""))
+            sentiments.append(self._sentiment_score(text))
+            text_lower = text.lower()
+            for kw in ["earnings", "upgrade", "downgrade", "fda", "approval", "launch",
+                       "partnership", "lawsuit", "recall", "guidance", "buyback", "merger"]:
+                if kw in text_lower:
                     keywords.append(kw)
 
         avg_sentiment = sum(sentiments) / len(sentiments) if sentiments else 0
@@ -53,29 +60,63 @@ class NewsScannerAgent(BaseAgent):
         }
 
     def _fetch_news(self, symbol):
+        """Try Yahoo Finance's JSON search endpoint first (returns real,
+        structured article data and is far more stable than scraping
+        rendered HTML), then fall back to the old regex scrape. Both are
+        real sources; neither path invents content."""
+        articles = self._fetch_news_json(symbol)
+        if articles:
+            return articles
+        return self._fetch_news_html(symbol)
+
+    def _fetch_news_json(self, symbol):
         try:
             import requests
+            url = "https://query1.finance.yahoo.com/v1/finance/search"
+            headers = {"User-Agent": "Mozilla/5.0 (compatible; KaitoDetector/1.0)"}
+            resp = requests.get(url, params={"q": symbol, "newsCount": self.max_articles},
+                                 headers=headers, timeout=10)
+            if resp.status_code != 200:
+                return []
+            payload = resp.json()
+            news_items = payload.get("news", [])
+            articles = []
+            for item in news_items[:self.max_articles]:
+                title = (item.get("title") or "").strip()
+                if not title:
+                    continue
+                articles.append({
+                    "title": title[:250],
+                    "description": (item.get("summary") or "")[:500],
+                    "publisher": item.get("publisher"),
+                    "link": item.get("link"),
+                    "published_at": item.get("providerPublishTime"),
+                })
+            return articles
+        except Exception:
+            return []
+
+    def _fetch_news_html(self, symbol):
+        try:
+            import requests
+            import re
             url = f"https://finance.yahoo.com/quote/{symbol}/"
             headers = {"User-Agent": "Mozilla/5.0 (compatible; KaitoDetector/1.0)"}
             resp = requests.get(url, headers=headers, timeout=10)
             if resp.status_code != 200:
                 return []
-            import re
             titles = re.findall(r'data-test="post-info">(.*?)</a>', resp.text)
-            articles = [{"title": t.strip()[:200], "description": ""} for t in titles[:self.max_articles]]
-            return articles
+            return [{"title": t.strip()[:200], "description": ""} for t in titles[:self.max_articles]]
         except Exception:
-            return self._mock_news(symbol)
-
-    def _mock_news(self, symbol):
-        return [
-            {"title": f"{symbol} shows strong momentum in recent trading", "description": "Positive volume indicators suggest continued upward trend."},
-            {"title": f"Analysts update outlook on {symbol}", "description": "Recent earnings report beats expectations."},
-        ]
+            return []
 
     def _sentiment_score(self, text):
-        positive_words = ["gain", "growth", "up", "rise", "surge", "beat", "strong", "positive", "upgrade", "approval", "breakthrough", "success", "profit", "record"]
-        negative_words = ["loss", "drop", "fall", "down", "decline", "miss", "weak", "negative", "downgrade", "delay", "investigation", "warning", "recall", "lawsuit"]
+        positive_words = ["gain", "growth", "up", "rise", "surge", "beat", "strong", "positive",
+                           "upgrade", "approval", "breakthrough", "success", "profit", "record",
+                           "outperform", "buyback", "raises guidance", "bullish"]
+        negative_words = ["loss", "drop", "fall", "down", "decline", "miss", "weak", "negative",
+                           "downgrade", "delay", "investigation", "warning", "recall", "lawsuit",
+                           "underperform", "cuts guidance", "bearish", "probe"]
         text_lower = text.lower()
         score = 0
         for word in positive_words:

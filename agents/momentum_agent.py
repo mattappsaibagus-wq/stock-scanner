@@ -80,9 +80,16 @@ class MomentumAgent(BaseAgent):
             delta = hist["Close"].diff()
             gain = delta.where(delta > 0, 0).rolling(window=period).mean()
             loss = (-delta.where(delta < 0, 0)).rolling(window=period).mean()
-            rs = gain / loss
-            rsi = 100 - (100 / (1 + rs))
-            return float(rsi.iloc[-1]) if not rsi.empty else None
+            last_gain = float(gain.iloc[-1])
+            last_loss = float(loss.iloc[-1])
+            if last_loss == 0:
+                # No down-moves in the window: RSI is 100 if there were any
+                # gains, or an undefined/flat 50 if the price didn't move at
+                # all. Either way, dividing gain/0 would produce NaN/inf,
+                # which isn't valid JSON and would corrupt the whole report.
+                return 100.0 if last_gain > 0 else 50.0
+            rs = last_gain / last_loss
+            return 100 - (100 / (1 + rs))
         except Exception:
             return None
 
