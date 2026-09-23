@@ -44,10 +44,26 @@ def _utcnow():
     return datetime.now(timezone.utc).isoformat()
 
 
+def _sanitize(obj):
+    """Replace non-finite floats (NaN/Infinity/-Infinity) with None.
+
+    Python's json module writes these as bare NaN/Infinity tokens by
+    default, which are not valid JSON and make browsers' JSON.parse
+    (and response.json()) reject the whole payload.
+    """
+    if isinstance(obj, float):
+        return obj if obj == obj and obj not in (float("inf"), float("-inf")) else None
+    if isinstance(obj, dict):
+        return {k: _sanitize(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_sanitize(v) for v in obj]
+    return obj
+
+
 def save_json(data, filepath):
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
     with open(filepath, "w") as f:
-        json.dump(data, f, indent=2, default=str)
+        json.dump(_sanitize(data), f, indent=2, default=str, allow_nan=False)
     return filepath
 
 
