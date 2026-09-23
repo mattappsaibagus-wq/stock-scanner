@@ -3,10 +3,115 @@
 #  - Lines starting with '#' are comments; blank lines ignored.
 #  - Tickers are uppercased on load. US tickers as-is.
 #  - Tokyo Stock Exchange tickers use the Yahoo '.T' suffix (prices in JPY).
-#  - All symbols validated against yfinance 5m/5d + 1d/1mo fetches.
+#  - This tool is specialized for the Japanese market: JP names lead,
+#    organized mega-cap -> micro-cap, with a smaller secondary US set
+#    at the bottom for cross-market context (sector/correlation checks).
 # ============================================================
 
-# ---------- US — core mega caps (original set) ----------
+# ---------- Japan — Mega Cap (Nikkei 225 / TOPIX Core30 class) ----------
+7203.T
+6758.T
+6861.T
+9984.T
+9983.T
+8035.T
+6981.T
+6501.T
+8306.T
+9432.T
+4502.T
+6857.T
+7974.T
+9433.T
+8058.T
+8031.T
+6367.T
+4063.T
+6954.T
+7267.T
+8001.T
+8316.T
+5401.T
+8411.T
+6752.T
+7751.T
+6503.T
+8766.T
+9020.T
+9022.T
+
+# ---------- Japan — Large Cap ----------
+6902.T
+4568.T
+4519.T
+8053.T
+9201.T
+9202.T
+2502.T
+2503.T
+2587.T
+4911.T
+4452.T
+3382.T
+8604.T
+9434.T
+5108.T
+6971.T
+6762.T
+7741.T
+4543.T
+7733.T
+4901.T
+6301.T
+5411.T
+
+# ---------- Japan — Mid Cap (semis, machinery, growth industrials) ----------
+6146.T
+7735.T
+7729.T
+6361.T
+6723.T
+6594.T
+8473.T
+7013.T
+5803.T
+6098.T
+4751.T
+6920.T
+6963.T
+6988.T
+3402.T
+2802.T
+4902.T
+
+# ---------- Japan — Small Cap ----------
+4385.T
+3994.T
+4165.T
+4443.T
+6526.T
+4587.T
+4390.T
+4478.T
+9449.T
+2432.T
+2121.T
+3659.T
+6047.T
+3765.T
+
+# ---------- Japan — Micro / Growth Market (recent IPOs, smallest caps) ----------
+5032.T
+5253.T
+9348.T
+# Timee — JPX's newer 4-character alphanumeric listing code (introduced
+# 2024). Included for completeness; if a data source doesn't yet support
+# alphanumeric TSE codes the scanner simply skips it (no signals) rather
+# than failing, same as any other temporarily-unavailable symbol.
+215A.T
+
+# ---------- US — secondary set (cross-market / sector-benchmark context) ----------
+# ---------- US — core mega caps ----------
 AAPL
 MSFT
 GOOGL
@@ -43,39 +148,3 @@ CELH
 ARM
 APP
 RKLB
-
-# ---------- Japan — mega caps (¥14T-41T: Toyota, Sony, Keyence, SoftBank G, Fast Retailing, Tokyo Electron, Murata, Hitachi, MUFG, NTT, Takeda, Advantest) ----------
-7203.T
-6758.T
-6861.T
-9984.T
-9983.T
-8035.T
-6981.T
-6501.T
-8306.T
-9432.T
-4502.T
-6857.T
-
-# ---------- Japan — mid/large growth (DISCO, SCREEN, Tokyo Seimitsu, Ebara, Renesas, Nidec, SBI Holdings, IHI, Fujikura, Recruit, CyberAgent) ----------
-6146.T
-7735.T
-7729.T
-6361.T
-6723.T
-6594.T
-8473.T
-7013.T
-5803.T
-6098.T
-4751.T
-
-# ---------- Japan — small-cap potential (Mercari, Money Forward, Plaid, Sansan, Socionext, PeptiDream, IPS) ----------
-4385.T
-3994.T
-4165.T
-4443.T
-6526.T
-4587.T
-4390.T

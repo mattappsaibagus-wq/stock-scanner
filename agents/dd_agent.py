@@ -1,5 +1,5 @@
 from datetime import datetime, timezone
-from agents.base_agent import BaseAgent, fetch_yf_history, get_price_change
+from agents.base_agent import BaseAgent, fetch_yf_history, get_price_change, fetch_yf_info
 
 
 class DdAgent(BaseAgent):
@@ -61,19 +61,14 @@ class DdAgent(BaseAgent):
         }
 
     def _get_fundamentals(self, symbol):
-        try:
-            import yfinance as yf
-            ticker = yf.Ticker(symbol)
-            info = ticker.info
-            if not info:
-                return None
-            return {
-                "market_cap": info.get("marketCap", 0),
-                "pe_ratio": info.get("trailingPE"),
-                "float_shares": info.get("floatShares", 0),
-                "sector": info.get("sector", "Unknown"),
-                "industry": info.get("industry", "Unknown"),
-                "beta": info.get("beta"),
-            }
-        except Exception:
+        info = fetch_yf_info(symbol)
+        if not info:
             return None
+        return {
+            "market_cap": info.get("marketCap", 0),
+            "pe_ratio": info.get("trailingPE"),
+            "float_shares": info.get("floatShares", 0),
+            "sector": info.get("sector", "Unknown"),
+            "industry": info.get("industry", "Unknown"),
+            "beta": info.get("beta"),
+        }
