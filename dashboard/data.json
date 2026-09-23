@@ -1,0 +1,3371 @@
+{
+  "generated_at": "2026-09-23T13:05:24.681321+00:00",
+  "recommendations": [
+    {
+      "symbol": "NVDA",
+      "action": "BUY",
+      "confidence": 1.0,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.680957+00:00",
+      "name": "NVIDIA",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.94,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 4.69,
+              "confidence": 0.9380000000000001
+            }
+          ],
+          "price": {
+            "open": 218.5800018310547,
+            "close": 228.8300018310547,
+            "change": 10.25,
+            "change_pct": 4.69,
+            "high": 229.97999572753906,
+            "low": 218.0399932861328,
+            "volume": 3218903
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:26.170294+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 7.02,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 213.82000732421875,
+            "close": 228.8300018310547,
+            "change": 15.009994506835938,
+            "change_pct": 7.02,
+            "high": 229.97999572753906,
+            "low": 212.5,
+            "volume": 3218903
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 5526523478016,
+            "pe_ratio": 28.934261,
+            "float_shares": 23131180000,
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "beta": 2.217
+          },
+          "timestamp": "2026-09-23T13:03:27.387917+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "action": "SELL",
+      "confidence": 1.0,
+      "signal_count": 4,
+      "alerts": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.680966+00:00",
+      "name": "Advanced Micro Devices",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 13.62,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 549.2050170898438,
+            "close": 624.0,
+            "change": 74.79498291015625,
+            "change_pct": 13.62,
+            "high": 624.52001953125,
+            "low": 541.5399780273438,
+            "volume": 1341178
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:28.085719+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "rsi_overbought",
+              "value": 82.05,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 456.75,
+            "close": NaN,
+            "change": NaN,
+            "change_pct": NaN,
+            "high": 616.6900024414062,
+            "low": 440.5,
+            "volume": 28045099
+          },
+          "indicators": {
+            "rsi": 82.05,
+            "macd_signal": null,
+            "sma20": NaN,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:28.466012+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 156.33334,
+              "confidence": 0.5
+            },
+            {
+              "type": "quality_momentum",
+              "change_pct": 20.2,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 519.1199951171875,
+            "close": 624.0,
+            "change": 104.8800048828125,
+            "change_pct": 20.2,
+            "high": 624.52001953125,
+            "low": 506.04998779296875,
+            "volume": 1341178
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 1018288996352,
+            "pe_ratio": 156.33334,
+            "float_shares": 1623529079,
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "beta": 2.476
+          },
+          "timestamp": "2026-09-23T13:03:29.404031+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "ADBE",
+      "action": "SELL",
+      "confidence": 1.0,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "momentum_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.680982+00:00",
+      "name": "Adobe",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.94,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "down",
+              "change_pct": -4.71,
+              "confidence": 0.942
+            }
+          ],
+          "price": {
+            "open": 249.97000122070312,
+            "close": 238.19000244140625,
+            "change": -11.779998779296875,
+            "change_pct": -4.71,
+            "high": 254.6699981689453,
+            "low": 237.69000244140625,
+            "volume": 386639
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:39.870303+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "rsi_oversold",
+              "value": 29.12,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 276.2699890136719,
+            "close": NaN,
+            "change": NaN,
+            "change_pct": NaN,
+            "high": 294.5299987792969,
+            "low": 241.50999450683594,
+            "volume": 7327009
+          },
+          "indicators": {
+            "rsi": 29.12,
+            "macd_signal": null,
+            "sma20": NaN,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:40.240246+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "INTU",
+      "action": "SELL",
+      "confidence": 1.0,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "momentum_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.680991+00:00",
+      "name": "Intuit",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "down",
+              "change_pct": -5.35,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 308.8399963378906,
+            "close": 292.31500244140625,
+            "change": -16.524993896484375,
+            "change_pct": -5.35,
+            "high": 313.375,
+            "low": 288.25,
+            "volume": 294645
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:43.878076+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "rsi_oversold",
+              "value": 29.21,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 369.9200134277344,
+            "close": NaN,
+            "change": NaN,
+            "change_pct": NaN,
+            "high": 372.9800109863281,
+            "low": 295.1099853515625,
+            "volume": 4793787
+          },
+          "indicators": {
+            "rsi": 29.21,
+            "macd_signal": null,
+            "sma20": NaN,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:44.235477+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "action": "BUY",
+      "confidence": 1.0,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681012+00:00",
+      "name": "Micron Technology",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 10.65,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 989.2451171875,
+            "close": 1094.5799560546875,
+            "change": 105.3348388671875,
+            "change_pct": 10.65,
+            "high": 1097.25,
+            "low": 977.9249877929688,
+            "volume": 1001511
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:57.573539+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 17.78,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 929.3400268554688,
+            "close": 1094.5799560546875,
+            "change": 165.23992919921875,
+            "change_pct": 17.78,
+            "high": 1097.25,
+            "low": 917.6500244140625,
+            "volume": 1001511
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 1237995618304,
+            "pe_ratio": 23.583477,
+            "float_shares": 1125541920,
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "beta": 2.222
+          },
+          "timestamp": "2026-09-23T13:03:59.315741+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "ZS",
+      "action": "BUY",
+      "confidence": 1.0,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681027+00:00",
+      "name": "Zscaler",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 7.7,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 195.2100067138672,
+            "close": 210.24000549316406,
+            "change": 15.029998779296875,
+            "change_pct": 7.7,
+            "high": 210.72999572753906,
+            "low": 192.64999389648438,
+            "volume": 166571
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:03.901426+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 10.68,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 189.9499969482422,
+            "close": 210.24000549316406,
+            "change": 20.290008544921875,
+            "change_pct": 10.68,
+            "high": 210.72999572753906,
+            "low": 187.4499969482422,
+            "volume": 166571
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 34270836736,
+            "pe_ratio": null,
+            "float_shares": 106451890,
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "beta": 0.948
+          },
+          "timestamp": "2026-09-23T13:04:05.290499+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "ARM",
+      "action": "SELL",
+      "confidence": 1.0,
+      "signal_count": 4,
+      "alerts": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681048+00:00",
+      "name": "Arm Holdings",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 26.22,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 264.0899963378906,
+            "close": 333.3299865722656,
+            "change": 69.239990234375,
+            "change_pct": 26.22,
+            "high": 334.6600036621094,
+            "low": 261.6549987792969,
+            "volume": 294738
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:15.571680+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "rsi_overbought",
+              "value": 77.57,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 238.77999877929688,
+            "close": NaN,
+            "change": NaN,
+            "change_pct": NaN,
+            "high": 324.1600036621094,
+            "low": 225.4600067138672,
+            "volume": 7363146
+          },
+          "indicators": {
+            "rsi": 77.57,
+            "macd_signal": null,
+            "sma20": NaN,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:15.922178+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 333.2,
+              "confidence": 0.5
+            },
+            {
+              "type": "quality_momentum",
+              "change_pct": 33.01,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 250.60989379882812,
+            "close": 333.3299865722656,
+            "change": 82.7200927734375,
+            "change_pct": 33.01,
+            "high": 334.6600036621094,
+            "low": 240.4499969482422,
+            "volume": 294738
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 355857137664,
+            "pe_ratio": 333.2,
+            "float_shares": 142588680,
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "beta": 3.89
+          },
+          "timestamp": "2026-09-23T13:04:16.809815+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "RKLB",
+      "action": "BUY",
+      "confidence": 1.0,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681054+00:00",
+      "name": "Rocket Lab",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 9.21,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 65.91999816894531,
+            "close": 71.98999786376953,
+            "change": 6.069999694824219,
+            "change_pct": 9.21,
+            "high": 72.5,
+            "low": 63.790000915527344,
+            "volume": 539229
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:19.472275+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 14.46,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 62.89500045776367,
+            "close": 71.98999786376953,
+            "change": 9.09499740600586,
+            "change_pct": 14.46,
+            "high": 72.5,
+            "low": 61.7400016784668,
+            "volume": 539229
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 46024806400,
+            "pe_ratio": null,
+            "float_shares": 556860860,
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "beta": 2.612
+          },
+          "timestamp": "2026-09-23T13:04:20.722593+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "8035.T",
+      "action": "BUY",
+      "confidence": 1.0,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681082+00:00",
+      "name": "Tokyo Electron",
+      "name_jp": "\u6771\u4eac\u30a8\u30ec\u30af\u30c8\u30ed\u30f3",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 5.97,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 50260.0,
+            "close": 53260.0,
+            "change": 3000.0,
+            "change_pct": 5.97,
+            "high": 53600.0,
+            "low": 50140.0,
+            "volume": 61200
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:31.599975+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 6.03,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 50230.0,
+            "close": 53260.0,
+            "change": 3030.0,
+            "change_pct": 6.03,
+            "high": 53600.0,
+            "low": 49000.0,
+            "volume": 61200
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 24127706497024,
+            "pe_ratio": 42.372746,
+            "float_shares": 439293079,
+            "sector": "Technology",
+            "industry": "Semiconductor Equipment & Materials",
+            "beta": 1.332
+          },
+          "timestamp": "2026-09-23T13:04:32.807791+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "6501.T",
+      "action": "BUY",
+      "confidence": 1.0,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681091+00:00",
+      "name": "Hitachi",
+      "name_jp": "\u65e5\u7acb\u88fd\u4f5c\u6240",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.93,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 4.65,
+              "confidence": 0.93
+            }
+          ],
+          "price": {
+            "open": 5274.0,
+            "close": 5519.0,
+            "change": 245.0,
+            "change_pct": 4.65,
+            "high": 5530.0,
+            "low": 5265.0,
+            "volume": 300
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:35.571878+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 5.69,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 5222.0,
+            "close": 5519.0,
+            "change": 297.0,
+            "change_pct": 5.69,
+            "high": 5530.0,
+            "low": 5167.0,
+            "volume": 300
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 24667773468672,
+            "pe_ratio": 31.249645,
+            "float_shares": 4404353693,
+            "sector": "Industrials",
+            "industry": "Conglomerates",
+            "beta": 0.538
+          },
+          "timestamp": "2026-09-23T13:04:36.767672+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "7735.T",
+      "action": "BUY",
+      "confidence": 1.0,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681110+00:00",
+      "name": "SCREEN Holdings",
+      "name_jp": "SCREEN\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 5.88,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 12085.0,
+            "close": 12795.0,
+            "change": 710.0,
+            "change_pct": 5.88,
+            "high": 12905.0,
+            "low": 12030.0,
+            "volume": 31800
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:48.131647+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 9.22,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 11715.0,
+            "close": 12795.0,
+            "change": 1080.0,
+            "change_pct": 9.22,
+            "high": 12905.0,
+            "low": 11660.0,
+            "volume": 31800
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 2421269463040,
+            "pe_ratio": 26.31579,
+            "float_shares": 185165668,
+            "sector": "Technology",
+            "industry": "Semiconductor Equipment & Materials",
+            "beta": 1.54
+          },
+          "timestamp": "2026-09-23T13:04:49.435392+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "7729.T",
+      "action": "BUY",
+      "confidence": 1.0,
+      "signal_count": 3,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681115+00:00",
+      "name": "Tokyo Seimitsu",
+      "name_jp": "\u6771\u4eac\u7cbe\u5bc6",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 6.8,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 16030.0,
+            "close": 17120.0,
+            "change": 1090.0,
+            "change_pct": 6.8,
+            "high": 17120.0,
+            "low": 16000.0,
+            "volume": 9200
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:50.177938+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 9.39,
+              "confidence": 0.8
+            },
+            {
+              "type": "low_float",
+              "float_shares": 39997740,
+              "confidence": 0.6
+            }
+          ],
+          "price": {
+            "open": 15650.0,
+            "close": 17120.0,
+            "change": 1470.0,
+            "change_pct": 9.39,
+            "high": 17120.0,
+            "low": 15540.0,
+            "volume": 9200
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 703216484352,
+            "pe_ratio": 28.571194,
+            "float_shares": 39997740,
+            "sector": "Technology",
+            "industry": "Semiconductor Equipment & Materials",
+            "beta": null
+          },
+          "timestamp": "2026-09-23T13:04:51.714171+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "6723.T",
+      "action": "BUY",
+      "confidence": 1.0,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681124+00:00",
+      "name": "Renesas Electronics",
+      "name_jp": "\u30eb\u30cd\u30b5\u30b9 \u30a8\u30ec\u30af\u30c8\u30ed\u30cb\u30af\u30b9",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.86,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 4.31,
+              "confidence": 0.8619999999999999
+            }
+          ],
+          "price": {
+            "open": 3158.0,
+            "close": 3294.0,
+            "change": 136.0,
+            "change_pct": 4.31,
+            "high": 3307.0,
+            "low": 3141.0,
+            "volume": 189700
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:55.343778+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 6.64,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 3089.0,
+            "close": 3294.0,
+            "change": 205.0,
+            "change_pct": 6.64,
+            "high": 3307.0,
+            "low": 3067.0,
+            "volume": 189700
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 6047161909248,
+            "pe_ratio": 17.761675,
+            "float_shares": 1676575178,
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "beta": 1.256
+          },
+          "timestamp": "2026-09-23T13:04:56.654469+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "6594.T",
+      "action": "BUY",
+      "confidence": 1.0,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681128+00:00",
+      "name": "Nidec",
+      "name_jp": "\u30cb\u30c7\u30c3\u30af",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 8.61,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 2626.0,
+            "close": 2852.0,
+            "change": 226.0,
+            "change_pct": 8.61,
+            "high": 2877.0,
+            "low": 2604.0,
+            "volume": 135900
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:57.380871+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 7.26,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 2659.0,
+            "close": 2852.0,
+            "change": 193.0,
+            "change_pct": 7.26,
+            "high": 2877.0,
+            "low": 2604.0,
+            "volume": 135900
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 3273861103616,
+            "pe_ratio": 27.246708,
+            "float_shares": 910031598,
+            "sector": "Industrials",
+            "industry": "Specialty Industrial Machinery",
+            "beta": 1.046
+          },
+          "timestamp": "2026-09-23T13:04:58.631931+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "6526.T",
+      "action": "BUY",
+      "confidence": 1.0,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681176+00:00",
+      "name": "Socionext",
+      "name_jp": "\u30bd\u30b7\u30aa\u30cd\u30af\u30b9\u30c8",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 7.18,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 1865.0,
+            "close": 1999.0,
+            "change": 134.0,
+            "change_pct": 7.18,
+            "high": 2020.5,
+            "low": 1853.5,
+            "volume": 128000
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:05:19.212698+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 11.3,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 1796.0,
+            "close": 1999.0,
+            "change": 203.0,
+            "change_pct": 11.3,
+            "high": 2020.5,
+            "low": 1780.5,
+            "volume": 128000
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 350578278400,
+            "pe_ratio": 40.48583,
+            "float_shares": 175091356,
+            "sector": "Industrials",
+            "industry": "Electrical Equipment & Parts",
+            "beta": 0.594
+          },
+          "timestamp": "2026-09-23T13:05:20.633640+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "9984.T",
+      "action": "BUY",
+      "confidence": 0.97,
+      "signal_count": 4,
+      "alerts": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681072+00:00",
+      "name": "SoftBank Group",
+      "name_jp": "\u30bd\u30d5\u30c8\u30d0\u30f3\u30af\u30b0\u30eb\u30fc\u30d7",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.88,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 4.42,
+              "confidence": 0.884
+            }
+          ],
+          "price": {
+            "open": 6040.0,
+            "close": 6307.0,
+            "change": 267.0,
+            "change_pct": 4.42,
+            "high": 6590.0,
+            "low": 5962.0,
+            "volume": 100
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:27.435060+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.75,
+          "alert": true,
+          "signals": [
+            {
+              "type": "strong_momentum",
+              "change_pct": 8.32,
+              "confidence": 0.75
+            }
+          ],
+          "price": {
+            "open": 5830.0,
+            "close": 6315.0,
+            "change": 485.0,
+            "change_pct": 8.32,
+            "high": 6959.0,
+            "low": 4882.0,
+            "volume": 90291700
+          },
+          "indicators": {
+            "rsi": 64.2,
+            "macd_signal": null,
+            "sma20": 5767.95,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:27.846644+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "potential_undervalued",
+              "pe_ratio": 7.235915,
+              "confidence": 0.7
+            },
+            {
+              "type": "quality_momentum",
+              "change_pct": 8.14,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 5832.0,
+            "close": 6307.0,
+            "change": 475.0,
+            "change_pct": 8.14,
+            "high": 6590.0,
+            "low": 5678.0,
+            "volume": 100
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 35988701184000,
+            "pe_ratio": 7.235915,
+            "float_shares": 3653717554,
+            "sector": "Communication Services",
+            "industry": "Telecom Services",
+            "beta": 0.997
+          },
+          "timestamp": "2026-09-23T13:04:28.814443+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "6098.T",
+      "action": "BUY",
+      "confidence": 0.94,
+      "signal_count": 3,
+      "alerts": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681152+00:00",
+      "name": "Recruit Holdings",
+      "name_jp": "\u30ea\u30af\u30eb\u30fc\u30c8\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.79,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 3.95,
+              "confidence": 0.79
+            }
+          ],
+          "price": {
+            "open": 16825.0,
+            "close": 17490.0,
+            "change": 665.0,
+            "change_pct": 3.95,
+            "high": 17585.0,
+            "low": 16745.0,
+            "volume": 75800
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:05:05.641403+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.75,
+          "alert": true,
+          "signals": [
+            {
+              "type": "strong_momentum",
+              "change_pct": 8.3,
+              "confidence": 0.75
+            }
+          ],
+          "price": {
+            "open": 16020.0,
+            "close": 17350.0,
+            "change": 1330.0,
+            "change_pct": 8.3,
+            "high": 18215.0,
+            "low": 15225.0,
+            "volume": 4860600
+          },
+          "indicators": {
+            "rsi": 42.8,
+            "macd_signal": null,
+            "sma20": 16677.25,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:05:06.005606+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 8.9,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 16060.0,
+            "close": 17490.0,
+            "change": 1430.0,
+            "change_pct": 8.9,
+            "high": 17585.0,
+            "low": 15830.0,
+            "volume": 75800
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 24096888848384,
+            "pe_ratio": 50.0,
+            "float_shares": 1364508924,
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "beta": 0.946
+          },
+          "timestamp": "2026-09-23T13:05:06.876666+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "6981.T",
+      "action": "BUY",
+      "confidence": 0.93,
+      "signal_count": 4,
+      "alerts": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681087+00:00",
+      "name": "Murata Manufacturing",
+      "name_jp": "\u6751\u7530\u88fd\u4f5c\u6240",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.77,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 3.87,
+              "confidence": 0.774
+            }
+          ],
+          "price": {
+            "open": 7423.0,
+            "close": 7710.0,
+            "change": 287.0,
+            "change_pct": 3.87,
+            "high": 7791.0,
+            "low": 7385.0,
+            "volume": 100
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:33.568431+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.75,
+          "alert": true,
+          "signals": [
+            {
+              "type": "strong_momentum",
+              "change_pct": 3.56,
+              "confidence": 0.75
+            }
+          ],
+          "price": {
+            "open": 7496.0,
+            "close": 7763.0,
+            "change": 267.0,
+            "change_pct": 3.56,
+            "high": 8364.0,
+            "low": 6777.0,
+            "volume": 23568900
+          },
+          "indicators": {
+            "rsi": 57.81,
+            "macd_signal": null,
+            "sma20": 7281.1,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:33.944218+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 60.977142,
+              "confidence": 0.5
+            },
+            {
+              "type": "quality_momentum",
+              "change_pct": 11.63,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 6907.0,
+            "close": 7710.0,
+            "change": 803.0,
+            "change_pct": 11.63,
+            "high": 7791.0,
+            "low": 6806.0,
+            "volume": 100
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 14071779819520,
+            "pe_ratio": 60.977142,
+            "float_shares": 1817067366,
+            "sector": "Technology",
+            "industry": "Electronic Components",
+            "beta": 1.202
+          },
+          "timestamp": "2026-09-23T13:04:34.830696+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "4502.T",
+      "action": "BUY",
+      "confidence": 0.93,
+      "signal_count": 2,
+      "alerts": [
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "agents": [
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681101+00:00",
+      "name": "Takeda Pharmaceutical",
+      "name_jp": "\u6b66\u7530\u85ac\u54c1\u5de5\u696d",
+      "details": [
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.75,
+          "alert": true,
+          "signals": [
+            {
+              "type": "strong_momentum",
+              "change_pct": 4.67,
+              "confidence": 0.75
+            }
+          ],
+          "price": {
+            "open": 5702.0,
+            "close": 5968.0,
+            "change": 266.0,
+            "change_pct": 4.67,
+            "high": 6012.0,
+            "low": 5504.0,
+            "volume": 6517000
+          },
+          "indicators": {
+            "rsi": 61.55,
+            "macd_signal": null,
+            "sma20": 5799.7,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:41.714848+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 5.25,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 5695.0,
+            "close": 5994.0,
+            "change": 299.0,
+            "change_pct": 5.25,
+            "high": 6012.0,
+            "low": 5640.0,
+            "volume": 58900
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 9529412550656,
+            "pe_ratio": null,
+            "float_shares": 1578400700,
+            "sector": "Healthcare",
+            "industry": "Drug Manufacturers - Specialty & Generic",
+            "beta": 0.1
+          },
+          "timestamp": "2026-09-23T13:04:42.699124+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "action": "WATCH",
+      "confidence": 0.9,
+      "signal_count": 3,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681003+00:00",
+      "name": "Palantir Technologies",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 6.43,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 173.80999755859375,
+            "close": 184.97999572753906,
+            "change": 11.169998168945312,
+            "change_pct": 6.43,
+            "high": 185.5399932861328,
+            "low": 172.0,
+            "volume": 883763
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:49.619850+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 158.11111,
+              "confidence": 0.5
+            },
+            {
+              "type": "quality_momentum",
+              "change_pct": 7.56,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 171.9779052734375,
+            "close": 184.97999572753906,
+            "change": 13.002090454101562,
+            "change_pct": 7.56,
+            "high": 185.5399932861328,
+            "low": 168.9600067138672,
+            "volume": 883763
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 444541796352,
+            "pe_ratio": 158.11111,
+            "float_shares": 2109957437,
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "beta": 1.621
+          },
+          "timestamp": "2026-09-23T13:03:50.826144+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "DDOG",
+      "action": "WATCH",
+      "confidence": 0.9,
+      "signal_count": 3,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681022+00:00",
+      "name": "Datadog",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 6.24,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 232.97000122070312,
+            "close": 247.50999450683594,
+            "change": 14.539993286132812,
+            "change_pct": 6.24,
+            "high": 249.91000366210938,
+            "low": 226.83250427246094,
+            "volume": 197713
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:01.955475+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 505.05103,
+              "confidence": 0.5
+            },
+            {
+              "type": "quality_momentum",
+              "change_pct": 5.78,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 233.99000549316406,
+            "close": 247.50999450683594,
+            "change": 13.519989013671875,
+            "change_pct": 5.78,
+            "high": 249.91000366210938,
+            "low": 226.83250427246094,
+            "volume": 197713
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 88862089216,
+            "pe_ratio": 505.05103,
+            "float_shares": 333009768,
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "beta": 1.488
+          },
+          "timestamp": "2026-09-23T13:04:03.192754+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "HOOD",
+      "action": "WATCH",
+      "confidence": 0.9,
+      "signal_count": 3,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681041+00:00",
+      "name": "Robinhood Markets",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 10.53,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 112.37000274658203,
+            "close": 124.19999694824219,
+            "change": 11.829994201660156,
+            "change_pct": 10.53,
+            "high": 126.41000366210938,
+            "low": 111.05999755859375,
+            "volume": 691773
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:11.521798+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 54.977875,
+              "confidence": 0.5
+            },
+            {
+              "type": "quality_momentum",
+              "change_pct": 14.17,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 108.78990173339844,
+            "close": 124.19999694824219,
+            "change": 15.41009521484375,
+            "change_pct": 14.17,
+            "high": 126.41000366210938,
+            "low": 101.70449829101562,
+            "volume": 691773
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 111710978048,
+            "pe_ratio": 54.977875,
+            "float_shares": 783765981,
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "beta": 2.34
+          },
+          "timestamp": "2026-09-23T13:04:12.718839+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "6857.T",
+      "action": "WATCH",
+      "confidence": 0.9,
+      "signal_count": 3,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681106+00:00",
+      "name": "Advantest",
+      "name_jp": "\u30a2\u30c9\u30d0\u30f3\u30c6\u30b9\u30c8",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 7.98,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 30070.0,
+            "close": 32470.0,
+            "change": 2400.0,
+            "change_pct": 7.98,
+            "high": 32630.0,
+            "low": 29835.0,
+            "volume": 93400
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:43.693993+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 62.1112,
+              "confidence": 0.5
+            },
+            {
+              "type": "quality_momentum",
+              "change_pct": 6.95,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 30360.0,
+            "close": 32470.0,
+            "change": 2110.0,
+            "change_pct": 6.95,
+            "high": 32630.0,
+            "low": 29810.0,
+            "volume": 93400
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 23138593144832,
+            "pe_ratio": 62.1112,
+            "float_shares": 723539350,
+            "sector": "Technology",
+            "industry": "Semiconductor Equipment & Materials",
+            "beta": 1.182
+          },
+          "timestamp": "2026-09-23T13:04:45.032741+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "5803.T",
+      "action": "WATCH",
+      "confidence": 0.9,
+      "signal_count": 3,
+      "alerts": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681147+00:00",
+      "name": "Fujikura",
+      "name_jp": "\u30d5\u30b8\u30af\u30e9",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 5.23,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 4738.0,
+            "close": 4986.0,
+            "change": 248.0,
+            "change_pct": 5.23,
+            "high": 5027.0,
+            "low": 4712.0,
+            "volume": 421900
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:05:03.593886+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 52.082455,
+              "confidence": 0.5
+            },
+            {
+              "type": "quality_momentum",
+              "change_pct": 5.19,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 4740.0,
+            "close": 4986.0,
+            "change": 246.0,
+            "change_pct": 5.19,
+            "high": 5027.0,
+            "low": 4669.0,
+            "volume": 421900
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 8199029653504,
+            "pe_ratio": 52.082455,
+            "float_shares": 1655845742,
+            "sector": "Industrials",
+            "industry": "Conglomerates",
+            "beta": 0.751
+          },
+          "timestamp": "2026-09-23T13:05:04.894159+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "4443.T",
+      "action": "BUY",
+      "confidence": 0.9,
+      "signal_count": 2,
+      "alerts": [
+        "early_detector",
+        "momentum_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681172+00:00",
+      "name": "Sansan",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.75,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 3.73,
+              "confidence": 0.746
+            }
+          ],
+          "price": {
+            "open": 2064.0,
+            "close": 2141.0,
+            "change": 77.0,
+            "change_pct": 3.73,
+            "high": 2141.0,
+            "low": 2054.0,
+            "volume": 49800
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:05:17.054361+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.75,
+          "alert": true,
+          "signals": [
+            {
+              "type": "strong_momentum",
+              "change_pct": 7.53,
+              "confidence": 0.75
+            }
+          ],
+          "price": {
+            "open": 1992.0,
+            "close": 2142.0,
+            "change": 150.0,
+            "change_pct": 7.53,
+            "high": 2355.0,
+            "low": 1876.0,
+            "volume": 1468000
+          },
+          "indicators": {
+            "rsi": 39.76,
+            "macd_signal": null,
+            "sma20": 2126.65,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:05:17.459623+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "action": "WATCH",
+      "confidence": 0.87,
+      "signal_count": 3,
+      "alerts": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.680973+00:00",
+      "name": "Meta Platforms",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 8.29,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 680.2999877929688,
+            "close": 736.6799926757812,
+            "change": 56.3800048828125,
+            "change_pct": 8.29,
+            "high": 757.27001953125,
+            "low": 660.7999877929688,
+            "volume": 649136
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:30.120984+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "rsi_overbought",
+              "value": 86.84,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 558.5792236328125,
+            "close": NaN,
+            "change": NaN,
+            "change_pct": NaN,
+            "high": 753.0,
+            "low": 545.8692218355393,
+            "volume": 27915040
+          },
+          "indicators": {
+            "rsi": 86.84,
+            "macd_signal": null,
+            "sma20": NaN,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:30.472402+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 8.23,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 680.64501953125,
+            "close": 736.6799926757812,
+            "change": 56.03497314453125,
+            "change_pct": 8.23,
+            "high": 757.27001953125,
+            "low": 660.7999877929688,
+            "volume": 649136
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 1876480229376,
+            "pe_ratio": 27.933065,
+            "float_shares": 2201758680,
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "beta": 1.243
+          },
+          "timestamp": "2026-09-23T13:03:31.276402+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "NET",
+      "action": "WATCH",
+      "confidence": 0.87,
+      "signal_count": 3,
+      "alerts": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681032+00:00",
+      "name": "Cloudflare",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 7.8,
+              "confidence": 1.0
+            }
+          ],
+          "price": {
+            "open": 327.4100036621094,
+            "close": 352.94500732421875,
+            "change": 25.535003662109375,
+            "change_pct": 7.8,
+            "high": 357.1000061035156,
+            "low": 313.5,
+            "volume": 275859
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:06.020097+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "rsi_overbought",
+              "value": 72.01,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 280.3500061035156,
+            "close": NaN,
+            "change": NaN,
+            "change_pct": NaN,
+            "high": 352.45001220703125,
+            "low": 269.29998779296875,
+            "volume": 3279351
+          },
+          "indicators": {
+            "rsi": 72.01,
+            "macd_signal": null,
+            "sma20": NaN,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:06.373725+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 7.07,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 329.63519287109375,
+            "close": 352.94500732421875,
+            "change": 23.309814453125,
+            "change_pct": 7.07,
+            "high": 357.1000061035156,
+            "low": 313.5,
+            "volume": 275859
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 125696139264,
+            "pe_ratio": null,
+            "float_shares": 320453940,
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "beta": 1.664
+          },
+          "timestamp": "2026-09-23T13:04:07.120229+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "8473.T",
+      "action": "BUY",
+      "confidence": 0.87,
+      "signal_count": 2,
+      "alerts": [
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "agents": [
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681133+00:00",
+      "name": "SBI Holdings",
+      "name_jp": "SBI\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+      "details": [
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.75,
+          "alert": true,
+          "signals": [
+            {
+              "type": "strong_momentum",
+              "change_pct": 6.41,
+              "confidence": 0.75
+            }
+          ],
+          "price": {
+            "open": 3075.0,
+            "close": 3272.0,
+            "change": 197.0,
+            "change_pct": 6.41,
+            "high": 3440.0,
+            "low": 2951.0,
+            "volume": 4476700
+          },
+          "indicators": {
+            "rsi": 47.07,
+            "macd_signal": null,
+            "sma20": 3299.85,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:59.787173+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.7,
+          "alert": true,
+          "signals": [
+            {
+              "type": "potential_undervalued",
+              "pe_ratio": 5.238385,
+              "confidence": 0.7
+            }
+          ],
+          "price": {
+            "open": 3230.0,
+            "close": 3276.0,
+            "change": 46.0,
+            "change_pct": 1.42,
+            "high": 3327.0,
+            "low": 3208.0,
+            "volume": 88800
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 2114993520640,
+            "pe_ratio": 5.238385,
+            "float_shares": 581426675,
+            "sector": "Financial Services",
+            "industry": "Financial Conglomerates",
+            "beta": 0.476
+          },
+          "timestamp": "2026-09-23T13:05:00.819106+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "6361.T",
+      "action": "BUY",
+      "confidence": 0.85,
+      "signal_count": 2,
+      "alerts": [
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681120+00:00",
+      "name": "Ebara",
+      "name_jp": "\u834f\u539f",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.62,
+          "alert": false,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 3.1,
+              "confidence": 0.62
+            }
+          ],
+          "price": {
+            "open": 4221.0,
+            "close": 4352.0,
+            "change": 131.0,
+            "change_pct": 3.1,
+            "high": 4403.0,
+            "low": 4207.0,
+            "volume": 40200
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:52.728361+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 6.02,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 4105.0,
+            "close": 4352.0,
+            "change": 247.0,
+            "change_pct": 6.02,
+            "high": 4403.0,
+            "low": 4083.0,
+            "volume": 40200
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 1968672735232,
+            "pe_ratio": 25.124956,
+            "float_shares": 446822184,
+            "sector": "Industrials",
+            "industry": "Specialty Industrial Machinery",
+            "beta": 1.202
+          },
+          "timestamp": "2026-09-23T13:04:54.582641+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "4165.T",
+      "action": "BUY",
+      "confidence": 0.85,
+      "signal_count": 3,
+      "alerts": [
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681167+00:00",
+      "name": "Plaid",
+      "name_jp": "\u30d7\u30ec\u30a4\u30c9",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.61,
+          "alert": false,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 3.05,
+              "confidence": 0.61
+            }
+          ],
+          "price": {
+            "open": 655.0,
+            "close": 675.0,
+            "change": 20.0,
+            "change_pct": 3.05,
+            "high": 683.0,
+            "low": 643.0,
+            "volume": 8600
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:05:15.068063+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 6.8,
+              "confidence": 0.8
+            },
+            {
+              "type": "low_float",
+              "float_shares": 16303272,
+              "confidence": 0.6
+            }
+          ],
+          "price": {
+            "open": 632.0,
+            "close": 675.0,
+            "change": 43.0,
+            "change_pct": 6.8,
+            "high": 683.0,
+            "low": 628.0,
+            "volume": 8600
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 27447392256,
+            "pe_ratio": 36.368534,
+            "float_shares": 16303272,
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "beta": 0.824
+          },
+          "timestamp": "2026-09-23T13:05:16.315449+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "6861.T",
+      "action": "WATCH",
+      "confidence": 0.8,
+      "signal_count": 1,
+      "alerts": [
+        "momentum_agent"
+      ],
+      "agents": [
+        "momentum_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681067+00:00",
+      "name": "Keyence",
+      "name_jp": "\u30ad\u30fc\u30a8\u30f3\u30b9",
+      "details": [
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "rsi_oversold",
+              "value": 21.61,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 83825.1796875,
+            "close": 76580.0,
+            "change": -7245.1796875,
+            "change_pct": -8.64,
+            "high": 86605.07094303459,
+            "low": 73243.66226768092,
+            "volume": 627400
+          },
+          "indicators": {
+            "rsi": 21.61,
+            "macd_signal": null,
+            "sma20": 78445.01,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:25.791179+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "4385.T",
+      "action": "WATCH",
+      "confidence": 0.8,
+      "signal_count": 1,
+      "alerts": [
+        "momentum_agent"
+      ],
+      "agents": [
+        "momentum_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681156+00:00",
+      "name": "Mercari",
+      "name_jp": "\u30e1\u30eb\u30ab\u30ea",
+      "details": [
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "rsi_oversold",
+              "value": 20.74,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 4473.0,
+            "close": 3699.0,
+            "change": -774.0,
+            "change_pct": -17.3,
+            "high": 4914.0,
+            "low": 3613.0,
+            "volume": 3505500
+          },
+          "indicators": {
+            "rsi": 20.74,
+            "macd_signal": null,
+            "sma20": 4194.6,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:05:10.526808+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "9432.T",
+      "action": "WATCH",
+      "confidence": 0.75,
+      "signal_count": 1,
+      "alerts": [
+        "momentum_agent"
+      ],
+      "agents": [
+        "momentum_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681097+00:00",
+      "name": "Nippon Telegraph & Telephone",
+      "name_jp": "\u65e5\u672c\u96fb\u4fe1\u96fb\u8a71",
+      "details": [
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.75,
+          "alert": true,
+          "signals": [
+            {
+              "type": "strong_momentum",
+              "change_pct": 10.54,
+              "confidence": 0.75
+            }
+          ],
+          "price": {
+            "open": 160.39999389648438,
+            "close": 177.3000030517578,
+            "change": 16.900009155273438,
+            "change_pct": 10.54,
+            "high": 180.10000610351562,
+            "low": 158.8000030517578,
+            "volume": 251021300
+          },
+          "indicators": {
+            "rsi": 59.16,
+            "macd_signal": null,
+            "sma20": 173.3,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:39.871021+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "4587.T",
+      "action": "WATCH",
+      "confidence": 0.75,
+      "signal_count": 1,
+      "alerts": [
+        "momentum_agent"
+      ],
+      "agents": [
+        "momentum_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681180+00:00",
+      "name": "PeptiDream",
+      "name_jp": "\u30da\u30d7\u30c1\u30c9\u30ea\u30fc\u30e0",
+      "details": [
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.75,
+          "alert": true,
+          "signals": [
+            {
+              "type": "strong_momentum",
+              "change_pct": 4.34,
+              "confidence": 0.75
+            }
+          ],
+          "price": {
+            "open": 1025.5,
+            "close": 1070.0,
+            "change": 44.5,
+            "change_pct": 4.34,
+            "high": 1155.0,
+            "low": 986.0,
+            "volume": 1049200
+          },
+          "indicators": {
+            "rsi": 44.97,
+            "macd_signal": null,
+            "sma20": 1082.4,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:05:21.718350+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "ABNB",
+      "action": "SELL",
+      "confidence": 0.74,
+      "signal_count": 2,
+      "alerts": [
+        "momentum_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.680997+00:00",
+      "name": "Airbnb",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.43,
+          "alert": false,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "down",
+              "change_pct": -2.15,
+              "confidence": 0.43
+            }
+          ],
+          "price": {
+            "open": 165.3699951171875,
+            "close": 161.80999755859375,
+            "change": -3.55999755859375,
+            "change_pct": -2.15,
+            "high": 169.60000610351562,
+            "low": 160.7100067138672,
+            "volume": 377177
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:47.749431+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "rsi_oversold",
+              "value": 22.86,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 190.2100067138672,
+            "close": NaN,
+            "change": NaN,
+            "change_pct": NaN,
+            "high": 193.4530029296875,
+            "low": 164.6999969482422,
+            "volume": 4960090
+          },
+          "indicators": {
+            "rsi": 22.86,
+            "macd_signal": null,
+            "sma20": NaN,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:48.101270+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "3994.T",
+      "action": "SELL",
+      "confidence": 0.74,
+      "signal_count": 4,
+      "alerts": [
+        "momentum_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681162+00:00",
+      "name": "Money Forward",
+      "name_jp": "\u30de\u30cd\u30fc\u30d5\u30a9\u30ef\u30fc\u30c9",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.51,
+          "alert": false,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "down",
+              "change_pct": -2.56,
+              "confidence": 0.512
+            }
+          ],
+          "price": {
+            "open": 6064.0,
+            "close": 5909.0,
+            "change": -155.0,
+            "change_pct": -2.56,
+            "high": 6192.0,
+            "low": 5831.0,
+            "volume": 13000
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:05:12.818274+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.75,
+          "alert": true,
+          "signals": [
+            {
+              "type": "strong_momentum",
+              "change_pct": 4.29,
+              "confidence": 0.75
+            }
+          ],
+          "price": {
+            "open": 5658.0,
+            "close": 5901.0,
+            "change": 243.0,
+            "change_pct": 4.29,
+            "high": 7050.0,
+            "low": 5640.0,
+            "volume": 1011300
+          },
+          "indicators": {
+            "rsi": 40.71,
+            "macd_signal": null,
+            "sma20": 6214.55,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:05:13.173553+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.6,
+          "alert": false,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 75.19113,
+              "confidence": 0.5
+            },
+            {
+              "type": "low_float",
+              "float_shares": 35730579,
+              "confidence": 0.6
+            }
+          ],
+          "price": {
+            "open": 6279.0,
+            "close": 5909.0,
+            "change": -370.0,
+            "change_pct": -5.89,
+            "high": 6409.0,
+            "low": 5831.0,
+            "volume": 13000
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 327299203072,
+            "pe_ratio": 75.19113,
+            "float_shares": 35730579,
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "beta": 1.212
+          },
+          "timestamp": "2026-09-23T13:05:14.340419+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "VRT",
+      "action": "WATCH",
+      "confidence": 0.73,
+      "signal_count": 3,
+      "alerts": [
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681017+00:00",
+      "name": "Vertiv Holdings",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.66,
+          "alert": false,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 3.31,
+              "confidence": 0.662
+            }
+          ],
+          "price": {
+            "open": 245.38499450683594,
+            "close": 253.50999450683594,
+            "change": 8.125,
+            "change_pct": 3.31,
+            "high": 255.39999389648438,
+            "low": 242.42999267578125,
+            "volume": 293796
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:00.031690+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 56.829597,
+              "confidence": 0.5
+            },
+            {
+              "type": "quality_momentum",
+              "change_pct": 5.75,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 239.72999572753906,
+            "close": 253.50999450683594,
+            "change": 13.779998779296875,
+            "change_pct": 5.75,
+            "high": 255.39999389648438,
+            "low": 237.63999938964844,
+            "volume": 293796
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 97579098112,
+            "pe_ratio": 56.829597,
+            "float_shares": 383848608,
+            "sector": "Industrials",
+            "industry": "Electrical Equipment & Parts",
+            "beta": 2.075
+          },
+          "timestamp": "2026-09-23T13:04:01.251445+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "7013.T",
+      "action": "BUY",
+      "confidence": 0.73,
+      "signal_count": 2,
+      "alerts": [
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681139+00:00",
+      "name": "IHI Corporation",
+      "name_jp": "IHI\uff08\u77f3\u5ddd\u5cf6\u64ad\u78e8\u91cd\u5de5\u696d\uff09",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.41,
+          "alert": false,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 2.07,
+              "confidence": 0.414
+            }
+          ],
+          "price": {
+            "open": 2802.5,
+            "close": 2860.5,
+            "change": 58.0,
+            "change_pct": 2.07,
+            "high": 2879.0,
+            "low": 2760.5,
+            "volume": 194000
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:05:01.610392+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "quality_momentum",
+              "change_pct": 7.98,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 2649.0,
+            "close": 2860.5,
+            "change": 211.5,
+            "change_pct": 7.98,
+            "high": 2879.0,
+            "low": 2616.0,
+            "volume": 194000
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 3024111796224,
+            "pe_ratio": 18.797363,
+            "float_shares": 1025335363,
+            "sector": "Industrials",
+            "industry": "Specialty Industrial Machinery",
+            "beta": 0.869
+          },
+          "timestamp": "2026-09-23T13:05:02.805956+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "action": "WATCH",
+      "confidence": 0.72,
+      "signal_count": 3,
+      "alerts": [
+        "dd_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.680946+00:00",
+      "name": "Tesla",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.64,
+          "alert": false,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 3.19,
+              "confidence": 0.638
+            }
+          ],
+          "price": {
+            "open": 367.1400146484375,
+            "close": 378.8599853515625,
+            "change": 11.719970703125,
+            "change_pct": 3.19,
+            "high": 380.4175109863281,
+            "low": 360.7510070800781,
+            "volume": 987132
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:03:24.129170+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 344.45453,
+              "confidence": 0.5
+            },
+            {
+              "type": "quality_momentum",
+              "change_pct": 5.96,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 357.5350036621094,
+            "close": 378.8599853515625,
+            "change": 21.324981689453125,
+            "change_pct": 5.96,
+            "high": 380.4175109863281,
+            "low": 354.89129638671875,
+            "volume": 987132
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 1496483495936,
+            "pe_ratio": 344.45453,
+            "float_shares": 2819186930,
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "beta": 1.845
+          },
+          "timestamp": "2026-09-23T13:03:25.341451+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "6758.T",
+      "action": "SELL",
+      "confidence": 0.72,
+      "signal_count": 2,
+      "alerts": [
+        "momentum_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681063+00:00",
+      "name": "Sony Group",
+      "name_jp": "\u30bd\u30cb\u30fc\u30b0\u30eb\u30fc\u30d7",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.4,
+          "alert": false,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "down",
+              "change_pct": -2.02,
+              "confidence": 0.404
+            }
+          ],
+          "price": {
+            "open": 3771.0,
+            "close": 3695.0,
+            "change": -76.0,
+            "change_pct": -2.02,
+            "high": 3776.0,
+            "low": 3676.0,
+            "volume": 158000
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:23.471000+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "rsi_oversold",
+              "value": 29.84,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 3718.0,
+            "close": 3697.0,
+            "change": -21.0,
+            "change_pct": -0.56,
+            "high": 4070.0,
+            "low": 3582.0,
+            "volume": 15142800
+          },
+          "indicators": {
+            "rsi": 29.84,
+            "macd_signal": null,
+            "sma20": 3806.7,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:23.856580+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "7203.T",
+      "action": "WATCH",
+      "confidence": 0.7,
+      "signal_count": 1,
+      "alerts": [
+        "dd_agent"
+      ],
+      "agents": [
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681058+00:00",
+      "name": "Toyota Motor",
+      "name_jp": "\u30c8\u30e8\u30bf\u81ea\u52d5\u8eca",
+      "details": [
+        {
+          "agent": "dd_agent",
+          "confidence": 0.7,
+          "alert": true,
+          "signals": [
+            {
+              "type": "potential_undervalued",
+              "pe_ratio": 8.605729,
+              "confidence": 0.7
+            }
+          ],
+          "price": {
+            "open": 3047.0,
+            "close": 3013.0,
+            "change": -34.0,
+            "change_pct": -1.12,
+            "high": 3068.0,
+            "low": 2999.0,
+            "volume": 764000
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 35821549780992,
+            "pe_ratio": 8.605729,
+            "float_shares": 10918525890,
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "beta": 0.337
+          },
+          "timestamp": "2026-09-23T13:04:22.678245+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "9983.T",
+      "action": "WATCH",
+      "confidence": 0.64,
+      "signal_count": 2,
+      "alerts": [
+        "momentum_agent"
+      ],
+      "agents": [
+        "early_detector",
+        "momentum_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681077+00:00",
+      "name": "Fast Retailing",
+      "name_jp": "\u30d5\u30a1\u30fc\u30b9\u30c8\u30ea\u30c6\u30a4\u30ea\u30f3\u30b0",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.47,
+          "alert": false,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 2.36,
+              "confidence": 0.472
+            }
+          ],
+          "price": {
+            "open": 66450.0,
+            "close": 68020.0,
+            "change": 1570.0,
+            "change_pct": 2.36,
+            "high": 68360.0,
+            "low": 65990.0,
+            "volume": 12800
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:29.596548+00:00"
+        },
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "rsi_oversold",
+              "value": 25.69,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 74674.4765625,
+            "close": 67680.0,
+            "change": -6994.4765625,
+            "change_pct": -9.37,
+            "high": 76595.84467176849,
+            "low": 65010.0,
+            "volume": 1275100
+          },
+          "indicators": {
+            "rsi": 25.69,
+            "macd_signal": null,
+            "sma20": 69201.86,
+            "sma50": null
+          },
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:29.993052+00:00"
+        }
+      ]
+    },
+    {
+      "symbol": "DUOL",
+      "action": "BUY",
+      "confidence": 0.62,
+      "signal_count": 2,
+      "alerts": [],
+      "agents": [
+        "early_detector",
+        "dd_agent"
+      ],
+      "timestamp": "2026-09-23T13:05:24.681036+00:00",
+      "name": "Duolingo",
+      "details": [
+        {
+          "agent": "early_detector",
+          "confidence": 0.43,
+          "alert": false,
+          "signals": [
+            {
+              "type": "early_movement",
+              "direction": "up",
+              "change_pct": 2.16,
+              "confidence": 0.43200000000000005
+            }
+          ],
+          "price": {
+            "open": 144.5800018310547,
+            "close": 147.7100067138672,
+            "change": 3.1300048828125,
+            "change_pct": 2.16,
+            "high": 152.67999267578125,
+            "low": 141.86000061035156,
+            "volume": 57591
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "timestamp": "2026-09-23T13:04:09.717779+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.6,
+          "alert": false,
+          "signals": [
+            {
+              "type": "low_float",
+              "float_shares": 39972785,
+              "confidence": 0.6
+            }
+          ],
+          "price": {
+            "open": 150.07000732421875,
+            "close": 147.7100067138672,
+            "change": -2.3600006103515625,
+            "change_pct": -1.57,
+            "high": 152.67999267578125,
+            "low": 141.86000061035156,
+            "volume": 57591
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 6882269696,
+            "pe_ratio": 17.459812,
+            "float_shares": 39972785,
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "beta": 0.89
+          },
+          "timestamp": "2026-09-23T13:04:10.835214+00:00"
+        }
+      ]
+    }
+  ],
+  "total_recommendations": 43
+}
