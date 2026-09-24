@@ -576,7 +576,7 @@
     }
     .card-head:hover { background: rgba(255, 255, 255, .03); }
     .card-head:active { background: rgba(255, 255, 255, .06); }
-    .card-head:active .sym-t { transform: scale(.97); }
+    .card-head:active .sym-name { transform: scale(.97); }
     .card-head:focus-visible { outline: none; box-shadow: inset var(--ring); }
 
     /* coloured action rail */
@@ -595,27 +595,31 @@
     .card.act-watch { --accent: var(--watch); --accent-soft: rgba(245, 181, 68, .16); }
 
     .sym { display: flex; flex-direction: column; min-width: 0; gap: 3px; }
-    .sym-t {
-        font-size: 1.22rem;
-        font-weight: 800;
-        letter-spacing: -.02em;
-        line-height: 1.1;
-        transform-origin: left center;
-        transition: transform .25s var(--ease);
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-    }
-    .sym-flag { font-size: .78rem; filter: saturate(.9); }
     .sym-name {
-        font-size: .8rem;
-        color: var(--muted);
+        font-size: 1.1rem;
+        font-weight: 800;
+        letter-spacing: -.01em;
+        line-height: 1.25;
+        color: var(--text);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        transform-origin: left center;
+        transition: transform .25s var(--ease);
     }
-    .sym-name .n-jp { font-weight: 600; }
-    .sym-name .n-en { color: var(--faint); }
+    .sym-name .n-jp { font-weight: 800; }
+    .sym-name .n-en { font-weight: 500; color: var(--muted); font-size: .82em; }
+    .sym-t {
+        font-size: .82rem;
+        font-weight: 700;
+        letter-spacing: -.01em;
+        line-height: 1.1;
+        color: var(--muted);
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .sym-flag { font-size: .72rem; filter: saturate(.9); }
     .sym-sub {
         display: flex;
         align-items: center;
@@ -918,7 +922,7 @@
         .mark svg { width: 20px; height: 20px; }
         .brand-sub { display: none; }
         .card-head { gap: 10px; padding: 13px 13px 13px 16px; }
-        .sym-t { font-size: 1.08rem; }
+        .sym-name { font-size: 1rem; }
         .sym-name .n-en { display: none; }
         .row-end { gap: 9px; }
         .ring { width: 38px; height: 38px; }
@@ -958,8 +962,8 @@
             <circle cx="12" cy="17" r="1" fill="currentColor" stroke="none"/>
         </svg>
         <span>
-            <span class="jp"><strong>免責事項:</strong> 本ページの内容は情報提供のみを目的としたものであり、投資助言ではありません。自動生成されたシグナルであり、将来の成果を保証するものではありません。投資判断はご自身の責任で行ってください。</span>
-            <span class="en"><strong>Disclaimer:</strong> Generated signals for informational purposes only — not financial advice. Automated output carries no guarantee of future performance. Always do your own research before trading.</span>
+            <span class="jp"><strong>免責事項:</strong> 当ページに掲載する情報は情報提供を目的としたものであり、特定の銘柄の売買を勧誘するものではありません。掲載内容は自動生成されたシグナルであり、その正確性・完全性および将来の成果を保証するものではありません。投資に関する最終判断は、ご自身の責任において行ってください。</span>
+            <span class="en">For informational purposes only — not a solicitation to buy or sell. Automatically generated signals carry no guarantee of accuracy or future performance. Please make your own investment decisions.</span>
         </span>
     </div>
 
@@ -1488,7 +1492,9 @@
             if (jpName || enName) {
                 nameHtml = '<span class="sym-name">'
                     + (jpName ? '<span class="n-jp">' + html(jpName) + '</span>' : '')
-                    + (enName && enName !== jpName ? '<span class="n-en">' + (jpName ? ' · ' : '') + html(enName) + '</span>' : '')
+                    + (enName && enName !== jpName
+                        ? '<span class="' + (jpName ? 'n-en' : 'n-jp') + '">' + (jpName ? ' · ' : '') + html(enName) + '</span>'
+                        : '')
                     + '</span>';
             }
             var sub = (agents.length ? agents.length + (agents.length === 1 ? ' agent' : ' agents') : 'agent stack pending')
@@ -1499,8 +1505,8 @@
                 + '  <span class="rail" aria-hidden="true"></span>'
                 + '  <button class="card-head" type="button" aria-expanded="' + isOpen + '" aria-controls="panel-' + symbol + '">'
                 + '    <span class="sym">'
-                + '      <span class="sym-t"><span class="sym-flag" aria-hidden="true">' + (isJapanSymbol(rawSymbol) ? '🇯🇵' : '🇺🇸') + '</span>' + symbolLabel + '</span>'
                 + nameHtml
+                + '      <span class="sym-t"><span class="sym-flag" aria-hidden="true">' + (isJapanSymbol(rawSymbol) ? '🇯🇵' : '🇺🇸') + '</span>' + symbolLabel + '</span>'
                 + '      <span class="sym-sub">' + html(sub) + '</span>'
                 + '    </span>'
                 + '    <span class="row-end">'
