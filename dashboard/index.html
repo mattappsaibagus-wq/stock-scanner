@@ -806,6 +806,7 @@
         color: var(--faint);
     }
     .card-foot .sep { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: .6; }
+    .price-age { margin: -4px 0 12px; padding-top: 0; border-top: none; }
 /* ============================================================
        Loading / empty / error states
        ============================================================ */
@@ -1413,7 +1414,12 @@
             })[0];
             if (priced) {
                 var p = priced.price;
-                blocks.push('<div class="sec-title">Price snapshot</div>' + metricGrid([
+                var priceAge = priced.timestamp
+                    ? '<div class="card-foot price-age"><span data-price-ts="' + html(priced.timestamp) + '">Data as of '
+                        + html(timeAgo(priced.timestamp)) + '</span><span class="sep" aria-hidden="true"></span><span>'
+                        + html(localTime(priced.timestamp)) + '</span></div>'
+                    : '';
+                blocks.push('<div class="sec-title">Price snapshot</div>' + priceAge + metricGrid([
                     ['Last', money(p.close, sym)],
                     ['Change', signed(p.change_pct), Number(p.change_pct) >= 0 ? 'pos' : 'neg'],
                     ['Session high', money(p.high, sym)],
@@ -1754,6 +1760,9 @@
             }
             Array.prototype.forEach.call(document.querySelectorAll('.card-foot [data-ts]'), function (node) {
                 node.textContent = 'Detected ' + timeAgo(node.getAttribute('data-ts'));
+            });
+            Array.prototype.forEach.call(document.querySelectorAll('[data-price-ts]'), function (node) {
+                node.textContent = 'Data as of ' + timeAgo(node.getAttribute('data-price-ts'));
             });
         }
 
