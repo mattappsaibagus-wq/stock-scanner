@@ -83,17 +83,20 @@ def main():
         # fixes a latent bug where momentum's old 1mo-only fetch (~22 rows)
         # could never actually satisfy its own 50-day SMA check.
         daily_hist = fetch_yf_history(symbol, period="6mo", interval="1d")
+        previous_close = None
         if daily_hist is not None and not daily_hist.empty:
             reference_prices[symbol] = float(daily_hist["Close"].iloc[-1])
             momentum_hist = daily_hist.tail(90)
+            if len(daily_hist) >= 2:
+                previous_close = float(daily_hist["Close"].iloc[-2])
         else:
             momentum_hist = None
 
-        early_result = early_detector.analyze(symbol)
-        momentum_result = momentum_agent.analyze(symbol, data={"history": momentum_hist} if momentum_hist is not None else None)
+        early_result = early_detector.analyze(symbol, data={"previous_close": previous_close})
+        momentum_result = momentum_agent.analyze(symbol, data={"history": momentum_hist, "previous_close": previous_close} if momentum_hist is not None else {"previous_close": previous_close})
         news_result = news_scanner.analyze(symbol)
-        dd_result = dd_agent.analyze(symbol)
-        pattern_result = pattern_agent.analyze(symbol, data={"pattern_history": daily_hist} if daily_hist is not None else None)
+        dd_result = dd_agent.analyze(symbol, data={"previous_close": previous_close})
+        pattern_result = pattern_agent.analyze(symbol, data={"pattern_history": daily_hist, "previous_close": previous_close} if daily_hist is not None else {"previous_close": previous_close})
         sector_result = sector_agent.analyze(symbol)
         sentiment_result = sentiment_agent.analyze(symbol)
 

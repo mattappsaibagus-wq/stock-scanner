@@ -25,11 +25,12 @@ class PatternAgent(BaseAgent):
         hist = data.get("pattern_history") if data else None
         if hist is None:
             hist = fetch_yf_history(symbol, period="6mo", interval="1d")
+        previous_close = data.get("previous_close") if data else None
 
         if hist is None or hist.empty or len(hist) < self.lookback + 2:
             return None
 
-        price_info = get_price_change(hist)
+        price_info = get_price_change(hist, previous_close=previous_close)
         if price_info is None:
             return None
 

@@ -16,8 +16,9 @@ class DdAgent(BaseAgent):
         hist = data.get("history") if data else None
         if hist is None:
             hist = fetch_yf_history(symbol, period="5d", interval="5m")
+        previous_close = data.get("previous_close") if data else None
 
-        price_info = get_price_change(hist)
+        price_info = get_price_change(hist, previous_close=previous_close)
         if price_info is None:
             return None
 

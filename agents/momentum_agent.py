@@ -18,11 +18,12 @@ class MomentumAgent(BaseAgent):
         hist = data.get("history") if data else None
         if hist is None:
             hist = fetch_yf_history(symbol, period="1mo", interval="1d")
+        previous_close = data.get("previous_close") if data else None
 
         if hist is None or hist.empty:
             return None
 
-        price_info = get_price_change(hist)
+        price_info = get_price_change(hist, previous_close=previous_close)
         if price_info is None:
             return None
 

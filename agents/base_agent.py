@@ -152,22 +152,53 @@ def _fetch_simple_history(symbol, period="5d"):
         return None
 
 
-def get_price_change(hist):
+def get_price_change(hist, previous_close=None):
+    """Summarizes a price history window into open/close/change/high/low/volume.
+
+    `change`/`change_pct` are computed against `previous_close` (the actual
+    previous trading day's official close) when provided - this matches how
+    every real market site defines "change," and is NOT the same as the
+    first bar of whatever window `hist` happens to cover. The earlier
+    version used that first bar as the reference point, which meant a
+    3-day intraday fetch reported a 3-day change as "the change," a 5-day
+    fetch reported a 5-day change, and so on - each agent silently
+    disagreeing with the others and with any real market source, even at
+    the same moment in time.
+
+    When `hist` spans more than one calendar day (e.g. a multi-day
+    intraday window fetched for signal detection), high/low/volume are
+    also narrowed to just the most recent session's rows, so "session
+    high/low" means today's session, not the whole fetched window - and
+    volume is summed across that session rather than returning a single
+    bar's volume.
+    """
     if hist is None or hist.empty:
         return None
     try:
-        first = hist["Close"].iloc[0]
-        last = hist["Close"].iloc[-1]
-        change = last - first
-        pct = (change / first) * 100 if first != 0 else 0
+        last_date = hist.index[-1].date()
+        session = hist[hist.index.map(lambda ts: ts.date()) == last_date]
+        if session.empty:
+            session = hist
+
+        last = float(hist["Close"].iloc[-1])
+
+        if previous_close is not None and previous_close != 0:
+            change = last - float(previous_close)
+            pct = (change / float(previous_close)) * 100
+        else:
+            first = float(hist["Close"].iloc[0])
+            change = last - first
+            pct = (change / first) * 100 if first != 0 else 0
+
         return {
-            "open": float(first),
-            "close": float(last),
+            "open": float(session["Close"].iloc[0]),
+            "close": last,
             "change": float(change),
             "change_pct": round(float(pct), 2),
-            "high": float(hist["High"].max()),
-            "low": float(hist["Low"].min()),
-            "volume": int(hist["Volume"].iloc[-1]) if "Volume" in hist.columns else 0,
+            "high": float(session["High"].max()),
+            "low": float(session["Low"].min()),
+            "volume": int(session["Volume"].sum()) if "Volume" in session.columns else 0,
+            "previous_close": float(previous_close) if previous_close is not None else None,
         }
     except Exception:
         return None
