@@ -21,7 +21,7 @@ import json
 import os
 from datetime import datetime, timezone, timedelta
 
-from agents.base_agent import fetch_yf_history
+from agents.base_agent import fetch_yf_history, _sanitize
 from agents.signal_taxonomy import signal_direction
 from agents.weight_learner import WeightLearner
 
@@ -84,8 +84,9 @@ class LearningLoop:
             price = None
             try:
                 hist = fetch_yf_history(symbol, period="5d", interval="1d")
-                if hist is not None and not hist.empty:
-                    price = float(hist["Close"].iloc[-1])
+                closes = hist["Close"].dropna() if hist is not None and not hist.empty else None
+                if closes is not None and not closes.empty:
+                    price = float(closes.iloc[-1])
             except Exception:
                 price = None
             price_cache[symbol] = price
@@ -246,7 +247,10 @@ class LearningLoop:
 
     def _save_predictions(self, history):
         with open(self.predictions_file, "w") as f:
-            json.dump(history, f, indent=2, default=str, allow_nan=False)
+            # _sanitize turns any stray NaN/inf into null instead of crashing the
+            # whole scan (a NaN here aborted the 2026-09-25 run before data.json
+            # was written, leaving the dashboard on midday prices).
+            json.dump(_sanitize(history), f, indent=2, default=str, allow_nan=False)
 
     def _load_weights(self):
         if os.path.exists(self.weights_file):
@@ -259,4 +263,4 @@ class LearningLoop:
 
     def _save_weights(self, weight_memory):
         with open(self.weights_file, "w") as f:
-            json.dump(weight_memory, f, indent=2, default=str, allow_nan=False)
+            json.dump(_sanitize(weight_memory), f, indent=2, default=str, allow_nan=False)
