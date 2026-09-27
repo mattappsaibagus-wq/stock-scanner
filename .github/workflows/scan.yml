@@ -71,15 +71,25 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain -- dashboard/data.json)" ]; then
+          # data.json is regenerated from scratch every run, so this run's copy
+          # always wins. Move onto the latest main first (another run or a code
+          # push may have landed while we scanned) instead of rebasing, which
+          # conflicts whenever two runs both touched data.json.
+          cp dashboard/data.json "$RUNNER_TEMP/data.json"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp "$RUNNER_TEMP/data.json" dashboard/data.json
+            if [ -z "$(git status --porcelain -- dashboard/data.json)" ]; then
+              echo "No change to dashboard/data.json, skipping commit"
+              break
+            fi
             git add dashboard/data.json
             git commit -m "Update dashboard data.json [skip ci]"
-            # Rebase onto anything pushed while this run was scanning.
-            git pull --rebase origin main
-            git push
-          else
-            echo "No change to dashboard/data.json, skipping commit"
-          fi
+            git push origin HEAD:main && break
+            echo "Push raced with another commit, retrying ($attempt/3)"
+            sleep 5
+          done
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
