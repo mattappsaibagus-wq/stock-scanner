@@ -84,11 +84,15 @@ def main():
         # could never actually satisfy its own 50-day SMA check.
         daily_hist = fetch_yf_history(symbol, period="6mo", interval="1d")
         previous_close = None
-        if daily_hist is not None and not daily_hist.empty:
-            reference_prices[symbol] = float(daily_hist["Close"].iloc[-1])
+        # Yahoo sometimes returns a trailing row with a NaN close (common for
+        # Tokyo tickers around the session boundary). Price off the last real
+        # close so a NaN never becomes the reference price.
+        closes = daily_hist["Close"].dropna() if daily_hist is not None and not daily_hist.empty else None
+        if closes is not None and not closes.empty:
+            reference_prices[symbol] = float(closes.iloc[-1])
             momentum_hist = daily_hist.tail(90)
-            if len(daily_hist) >= 2:
-                previous_close = float(daily_hist["Close"].iloc[-2])
+            if len(closes) >= 2:
+                previous_close = float(closes.iloc[-2])
         else:
             momentum_hist = None
 
