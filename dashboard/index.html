@@ -119,6 +119,25 @@
     .disclaimer .jp { display: block; }
     .disclaimer .en { display: block; color: #b8ac8a; margin-top: 2px; }
 /* ============================================================
+       Data freshness banner (shown only when prices are behind)
+       ============================================================ */
+    .freshness {
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+        padding: 11px 14px;
+        border: 1px solid rgba(255, 84, 90, .38);
+        border-radius: 13px;
+        background: rgba(255, 84, 90, .09);
+        font-size: .8rem;
+        line-height: 1.5;
+        color: var(--text);
+    }
+    .freshness[hidden] { display: none; }
+    .freshness svg { width: 16px; height: 16px; flex: none; margin-top: 2px; color: var(--danger); }
+    .freshness strong { font-weight: 700; }
+    .freshness .en { display: block; color: var(--muted); margin-top: 2px; }
+/* ============================================================
        Top bar
        ============================================================ */
     .topbar {
@@ -1004,11 +1023,22 @@
             <p>Seven specialized agents sweep price action, momentum, chart patterns, sector relative strength, analyst sentiment, news and fundamentals across Japanese and US markets — a regime-aware, self-learning advisor distils them into ranked Buy / Watch / Sell calls. Tap a row to open its dossier.</p>
         </div>
         <div class="hero-meta">
-            <span class="chip">Updated <strong id="chip-updated">--</strong></span>
+            <span class="chip" title="When the scanner last pulled prices from Yahoo Finance">Prices as of <strong id="chip-updated">--</strong></span>
             <span class="chip" id="chip-regime-wrap" style="display:none">Regime <strong id="chip-regime">--</strong></span>
-            <span class="chip">Auto <strong>60s</strong></span>
+            <span class="chip" title="The page checks for a newer scan every 60 seconds. Prices only change when the scanner runs.">Rechecks <strong>60s</strong></span>
         </div>
     </section>
+
+    <div class="freshness" id="freshness" role="alert" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <polyline points="12 7 12 12 15.5 14"/>
+        </svg>
+        <span>
+            <span class="jp" id="freshness-jp"></span>
+            <span class="en" id="freshness-en"></span>
+        </span>
+    </div>
 
 <!-- ==================== KPI tiles ==================== -->
     <section class="stats" aria-label="Signal summary">
@@ -1159,7 +1189,7 @@
         ['signal-container', 'live-region', 'total-signals', 'buy-count', 'watch-count', 'sell-count',
          'count-all', 'count-buy', 'count-watch', 'count-sell', 'search', 'search-wrap', 'search-clear',
          'sort-btn', 'segment-glider', 'refresh-btn', 'status-text', 'status-dot', 'chip-updated',
-         'chip-regime', 'chip-regime-wrap',
+         'chip-regime', 'chip-regime-wrap', 'freshness', 'freshness-jp', 'freshness-en',
          'foot-count', 'loader-line'].forEach(function (id) {
             dom[id.replace(/-([a-z])/g, function (m, c) { return c.toUpperCase(); })] = document.getElementById(id);
         });
@@ -1697,6 +1727,99 @@
             renderList();
             announce(labels[state.sort].replace('Sort: ', 'Sorted by '));
         }
+/* ---------------- data freshness ---------------- */
+
+        /* Minutes to add to UTC to get local time in `tz` at instant `date`. */
+        function tzOffsetMin(date, tz) {
+            var parts = {};
+            new Intl.DateTimeFormat('en-US', {
+                timeZone: tz, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+            }).formatToParts(date).forEach(function (p) { parts[p.type] = p.value; });
+            var asUtc = Date.UTC(+parts.year, +parts.month - 1, +parts.day, +parts.hour, +parts.minute, +parts.second);
+            return Math.round((asUtc - date.getTime()) / 60000);
+        }
+
+        /* The most recent weekday session close (local hh:mm in tz) at or before `now`.
+           Exchange holidays are not modelled, so a holiday reads as a missed close. */
+        function lastClose(now, tz, hh, mm) {
+            for (var back = 0; back < 8; back++) {
+                var probe = new Date(now.getTime() - back * 86400000);
+                var off = tzOffsetMin(probe, tz);
+                var local = new Date(probe.getTime() + off * 60000);
+                var dow = local.getUTCDay();
+                if (dow === 0 || dow === 6) continue;
+                var closeUtc = Date.UTC(local.getUTCFullYear(), local.getUTCMonth(), local.getUTCDate(), hh, mm) - off * 60000;
+                if (closeUtc <= now.getTime()) return new Date(closeUtc);
+            }
+            return null;
+        }
+
+        function inSession(now, tz, openH, openM, closeH, closeM) {
+            var local = new Date(now.getTime() + tzOffsetMin(now, tz) * 60000);
+            var dow = local.getUTCDay();
+            if (dow === 0 || dow === 6) return false;
+            var mins = local.getUTCHours() * 60 + local.getUTCMinutes();
+            return mins >= openH * 60 + openM && mins < closeH * 60 + closeM;
+        }
+
+        function fmtJst(date) {
+            return new Intl.DateTimeFormat('ja-JP', {
+                timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'
+            }).format(date) + ' JST';
+        }
+
+        function fmtDay(date, tz, locale) {
+            return new Intl.DateTimeFormat(locale, { timeZone: tz, month: locale === 'ja-JP' ? 'numeric' : 'short', day: 'numeric' }).format(date);
+        }
+
+        var MARKETS = [
+            { key: 'jp', jp: '東証', en: 'Tokyo', tz: 'Asia/Tokyo', open: [9, 0], close: [15, 30] },
+            { key: 'us', jp: '米国市場', en: 'US', tz: 'America/New_York', open: [9, 30], close: [16, 0] }
+        ];
+        var LIVE_TOLERANCE_MIN = 90;
+
+        /* Returns null when data is current, otherwise { jp, en } warning text. */
+        function freshnessIssue(generatedAt, now) {
+            if (!generatedAt) return null;
+            var gen = new Date(generatedAt);
+            if (isNaN(gen.getTime())) return null;
+            var asOfJp = fmtJst(gen);
+            var jp = [], en = [];
+
+            MARKETS.forEach(function (m) {
+                var close = lastClose(now, m.tz, m.close[0], m.close[1]);
+                if (close && gen < close) {
+                    jp.push(fmtDay(close, m.tz, 'ja-JP') + 'の' + m.jp + '終値が未反映');
+                    en.push('missing the ' + m.en + ' close of ' + fmtDay(close, m.tz, 'en-US'));
+                } else if (inSession(now, m.tz, m.open[0], m.open[1], m.close[0], m.close[1])
+                           && (now - gen) / 60000 > LIVE_TOLERANCE_MIN) {
+                    var hrs = Math.round((now - gen) / 3600000 * 10) / 10;
+                    jp.push(m.jp + 'の取引中価格より約' + hrs + '時間遅れ');
+                    en.push('about ' + hrs + 'h behind live ' + m.en + ' trading');
+                }
+            });
+
+            if (!jp.length) return null;
+            return {
+                jp: '<strong>価格データが古くなっています。</strong> ' + asOfJp + '時点の価格です(' + jp.join('、') + ')。売買の判断には証券会社のリアルタイム株価をご確認ください。',
+                en: 'Prices are from ' + asOfJp + ', ' + en.join(' and ') + '. Check your broker\'s live quote before trading.'
+            };
+        }
+
+        function renderFreshness() {
+            if (!dom.freshness) return false;
+            var issue = freshnessIssue(state.generatedAt, new Date());
+            if (issue) {
+                dom.freshnessJp.innerHTML = issue.jp;
+                dom.freshnessEn.textContent = issue.en;
+                dom.freshness.hidden = false;
+            } else {
+                dom.freshness.hidden = true;
+            }
+            return !!issue;
+        }
+
 /* ---------------- refresh + status ---------------- */
 
         function setStatus(text, kind) {
@@ -1754,10 +1877,11 @@
 
         function updateTimes() {
             if (dom.chipUpdated) {
-                dom.chipUpdated.textContent = state.lastLoaded
-                    ? timeAgo(new Date(state.lastLoaded).toISOString())
+                dom.chipUpdated.textContent = state.generatedAt
+                    ? fmtJst(new Date(state.generatedAt)) + ' (' + timeAgo(state.generatedAt) + ')'
                     : '--';
             }
+            if (state.recs.length) renderFreshness();
             Array.prototype.forEach.call(document.querySelectorAll('.card-foot [data-ts]'), function (node) {
                 node.textContent = 'Detected ' + timeAgo(node.getAttribute('data-ts'));
             });
@@ -1798,7 +1922,8 @@
                         if (!stillThere) state.open = null;
                     }
                     render();
-                    setStatus('Live', 'live');
+                    var isStale = renderFreshness();
+                    setStatus(isStale ? 'Stale' : 'Current', isStale ? 'stale' : 'live');
                     announce(recs.length + (recs.length === 1 ? ' signal' : ' signals') + ' loaded');
                 })
                 .catch(function (error) {
