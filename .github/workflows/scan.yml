@@ -2,10 +2,21 @@ name: Stock Scan
 
 on:
   schedule:
-    # US session: 14:00 UTC Mon-Fri (10:00 ET, after Tokyo close same day)
+    # All times UTC. GitHub can start scheduled runs late (sometimes hours),
+    # so every run records its real time in data.json as generated_at and the
+    # dashboard flags anything that missed the latest close.
+    #
+    # Tokyo lunch break: 02:45 UTC = 11:45 JST (morning session complete).
+    # Replaces the old 00:00 UTC (09:00 JST) run, which fired at the open while
+    # Yahoo's ~20 min delay still showed the previous day's prices.
+    - cron: '45 2 * * 1-5'
+    # Tokyo after close: 06:45 UTC = 15:45 JST (TSE closes 15:30 JST).
+    # This is the run that captures the official Tokyo close.
+    - cron: '45 6 * * 1-5'
+    # US session: 14:00 UTC Mon-Fri (US morning; also re-confirms Tokyo close)
     - cron: '0 14 * * 1-5'
-    # Tokyo session open: 00:00 UTC Mon-Fri (09:00 JST)
-    - cron: '0 0 * * 1-5'
+    # US after close: 21:30 UTC (after 16:00 ET in both EDT and EST)
+    - cron: '30 21 * * 1-5'
   workflow_dispatch:
   # Redeploy Pages whenever the scanner or the dashboard itself changes, so UI
   # updates go live immediately instead of waiting for the next weekday scan.
@@ -18,6 +29,11 @@ on:
       - 'requirements.txt'
       - 'watchlist.txt'
       - '.github/workflows/scan.yml'
+
+# Never run two scans at once: overlapping runs race to push data.json.
+concurrency:
+  group: stock-scan
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -58,6 +74,8 @@ jobs:
           if [ -n "$(git status --porcelain -- dashboard/data.json)" ]; then
             git add dashboard/data.json
             git commit -m "Update dashboard data.json [skip ci]"
+            # Rebase onto anything pushed while this run was scanning.
+            git pull --rebase origin main
             git push
           else
             echo "No change to dashboard/data.json, skipping commit"
@@ -77,10 +95,17 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Trigger Render redeploy (keeps mirror site fresh)
-        if: ${{ env.RENDER_DEPLOY_HOOK != '' }}
+        # The hook is read inside the script: a step's own env isn't visible to
+        # its `if:`, so the old `if: env.RENDER_DEPLOY_HOOK != ''` never ran.
         env:
           RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
         run: |
-          curl -fsS -X POST "$RENDER_DEPLOY_HOOK" \
-            && echo "Render deploy triggered" \
-            || echo "WARN: Render deploy hook failed (non-fatal - Pages deploy already succeeded)"
+          if [ -z "$RENDER_DEPLOY_HOOK" ]; then
+            echo "::warning::RENDER_DEPLOY_HOOK secret is not set - tokyostockradar.onrender.com will not update"
+            exit 0
+          fi
+          if curl -fsS -X POST "$RENDER_DEPLOY_HOOK"; then
+            echo "Render deploy triggered"
+          else
+            echo "::warning::Render deploy hook failed (Pages deploy already succeeded)"
+          fi
