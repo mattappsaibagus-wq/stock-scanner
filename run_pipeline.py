@@ -71,6 +71,7 @@ def main():
 
     all_results = []
     reference_prices = {}
+    failed_symbols = []
 
     for idx, symbol in enumerate(symbols):
         if idx:
@@ -82,33 +83,49 @@ def main():
         # longer window and let momentum use the tail of it. This also
         # fixes a latent bug where momentum's old 1mo-only fetch (~22 rows)
         # could never actually satisfy its own 50-day SMA check.
-        daily_hist = fetch_yf_history(symbol, period="6mo", interval="1d")
-        previous_close = None
-        # Yahoo sometimes returns a trailing row with a NaN close (common for
-        # Tokyo tickers around the session boundary). Price off the last real
-        # close so a NaN never becomes the reference price.
-        closes = daily_hist["Close"].dropna() if daily_hist is not None and not daily_hist.empty else None
-        if closes is not None and not closes.empty:
-            reference_prices[symbol] = float(closes.iloc[-1])
-            momentum_hist = daily_hist.tail(90)
-            if len(closes) >= 2:
-                previous_close = float(closes.iloc[-2])
-        else:
-            momentum_hist = None
+        # One bad ticker (or a Yahoo hiccup) must never kill the whole scan:
+        # skip it, log it, and keep going with the rest of the watchlist.
+        try:
+            daily_hist = fetch_yf_history(symbol, period="6mo", interval="1d")
+            previous_close = None
+            # Yahoo sometimes returns a trailing row with a NaN close (common for
+            # Tokyo tickers around the session boundary). Price off the last real
+            # close so a NaN never becomes the reference price.
+            closes = daily_hist["Close"].dropna() if daily_hist is not None and not daily_hist.empty else None
+            if closes is not None and not closes.empty:
+                reference_prices[symbol] = float(closes.iloc[-1])
+                momentum_hist = daily_hist.tail(90)
+                if len(closes) >= 2:
+                    previous_close = float(closes.iloc[-2])
+            else:
+                momentum_hist = None
 
-        early_result = early_detector.analyze(symbol, data={"previous_close": previous_close})
-        momentum_result = momentum_agent.analyze(symbol, data={"history": momentum_hist, "previous_close": previous_close} if momentum_hist is not None else {"previous_close": previous_close})
-        news_result = news_scanner.analyze(symbol)
-        dd_result = dd_agent.analyze(symbol, data={"previous_close": previous_close})
-        pattern_result = pattern_agent.analyze(symbol, data={"pattern_history": daily_hist, "previous_close": previous_close} if daily_hist is not None else {"previous_close": previous_close})
-        sector_result = sector_agent.analyze(symbol)
-        sentiment_result = sentiment_agent.analyze(symbol)
+            early_result = early_detector.analyze(symbol, data={"previous_close": previous_close})
+            momentum_result = momentum_agent.analyze(symbol, data={"history": momentum_hist, "previous_close": previous_close} if momentum_hist is not None else {"previous_close": previous_close})
+            news_result = news_scanner.analyze(symbol)
+            dd_result = dd_agent.analyze(symbol, data={"previous_close": previous_close})
+            pattern_result = pattern_agent.analyze(symbol, data={"pattern_history": daily_hist, "previous_close": previous_close} if daily_hist is not None else {"previous_close": previous_close})
+            sector_result = sector_agent.analyze(symbol)
+            sentiment_result = sentiment_agent.analyze(symbol)
 
-        symbol_results = [early_result, momentum_result, news_result, dd_result,
-                           pattern_result, sector_result, sentiment_result]
-        for r in symbol_results:
-            if r:
-                all_results.append(r)
+            symbol_results = [early_result, momentum_result, news_result, dd_result,
+                               pattern_result, sector_result, sentiment_result]
+            for r in symbol_results:
+                if r:
+                    all_results.append(r)
+        except Exception as e:
+            failed_symbols.append(symbol)
+            print(f"[Kaito Detector] WARNING: skipped {symbol} after error: {type(e).__name__}: {e}", flush=True)
+
+    # If Yahoo returned prices for less than half the watchlist, this run is
+    # broken data, not a market view. Exit without touching data.json so the
+    # dashboard keeps the last good scan (and shows STALE) instead of
+    # publishing a half-empty list.
+    priced = len(reference_prices)
+    print(f"[Kaito Detector] Price data for {priced}/{len(symbols)} symbols; {len(failed_symbols)} skipped after errors", flush=True)
+    if priced < len(symbols) * 0.5:
+        print("::error::Yahoo returned prices for fewer than half the watchlist - not publishing this run", flush=True)
+        sys.exit(1)
 
     print(f"[Kaito Detector] Collected {len(all_results)} agent results across {AGENT_COUNT} agents")
 
