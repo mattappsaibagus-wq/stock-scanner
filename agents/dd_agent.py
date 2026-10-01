@@ -2,6 +2,22 @@ from datetime import datetime, timezone
 from agents.base_agent import BaseAgent, fetch_yf_history, get_price_change, fetch_yf_info
 
 
+def _num(value, default=None):
+    """Coerce a Yahoo fundamentals field to a finite float.
+
+    Yahoo sometimes returns numbers as strings ("Infinity", "N/A", "1.2k"),
+    which used to crash the whole scan on comparisons like `pe_ratio < 10`.
+    Anything that isn't a finite number becomes `default`.
+    """
+    try:
+        v = float(value)
+    except (TypeError, ValueError):
+        return default
+    if v != v or v in (float("inf"), float("-inf")):
+        return default
+    return v
+
+
 class DdAgent(BaseAgent):
     """Conducts due diligence analysis on flagged stocks."""
 
@@ -66,10 +82,10 @@ class DdAgent(BaseAgent):
         if not info:
             return None
         return {
-            "market_cap": info.get("marketCap", 0),
-            "pe_ratio": info.get("trailingPE"),
-            "float_shares": info.get("floatShares", 0),
+            "market_cap": _num(info.get("marketCap"), 0),
+            "pe_ratio": _num(info.get("trailingPE")),
+            "float_shares": _num(info.get("floatShares"), 0),
             "sector": info.get("sector", "Unknown"),
             "industry": info.get("industry", "Unknown"),
-            "beta": info.get("beta"),
+            "beta": _num(info.get("beta")),
         }
