@@ -1,0 +1,19 @@
+# Netlify deploy for kaitoisland.netlify.app
+# Static dashboard only: no build step.
+[build]
+publish = "dashboard"
+command = ""
+
+# data.json is refreshed by GitHub Actions on every scan (commits marked
+# [skip ci], which Netlify also skips). Proxy it from GitHub Pages so the
+# Netlify site always shows the latest scan without spending a deploy.
+[[redirects]]
+from = "/data.json"
+to = "https://mattappsaibagus-wq.github.io/stock-scanner/data.json"
+status = 200
+force = true
+
+[[headers]]
+for = "/data.json"
+[headers.values]
+Cache-Control = "no-store"
