@@ -189,6 +189,7 @@ def main():
         "recommendations": recommendations,
         "total_recommendations": len(recommendations),
         "learning_stats": learning_result["stats"],
+        "track_record": learning_result.get("track_record"),
     }
     save_json(dashboard_report, dashboard_data_path)
     print(f"[Kaito Detector] Dashboard data saved to {dashboard_data_path}")
