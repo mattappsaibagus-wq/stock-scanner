@@ -66,6 +66,7 @@ class LearningLoop:
         return {
             "agent": self.name,
             "stats": stats,
+            "track_record": self._track_record(history),
             "weights_sample": self._weight_sample(weight_memory),
             "newly_settled_signals": len(newly_settled_signals),
             "newly_settled_recommendations": len(newly_settled_recs),
@@ -220,6 +221,99 @@ class LearningLoop:
             "accuracy_pct": round(accuracy, 1),
             "total_signal_predictions_logged": len(sig_preds),
             "resolved_signal_predictions": len(sig_resolved),
+        }
+
+    def _track_record(self, history):
+        """Per-signal / per-agent / per-action win rate and average return.
+
+        A call "wins" when the price moved the way it pointed: up for bullish
+        signals and BUY calls, down for bearish signals and SELL calls. Returns
+        are directional (a SELL that fell 2% counts as +2%) and measured from
+        the price at the call to the close when it was resolved (~1 trading
+        session later, see SETTLE_HOURS).
+
+        The scanner runs several times a day and a persistent signal (e.g.
+        analyst consensus) is re-logged on every run, so the same signal on the
+        same stock is counted once per day. Otherwise one stock could appear
+        four times and inflate the sample size.
+        """
+
+        def day_key(p, field):
+            return (p.get("symbol"), p.get(field), str(p.get("timestamp") or "")[:10])
+
+        def summarize(directional_returns):
+            n = len(directional_returns)
+            if not n:
+                return {"n": 0, "win_rate_pct": None, "avg_return_pct": None}
+            wins = sum(1 for r in directional_returns if r > 0)
+            return {
+                "n": n,
+                "win_rate_pct": round(wins / n * 100, 1),
+                "avg_return_pct": round(sum(directional_returns) / n, 2),
+            }
+
+        seen = set()
+        by_signal, by_agent, all_signals = {}, {}, []
+        pending_signals = 0
+        for p in history.get("signal_predictions", []):
+            if not p.get("resolved"):
+                pending_signals += 1
+                continue
+            ret = p.get("outcome_return_pct")
+            direction = p.get("direction")
+            if ret is None or direction not in (1, -1):
+                continue
+            key = day_key(p, "signal_type")
+            if key in seen:
+                continue
+            seen.add(key)
+            dret = ret * direction
+            sig = p.get("signal_type") or "unknown"
+            by_signal.setdefault((sig, direction), []).append(dret)
+            by_agent.setdefault(p.get("agent") or "unknown", []).append(dret)
+            all_signals.append(dret)
+
+        seen = set()
+        by_action = {"BUY": [], "SELL": [], "WATCH": []}
+        pending_recs = 0
+        for p in history.get("recommendation_predictions", []):
+            if not p.get("resolved"):
+                pending_recs += 1
+                continue
+            ret = p.get("outcome_return_pct")
+            action = p.get("action")
+            if ret is None or action not in by_action:
+                continue
+            key = day_key(p, "action")
+            if key in seen:
+                continue
+            seen.add(key)
+            # WATCH isn't a directional bet: report its raw move (win = rose).
+            by_action[action].append(-ret if action == "SELL" else ret)
+
+        signals = [
+            dict(signal_type=sig, side="bullish" if d == 1 else "bearish", **summarize(rets))
+            for (sig, d), rets in by_signal.items()
+        ]
+        signals.sort(key=lambda r: (-r["n"], r["signal_type"]))
+        agents = [dict(agent=a, **summarize(rets)) for a, rets in by_agent.items()]
+        agents.sort(key=lambda r: (-r["n"], r["agent"]))
+
+        timestamps = [
+            p.get("timestamp")
+            for p in history.get("recommendation_predictions", []) + history.get("signal_predictions", [])
+            if p.get("timestamp")
+        ]
+        return {
+            "horizon": "~1 trading session",
+            "dedupe": "same signal on the same stock counted once per day",
+            "tracking_since": min(timestamps) if timestamps else None,
+            "pending_signals": pending_signals,
+            "pending_recommendations": pending_recs,
+            "overall_signals": summarize(all_signals),
+            "by_action": {a: summarize(r) for a, r in by_action.items()},
+            "by_signal": signals,
+            "by_agent": agents,
         }
 
     def _weight_sample(self, weight_memory, top_n=8):
