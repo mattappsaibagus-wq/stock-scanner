@@ -67,7 +67,7 @@ jobs:
           name: signals
           path: data/signals.json
 
-      - name: Commit dashboard data.json
+      - name: Commit dashboard data.json + learning history
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -75,17 +75,36 @@ jobs:
           # always wins. Move onto the latest main first (another run or a code
           # push may have landed while we scanned) instead of rebasing, which
           # conflicts whenever two runs both touched data.json.
+          #
+          # The learning loop's memory (data/prediction_history.json and
+          # data/learning_state.json) is committed too. data/ is gitignored and
+          # every Actions run starts from a fresh checkout, so without this the
+          # history was wiped each run and no prediction was ever resolved
+          # (accuracy stuck at 0%). Force-adding just these two files keeps the
+          # rest of data/ ignored. Runs never overlap (concurrency group), so
+          # this run's copy is always the newest.
           cp dashboard/data.json "$RUNNER_TEMP/data.json"
+          mkdir -p "$RUNNER_TEMP/learn"
+          for f in prediction_history.json learning_state.json; do
+            if [ -f "data/$f" ]; then cp "data/$f" "$RUNNER_TEMP/learn/$f"; fi
+          done
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
             cp "$RUNNER_TEMP/data.json" dashboard/data.json
-            if [ -z "$(git status --porcelain -- dashboard/data.json)" ]; then
-              echo "No change to dashboard/data.json, skipping commit"
+            mkdir -p data
+            git add dashboard/data.json
+            for f in prediction_history.json learning_state.json; do
+              if [ -f "$RUNNER_TEMP/learn/$f" ]; then
+                cp "$RUNNER_TEMP/learn/$f" "data/$f"
+                git add -f "data/$f"
+              fi
+            done
+            if git diff --cached --quiet; then
+              echo "No change to dashboard data or learning history, skipping commit"
               break
             fi
-            git add dashboard/data.json
-            git commit -m "Update dashboard data.json [skip ci]"
+            git commit -m "Update dashboard data.json + learning history [skip ci]"
             git push origin HEAD:main && break
             echo "Push raced with another commit, retrying ($attempt/3)"
             sleep 5
