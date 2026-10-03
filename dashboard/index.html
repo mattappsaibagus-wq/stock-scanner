@@ -1202,7 +1202,8 @@
             dd_agent:       { label: 'Due Diligence',  short: 'DD', accent: 'var(--buy)' },
             pattern_agent:  { label: 'Pattern Agent',  short: 'PA', accent: 'var(--brand)' },
             sector_agent:   { label: 'Sector Agent',   short: 'SC', accent: 'var(--brand-2)' },
-            sentiment_agent:{ label: 'Analyst Sentiment', short: 'AS', accent: 'var(--buy)' }
+            sentiment_agent:{ label: 'Analyst Sentiment', short: 'AS', accent: 'var(--buy)' },
+            kronos_agent:   { label: 'Kronos Forecast', short: 'KR', accent: 'var(--watch)' }
         };
 
         var SIGNALS = {
@@ -1233,7 +1234,9 @@
             analyst_upgrade_trend: 'Analyst upgrades trending',
             analyst_downgrade_trend: 'Analyst downgrades trending',
             price_target_upside: 'Price target upside',
-            price_target_downside: 'Price target downside'
+            price_target_downside: 'Price target downside',
+            kronos_forecast_up: 'Kronos forecast: up',
+            kronos_forecast_down: 'Kronos forecast: down'
         };
 
         var ACTION_LABEL = { BUY: 'Buy', WATCH: 'Watch', SELL: 'Sell' };
@@ -1424,6 +1427,9 @@
             if (type === 'early_movement') {
                 cls = signal.direction === 'down' ? 't-down' : 't-up';
                 extra = '<b>' + signed(signal.change_pct) + '</b>';
+            } else if (type === 'kronos_forecast_up' || type === 'kronos_forecast_down') {
+                cls = type === 'kronos_forecast_down' ? 't-down' : 't-up';
+                extra = '<b>' + signed(signal.expected_move_pct) + '</b>';
             } else if (type === 'volume_spike') {
                 extra = '<b>' + fixed(signal.volume_ratio, 2) + '&times;</b> avg';
             } else if (type === 'rsi_overbought' || type === 'rsi_oversold') {
@@ -1541,6 +1547,18 @@
                     ['MACD', html(String(tech.macd_signal || '--'))],
                     ['SMA 20', money(tech.sma20, sym)],
                     ['SMA 50', money(tech.sma50, sym)]
+                ]));
+            }
+
+            var fc = details.map(function (d) { return d.forecast; }).filter(Boolean)[0];
+            if (fc) {
+                var rng = Array.isArray(fc.range_pct) && fc.range_pct.length === 2
+                    ? signed(fc.range_pct[0]) + ' … ' + signed(fc.range_pct[1]) : '--';
+                blocks.push('<div class="sec-title">Kronos forecast · ' + html(String(fc.target_date || '')) + ' close</div>' + metricGrid([
+                    ['Expected move', signed(fc.expected_move_pct), Number(fc.expected_move_pct) >= 0 ? 'pos' : 'neg'],
+                    ['10–90% range', rng],
+                    ['Paths agreeing', Math.round(clamp01(fc.path_agreement) * 100) + '<small>% of ' + (Number(fc.paths) || 0) + '</small>'],
+                    ['Move vs. daily vol', fc.move_vs_vol == null ? '--' : fixed(fc.move_vs_vol, 2) + '<small>σ</small>']
                 ]));
             }
 
