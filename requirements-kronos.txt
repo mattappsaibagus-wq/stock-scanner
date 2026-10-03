@@ -1,0 +1,12 @@
+# Optional: Kronos forecast agent (agents/kronos_agent.py).
+# Without these the scanner still runs; the Kronos agent just emits nothing.
+#
+# Install torch CPU-only first (the default PyPI wheel pulls ~2 GB of CUDA):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# then:
+#   pip install -r requirements-kronos.txt
+einops==0.8.1
+huggingface_hub==0.33.1
+safetensors==0.6.2
+tqdm>=4.66
+jpholiday>=0.1.10

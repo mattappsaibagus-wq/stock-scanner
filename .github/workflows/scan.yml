@@ -27,6 +27,8 @@ on:
       - 'agents/**'
       - 'run_pipeline.py'
       - 'requirements.txt'
+      - 'requirements-kronos.txt'
+      - 'vendor/**'
       - 'watchlist.txt'
       - '.github/workflows/scan.yml'
 
@@ -52,11 +54,33 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: |
+            requirements.txt
+            requirements-kronos.txt
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      # Kronos forecast agent: CPU-only torch (the default PyPI wheel drags in
+      # ~2 GB of CUDA libraries a GitHub runner can't use). Failure here must
+      # not block the scan - the agent detects missing torch and sits out.
+      - name: Install Kronos dependencies
+        continue-on-error: true
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements-kronos.txt
+
+      # Kronos-small + tokenizer weights (~100 MB) from Hugging Face, cached
+      # so all four daily scans don't re-download them.
+      - name: Cache Kronos weights
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: kronos-hf-${{ hashFiles('vendor/kronos/VENDORED.md') }}
+          restore-keys: kronos-hf-
 
       - name: Run pipeline
         run: python -u run_pipeline.py

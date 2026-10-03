@@ -57,6 +57,10 @@ SIGNAL_DIRECTIONS = {
     "analyst_downgrade_trend": -1,
     "price_target_upside": 1,
     "price_target_downside": -1,
+
+    # kronos_agent (Tokyo symbols only)
+    "kronos_forecast_up": 1,
+    "kronos_forecast_down": -1,
 }
 
 
