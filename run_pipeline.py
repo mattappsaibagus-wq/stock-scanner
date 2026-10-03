@@ -3,7 +3,8 @@
 Kaito Detector - Multi-Agent Stock Scanner Pipeline
 
 Runs the full agent roster (price/volume, momentum, chart patterns, sector
-relative strength, analyst sentiment, news, due diligence), gates them by
+relative strength, analyst sentiment, news, due diligence, and Kronos
+foundation-model forecasts for Tokyo names), gates them by
 the current market regime, consolidates them into weighted BUY/WATCH/SELL
 calls, and closes the self-learning loop by resolving prior predictions
 against real outcomes before logging new ones.
@@ -13,6 +14,8 @@ import json
 import os
 import sys
 import time
+
+import pandas as pd
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -27,10 +30,11 @@ from agents.pattern_agent import PatternAgent
 from agents.sector_agent import SectorAgent
 from agents.sentiment_agent import SentimentAgent
 from agents.macro_agent import MacroAgent
+from agents.kronos_agent import KronosForecastAgent
 from agents.advisor import AdvisorAgent
 from agents.learning_loop import LearningLoop
 
-AGENT_COUNT = 8
+AGENT_COUNT = 9
 
 
 def _load_learning_state(data_dir):
@@ -66,12 +70,14 @@ def main():
     pattern_agent = PatternAgent()
     sector_agent = SectorAgent()
     sentiment_agent = SentimentAgent()
+    kronos_agent = KronosForecastAgent()
     advisor = AdvisorAgent(config={"regime": regime}, learning_state=learning_state)
     learning_loop = LearningLoop()
 
     all_results = []
     reference_prices = {}
     failed_symbols = []
+    kronos_inputs = {}  # Tokyo symbols -> (1y daily history, reference price)
 
     for idx, symbol in enumerate(symbols):
         if idx:
@@ -86,7 +92,14 @@ def main():
         # One bad ticker (or a Yahoo hiccup) must never kill the whole scan:
         # skip it, log it, and keep going with the rest of the watchlist.
         try:
-            daily_hist = fetch_yf_history(symbol, period="6mo", interval="1d")
+            # Fetch a year once: Kronos wants ~200 bars of context, while the
+            # momentum/pattern agents keep seeing exactly the 6 months they
+            # always did (sliced locally - no extra Yahoo call).
+            daily_hist_1y = fetch_yf_history(symbol, period="1y", interval="1d")
+            daily_hist = daily_hist_1y
+            if daily_hist_1y is not None and not daily_hist_1y.empty:
+                cutoff = daily_hist_1y.index[-1] - pd.DateOffset(months=6)
+                daily_hist = daily_hist_1y[daily_hist_1y.index >= cutoff]
             previous_close = None
             # Yahoo sometimes returns a trailing row with a NaN close (common for
             # Tokyo tickers around the session boundary). Price off the last real
@@ -113,6 +126,9 @@ def main():
             for r in symbol_results:
                 if r:
                     all_results.append(r)
+
+            if symbol.endswith(".T") and symbol in reference_prices:
+                kronos_inputs[symbol] = (daily_hist_1y, reference_prices[symbol])
         except Exception as e:
             failed_symbols.append(symbol)
             print(f"[Kaito Detector] WARNING: skipped {symbol} after error: {type(e).__name__}: {e}", flush=True)
@@ -126,6 +142,13 @@ def main():
     if priced < len(symbols) * 0.5:
         print("::error::Yahoo returned prices for fewer than half the watchlist - not publishing this run", flush=True)
         sys.exit(1)
+
+    # Kronos runs once over every Tokyo symbol in batched forward passes
+    # (far cheaper than one model call per symbol). If torch / the weights
+    # aren't available it contributes nothing and the scan carries on.
+    kronos_results = kronos_agent.analyze_batch(kronos_inputs)
+    all_results.extend(kronos_results)
+    print(f"[Kaito Detector] Kronos forecast agent: {kronos_agent.last_run_stats}", flush=True)
 
     print(f"[Kaito Detector] Collected {len(all_results)} agent results across {AGENT_COUNT} agents")
 
@@ -148,6 +171,7 @@ def main():
             "indicators": result.get("indicators"),
             "fundamentals": result.get("fundamentals"),
             "benchmark": result.get("benchmark"),
+            "forecast": result.get("forecast"),
             "timestamp": result.get("timestamp"),
         })
 
@@ -164,6 +188,7 @@ def main():
         "symbols_scanned": symbols,
         "total_agents": AGENT_COUNT,
         "regime": regime_info,
+        "kronos": kronos_agent.last_run_stats,
         "agent_results": all_results,
         "recommendations": recommendations,
     }
