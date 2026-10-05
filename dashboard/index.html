@@ -953,7 +953,6 @@
     .health-row.is-warn { border-color: rgba(245, 181, 68, .35); }
     .health-name { font-size: .82rem; font-weight: 700; }
     .health-detail { font-size: .76rem; color: var(--muted); line-height: 1.5; overflow-wrap: anywhere; }
-    .health-detail a, .health-sub a { color: var(--brand); }
     .health-fixes { margin: 12px 0 0; padding: 0; list-style: none; font-size: .76rem; color: var(--muted); display: grid; gap: 4px; }
     .health-fixes strong { color: var(--text); }
     @media (max-width: 520px) {
@@ -2305,15 +2304,12 @@
             chip.hidden = false;
 
             var sub = 'Checked ' + html(when) + ' · ' + (bad ? bad + ' of ' + h.checks.length + ' checks need attention' : 'all ' + h.checks.length + ' checks passing');
-            if (h.issue_url && st !== 'ok') sub += ' · <a href="' + html(h.issue_url) + '" target="_blank" rel="noopener">open issue</a>';
-            if (h.doctor_run) sub += ' · <a href="' + html(h.doctor_run) + '" target="_blank" rel="noopener">doctor log</a>';
             document.getElementById('health-sub').innerHTML = sub;
 
             document.getElementById('health-list').innerHTML = h.checks.map(function (c) {
                 var cs = HEALTH_WORD[c.status] ? c.status : 'warn';
-                var link = c.url ? ' <a href="' + html(c.url) + '" target="_blank" rel="noopener">run</a>' : '';
                 return '<div class="health-row is-' + cs + '"><span class="hdot is-' + cs + '" role="img" aria-label="' + HEALTH_WORD[cs] + '"></span>'
-                    + '<div><div class="health-name">' + html(c.name) + '</div><div class="health-detail">' + html(c.detail) + link + '</div></div></div>';
+                    + '<div><div class="health-name">' + html(c.name) + '</div><div class="health-detail">' + html(c.detail) + '</div></div></div>';
             }).join('');
 
             var fixes = document.getElementById('health-fixes');
