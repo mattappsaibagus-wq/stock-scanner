@@ -935,6 +935,27 @@
     .track-table .side-mini { display: none; font-size: .7rem; margin-left: 4px; }
     .track-note { font-size: .72rem; color: var(--faint); margin: 12px 0 0; line-height: 1.55; }
     .track-empty { font-size: .82rem; color: var(--muted); padding: 14px; border: 1px dashed var(--border-strong); border-radius: var(--radius); line-height: 1.55; }
+
+    /* ============================================================
+       System Health (doctor/doctor.py -> doctor-status branch)
+       ============================================================ */
+    .chip-health { cursor: pointer; text-decoration: none; }
+    .chip-health[hidden], .health-fixes[hidden] { display: none; }
+    .chip-health .hdot, .health-row .hdot { width: 8px; height: 8px; border-radius: 50%; background: var(--faint); flex: none; }
+    .hdot.is-ok { background: var(--brand); box-shadow: 0 0 0 3px rgba(0, 224, 184, .16); }
+    .hdot.is-warn { background: var(--watch); box-shadow: 0 0 0 3px rgba(245, 181, 68, .16); }
+    .hdot.is-fail { background: var(--danger); box-shadow: 0 0 0 3px rgba(255, 84, 90, .18); }
+    .health { margin-top: 18px; }
+    .health-list { display: grid; gap: 8px; }
+    .health-row { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 12px; align-items: start; border: 1px solid var(--border); border-radius: var(--radius); padding: 11px 14px; background: var(--panel); }
+    .health-row .hdot { margin-top: 6px; }
+    .health-row.is-fail { border-color: rgba(255, 84, 90, .4); }
+    .health-row.is-warn { border-color: rgba(245, 181, 68, .35); }
+    .health-name { font-size: .82rem; font-weight: 700; }
+    .health-detail { font-size: .76rem; color: var(--muted); line-height: 1.5; overflow-wrap: anywhere; }
+    .health-detail a, .health-sub a { color: var(--brand); }
+    .health-fixes { margin: 12px 0 0; padding: 0; list-style: none; font-size: .76rem; color: var(--muted); display: grid; gap: 4px; }
+    .health-fixes strong { color: var(--text); }
     @media (max-width: 520px) {
         .track-kpis { grid-template-columns: 1fr; }
         .wr-bar { display: none; }
@@ -1073,6 +1094,7 @@
         <div class="hero-meta">
             <span class="chip" title="When the scanner last pulled prices from Yahoo Finance">Prices as of <strong id="chip-updated">--</strong></span>
             <span class="chip" id="chip-regime-wrap" style="display:none">Regime <strong id="chip-regime">--</strong></span>
+            <a class="chip chip-health" id="chip-health" href="#system-health" title="Automatic System Health checks" hidden><span class="hdot" id="chip-health-dot" aria-hidden="true"></span>Health <strong id="chip-health-text">--</strong></a>
             <span class="chip" title="The page checks for a newer scan every 60 seconds. Prices only change when the scanner runs.">Rechecks <strong>60s</strong></span>
         </div>
     </section>
@@ -1171,6 +1193,17 @@
             Average return is directional, so a Sell call on a stock that fell 2% counts as +2%. The same signal on the same stock counts once per day.
             Faded rows have fewer than 20 calls, too few to read anything into yet. A win rate near 50% with an average return near 0% means no edge.
         </p>
+    </section>
+
+    <!-- ==================== System Health ==================== -->
+    <section class="track health" id="system-health" aria-labelledby="health-title" hidden>
+        <div class="track-head">
+            <h2 id="health-title">System Health<span class="jp">システム診断</span></h2>
+        </div>
+        <p class="track-sub health-sub" id="health-sub"></p>
+        <div class="health-list" id="health-list"></div>
+        <ul class="health-fixes" id="health-fixes" hidden></ul>
+        <p class="track-note">The doctor checks the scanner after every scan and every 3 hours. It re-runs a failed scan once, starts a scan when data goes stale and redeploys Render when it falls behind. Anything it can't fix opens a GitHub Issue.</p>
     </section>
 
     <!-- ==================== Footer ==================== -->
@@ -2244,11 +2277,61 @@
             });
         }
 
+        /* ---------------- System Health (doctor) ---------------- */
+
+        var HEALTH_URL = 'https://raw.githubusercontent.com/mattappsaibagus-wq/stock-scanner/doctor-status/health.json';
+        var HEALTH_WORD = { ok: 'OK', warn: 'Warning', fail: 'Broken' };
+
+        function loadHealth() {
+            // raw.githubusercontent caches ~5 min; bust per minute at most.
+            return fetch(HEALTH_URL + '?m=' + Math.floor(Date.now() / 60000), { cache: 'no-store' })
+                .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+                .then(renderHealth)
+                .catch(function () { /* doctor not run yet: keep the panel hidden */ });
+        }
+
+        function renderHealth(h) {
+            if (!h || !Array.isArray(h.checks)) return;
+            var section = document.getElementById('system-health');
+            var chip = document.getElementById('chip-health');
+            var st = HEALTH_WORD[h.status] ? h.status : 'warn';
+            var checked = h.checked_at ? new Date(h.checked_at) : null;
+            var when = checked && !isNaN(checked) ? checked.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }) + ' JST' : '--';
+            var bad = h.checks.filter(function (c) { return c.status !== 'ok'; }).length;
+
+            document.getElementById('chip-health-dot').className = 'hdot is-' + st;
+            document.getElementById('chip-health-text').textContent = HEALTH_WORD[st];
+            chip.title = 'System Health: ' + HEALTH_WORD[st] + ' (checked ' + when + ')';
+            chip.hidden = false;
+
+            var sub = 'Checked ' + html(when) + ' · ' + (bad ? bad + ' of ' + h.checks.length + ' checks need attention' : 'all ' + h.checks.length + ' checks passing');
+            if (h.issue_url && st !== 'ok') sub += ' · <a href="' + html(h.issue_url) + '" target="_blank" rel="noopener">open issue</a>';
+            if (h.doctor_run) sub += ' · <a href="' + html(h.doctor_run) + '" target="_blank" rel="noopener">doctor log</a>';
+            document.getElementById('health-sub').innerHTML = sub;
+
+            document.getElementById('health-list').innerHTML = h.checks.map(function (c) {
+                var cs = HEALTH_WORD[c.status] ? c.status : 'warn';
+                var link = c.url ? ' <a href="' + html(c.url) + '" target="_blank" rel="noopener">run</a>' : '';
+                return '<div class="health-row is-' + cs + '"><span class="hdot is-' + cs + '" role="img" aria-label="' + HEALTH_WORD[cs] + '"></span>'
+                    + '<div><div class="health-name">' + html(c.name) + '</div><div class="health-detail">' + html(c.detail) + link + '</div></div></div>';
+            }).join('');
+
+            var fixes = document.getElementById('health-fixes');
+            var fx = Array.isArray(h.fixes) ? h.fixes : [];
+            fixes.hidden = !fx.length;
+            fixes.innerHTML = fx.map(function (f) {
+                return '<li><strong>' + (f.done ? 'Auto-fix applied' : 'Auto-fix skipped') + ':</strong> ' + html(f.result) + '</li>';
+            }).join('');
+            section.hidden = false;
+        }
+
         function boot() {
             if (dom.signalContainer) dom.signalContainer.innerHTML = skeleton();
             bind();
             loadData(false).then(applyHash);
             setInterval(function () { loadData(false); }, REFRESH_MS);
+            loadHealth();
+            setInterval(loadHealth, 5 * REFRESH_MS);
             setInterval(updateTimes, 15000);
             updateTimes();
             moveGlider();

@@ -48,6 +48,18 @@ def _load_learning_state(data_dir):
     return {}
 
 
+def _agent_result_counts(all_results):
+    """Per agent: how many symbols it returned a result for, and how many alerted."""
+    counts = {}
+    for r in all_results:
+        name = r.get("agent") or "unknown"
+        c = counts.setdefault(name, {"results": 0, "alerts": 0})
+        c["results"] += 1
+        if r.get("alert"):
+            c["alerts"] += 1
+    return counts
+
+
 def main():
     data_dir = get_data_dir()
     print(f"[Kaito Detector] Starting pipeline - data dir: {data_dir}")
@@ -215,6 +227,16 @@ def main():
         "total_recommendations": len(recommendations),
         "learning_stats": learning_result["stats"],
         "track_record": learning_result.get("track_record"),
+        # Read by doctor/doctor.py (System Health): lets it spot an agent that
+        # went silent or a Yahoo outage that skipped half the watchlist,
+        # instead of us finding out by eyeballing the dashboard.
+        "scan_health": {
+            "symbols_total": len(symbols),
+            "symbols_priced": priced,
+            "failed_symbols": failed_symbols,
+            "agent_results": _agent_result_counts(all_results),
+            "kronos": kronos_agent.last_run_stats,
+        },
     }
     save_json(dashboard_report, dashboard_data_path)
     print(f"[Kaito Detector] Dashboard data saved to {dashboard_data_path}")

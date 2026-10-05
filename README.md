@@ -153,3 +153,28 @@ session open) and can be triggered manually from the **Actions** tab.
 ## License
 
 Private use for trading signal generation. Not financial advice.
+
+## System Health (the doctor)
+
+`doctor/doctor.py` runs from `.github/workflows/doctor.yml` after every scan
+and every 3 hours, so breakages surface on their own instead of by eyeballing
+the dashboard.
+
+| Check | Catches |
+|-------|---------|
+| Data freshness | A scheduled scan that is overdue or never started |
+| Last scan run | Failed or cancelled scan runs, with the failing step and error |
+| Agents reporting | Any of the 8 signal agents going silent (e.g. Kronos install failed) |
+| Data sanity | 0 or suddenly few recommendations, missing prices, Yahoo outages, missing regime |
+| Learning loop | Prediction history being reset, or nothing resolving for 3+ days |
+| Live sites | GitHub Pages, Netlify and Render down or serving an old scan |
+| Secrets & warnings | Missing `RENDER_DEPLOY_HOOK` and other scan warnings |
+
+Safe automatic fixes (rate-limited, never loops): re-run a failed scan once,
+start a scan when data is stale, trigger the Render deploy hook when Render
+lags. Anything else opens (and keeps updating) one GitHub Issue labelled
+`doctor`, which closes itself when every check is green again.
+
+Results are force-pushed as `health.json` to the `doctor-status` branch and
+shown in the dashboard's **System Health** panel. Run it by hand from
+Actions -> Doctor -> Run workflow (tick *dry run* to check without acting).

@@ -1,0 +1,81 @@
+name: Doctor
+
+# System Health: checks the scanner after every scan and every 3 hours, applies
+# safe scripted fixes, publishes health.json for the dashboard and keeps a
+# single "doctor" GitHub Issue open while anything is wrong.
+# See doctor/doctor.py for the full list of checks and fixes.
+
+on:
+  # Right after every Stock Scan finishes (success or failure).
+  workflow_run:
+    workflows: ["Stock Scan"]
+    types: [completed]
+  # Sweep every 3 hours (UTC, off the hour), which also catches scheduled
+  # scans GitHub never started.
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Check only: no fixes, no issue changes'
+        type: boolean
+        default: false
+
+concurrency:
+  group: doctor
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # push health.json to the doctor-status branch
+  issues: write     # open / update / close the doctor issue
+  actions: write    # re-run a failed scan, start a scan
+  checks: read      # read error annotations of failed scans
+
+jobs:
+  doctor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Always examine the newest main (the scan that just finished pushed data.json there).
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Load previous health report
+        run: |
+          if git fetch --depth=1 origin doctor-status 2>/dev/null; then
+            git show origin/doctor-status:health.json > "$RUNNER_TEMP/prev.json" || echo '{}' > "$RUNNER_TEMP/prev.json"
+          else
+            echo '{}' > "$RUNNER_TEMP/prev.json"
+          fi
+
+      - name: Examine scanner
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+          DOCTOR_PREV_HEALTH: ${{ runner.temp }}/prev.json
+          DOCTOR_OUT: ${{ runner.temp }}/health.json
+          DOCTOR_DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+        run: python -u doctor/doctor.py
+
+      # health.json lives on its own single-commit branch (force-pushed), so
+      # main's history isn't flooded and it never races the scan's data.json push.
+      # The dashboard reads it from raw.githubusercontent.com.
+      - name: Publish health.json
+        if: ${{ !inputs.dry_run }}
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          dir="$RUNNER_TEMP/status"
+          rm -rf "$dir" && mkdir -p "$dir" && cd "$dir"
+          git init -q -b doctor-status
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          cp "$RUNNER_TEMP/health.json" health.json
+          git add health.json
+          git commit -q -m "System Health report [skip ci]"
+          git push -f -q "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" doctor-status
