@@ -61,6 +61,10 @@ STALE_FAIL = timedelta(hours=3)
 REDISPATCH_COOLDOWN = timedelta(hours=3)
 RENDER_COOLDOWN = timedelta(hours=2)
 HISTORY_LEN = 30
+# agents/learning_loop.py keeps only the newest N recommendation predictions.
+# Once the log is full, old (resolved) entries roll off as new ones arrive, so
+# the resolved count can go down without anything being lost.
+PREDICTION_CAP = 5000
 
 OK, WARN, FAIL = "ok", "warn", "fail"
 RANK = {OK: 0, WARN: 1, FAIL: 2}
@@ -322,12 +326,18 @@ def check_learning(data, prev):
         changed_at = NOW
     acc = ls.get("accuracy_pct")
     base = f"{resolved} resolved of {logged} logged calls, accuracy {acc}%."
-    if p_resolved is not None and resolved < p_resolved:
-        return check("learning", "Learning loop", FAIL,
-                     f"Resolved count dropped {p_resolved} -> {resolved}: prediction history was reset or lost. {base}"), new_state
     if p_logged is not None and logged is not None and logged < p_logged:
         return check("learning", "Learning loop", FAIL,
                      f"Logged count dropped {p_logged} -> {logged}: history file was reset. {base}"), new_state
+    if p_resolved is not None and resolved < p_resolved:
+        # At the cap the log rotates: oldest (resolved) calls drop off as new
+        # ones are added. That's expected unless the drop is huge.
+        at_cap = (logged is not None and p_logged is not None
+                  and logged >= PREDICTION_CAP and p_logged >= PREDICTION_CAP)
+        if not (at_cap and resolved >= 0.5 * p_resolved):
+            return check("learning", "Learning loop", FAIL,
+                         f"Resolved count dropped {p_resolved} -> {resolved}: prediction history was reset or lost. {base}"), new_state
+        base += f" (Log is at its {PREDICTION_CAP}-call cap; oldest calls rotated out.)"
     if NOW - changed_at > timedelta(days=3):
         return check("learning", "Learning loop", WARN,
                      f"No new predictions resolved since {jst(changed_at)}. {base}"), new_state

@@ -48,10 +48,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -76,7 +76,7 @@ jobs:
       # Kronos-small + tokenizer weights (~100 MB) from Hugging Face, cached
       # so all four daily scans don't re-download them.
       - name: Cache Kronos weights
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.cache/huggingface
           key: kronos-hf-${{ hashFiles('vendor/kronos/VENDORED.md') }}
@@ -86,7 +86,7 @@ jobs:
         run: python -u run_pipeline.py
 
       - name: Upload scan results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: signals
           path: data/signals.json
@@ -135,17 +135,17 @@ jobs:
           done
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
         with:
           enablement: true
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dashboard/
 
       - name: Deploy to Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
       - name: Trigger Render redeploy (keeps mirror site fresh)
         # The hook is read inside the script: a step's own env isn't visible to
