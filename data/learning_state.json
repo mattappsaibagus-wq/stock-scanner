@@ -1,59 +1,59 @@
 {
   "weights": {
-    "potential_undervalued": 0.5001,
-    "analyst_consensus_bullish": 0.4783,
-    "price_target_upside": 0.469,
-    "rsi_overbought": 0.5517,
-    "early_movement": 0.5226,
-    "potentially_overvalued": 0.5501,
-    "quality_momentum": 0.4616,
-    "above_sma": 0.4559,
-    "relative_strength_bearish": 0.4905,
-    "analyst_upgrade_trend": 0.4643,
-    "strong_momentum": 0.4489,
-    "news_sentiment": 0.5067,
-    "relative_strength_bullish": 0.4474,
-    "breakout": 0.4518,
+    "potential_undervalued": 0.498,
+    "analyst_consensus_bullish": 0.4677,
+    "price_target_upside": 0.459,
+    "rsi_overbought": 0.5649,
+    "early_movement": 0.5231,
+    "potentially_overvalued": 0.5722,
+    "quality_momentum": 0.4412,
+    "above_sma": 0.4372,
+    "relative_strength_bearish": 0.49,
+    "analyst_upgrade_trend": 0.4536,
+    "strong_momentum": 0.4336,
+    "news_sentiment": 0.4971,
+    "relative_strength_bullish": 0.4278,
+    "breakout": 0.4436,
     "macd_bearish": 0.5361,
-    "rsi_oversold": 0.5017,
-    "below_sma": 0.4921,
+    "rsi_oversold": 0.491,
+    "below_sma": 0.4943,
     "breakdown": 0.4722,
     "analyst_downgrade_trend": 0.4765,
-    "macd_bullish": 0.5041,
+    "macd_bullish": 0.5012,
     "bearish_engulfing": 0.4834,
-    "kronos_forecast_down": 0.5264,
-    "kronos_forecast_up": 0.5427,
-    "bullish_engulfing": 0.4747,
-    "support_bounce": 0.416,
+    "kronos_forecast_down": 0.5377,
+    "kronos_forecast_up": 0.5514,
+    "bullish_engulfing": 0.4654,
+    "support_bounce": 0.3958,
     "price_target_downside": 0.4972
   },
   "regime_weights": {
     "risk_on": {
-      "potential_undervalued": 0.5001,
-      "analyst_consensus_bullish": 0.4783,
-      "price_target_upside": 0.469,
-      "rsi_overbought": 0.5517,
-      "early_movement": 0.5226,
-      "potentially_overvalued": 0.5501,
-      "quality_momentum": 0.4616,
-      "above_sma": 0.4559,
-      "relative_strength_bearish": 0.4905,
-      "analyst_upgrade_trend": 0.4643,
-      "strong_momentum": 0.4489,
-      "news_sentiment": 0.5067,
-      "relative_strength_bullish": 0.4474,
-      "breakout": 0.4518,
+      "potential_undervalued": 0.498,
+      "analyst_consensus_bullish": 0.4677,
+      "price_target_upside": 0.459,
+      "rsi_overbought": 0.5649,
+      "early_movement": 0.5231,
+      "potentially_overvalued": 0.5722,
+      "quality_momentum": 0.4412,
+      "above_sma": 0.4372,
+      "relative_strength_bearish": 0.49,
+      "analyst_upgrade_trend": 0.4536,
+      "strong_momentum": 0.4336,
+      "news_sentiment": 0.4971,
+      "relative_strength_bullish": 0.4278,
+      "breakout": 0.4436,
       "macd_bearish": 0.5361,
-      "rsi_oversold": 0.5017,
-      "below_sma": 0.4921,
+      "rsi_oversold": 0.491,
+      "below_sma": 0.4943,
       "breakdown": 0.4722,
       "analyst_downgrade_trend": 0.4765,
-      "macd_bullish": 0.5041,
+      "macd_bullish": 0.5012,
       "bearish_engulfing": 0.4834,
-      "kronos_forecast_down": 0.5264,
-      "kronos_forecast_up": 0.5427,
-      "bullish_engulfing": 0.4747,
-      "support_bounce": 0.416,
+      "kronos_forecast_down": 0.5377,
+      "kronos_forecast_up": 0.5514,
+      "bullish_engulfing": 0.4654,
+      "support_bounce": 0.3958,
       "price_target_downside": 0.4972
     },
     "neutral": {},
@@ -61,52 +61,52 @@
   },
   "agent_stats": {
     "dd_agent": {
-      "samples": 1758,
-      "wins": 667,
-      "win_rate": 0.379,
-      "avg_return": 0.022
+      "samples": 1788,
+      "wins": 687,
+      "win_rate": 0.384,
+      "avg_return": 0.039
     },
     "sentiment_agent": {
-      "samples": 6641,
-      "wins": 2381,
+      "samples": 6760,
+      "wins": 2428,
       "win_rate": 0.359,
-      "avg_return": -0.111
+      "avg_return": -0.132
     },
     "momentum_agent": {
-      "samples": 6344,
-      "wins": 2247,
-      "win_rate": 0.354,
-      "avg_return": -0.01
+      "samples": 6462,
+      "wins": 2294,
+      "win_rate": 0.355,
+      "avg_return": -0.023
     },
     "early_detector": {
-      "samples": 1806,
-      "wins": 755,
-      "win_rate": 0.418,
-      "avg_return": 0.388
+      "samples": 1844,
+      "wins": 774,
+      "win_rate": 0.42,
+      "avg_return": 0.391
     },
     "sector_agent": {
-      "samples": 4540,
-      "wins": 1497,
-      "win_rate": 0.33,
-      "avg_return": -0.135
+      "samples": 4624,
+      "wins": 1520,
+      "win_rate": 0.329,
+      "avg_return": -0.15
     },
     "news_scanner": {
-      "samples": 513,
-      "wins": 195,
-      "win_rate": 0.38,
-      "avg_return": 0.512
+      "samples": 525,
+      "wins": 200,
+      "win_rate": 0.381,
+      "avg_return": 0.488
     },
     "pattern_agent": {
-      "samples": 1405,
-      "wins": 494,
+      "samples": 1431,
+      "wins": 503,
       "win_rate": 0.352,
-      "avg_return": -0.114
+      "avg_return": -0.142
     },
     "kronos_agent": {
-      "samples": 1898,
-      "wins": 799,
-      "win_rate": 0.421,
-      "avg_return": 0.075
+      "samples": 1921,
+      "wins": 812,
+      "win_rate": 0.423,
+      "avg_return": 0.091
     }
   },
   "calibration": {
@@ -114,12 +114,12 @@
       "3": {
         "n": 188,
         "mean_conf": 0.67,
-        "mean_acc": 0.41
+        "mean_acc": 0.399
       },
       "4": {
         "n": 189,
         "mean_conf": 0.92,
-        "mean_acc": 0.328
+        "mean_acc": 0.333
       },
       "2": {
         "n": 64,
@@ -127,13 +127,13 @@
         "mean_acc": 0.625
       },
       "1": {
-        "n": 10,
-        "mean_conf": 0.239,
-        "mean_acc": 0.5
+        "n": 9,
+        "mean_conf": 0.243,
+        "mean_acc": 0.556
       }
     },
-    "ece": 0.3788,
-    "n": 451
+    "ece": 0.3823,
+    "n": 450
   },
   "accuracy_history": [
     {
@@ -1004,6 +1004,37 @@
         "price_target_downside": 0.4972
       },
       "sample_size": 451
+    },
+    {
+      "weights": {
+        "potential_undervalued": 0.498,
+        "analyst_consensus_bullish": 0.4677,
+        "price_target_upside": 0.459,
+        "rsi_overbought": 0.5649,
+        "early_movement": 0.5231,
+        "potentially_overvalued": 0.5722,
+        "quality_momentum": 0.4412,
+        "above_sma": 0.4372,
+        "relative_strength_bearish": 0.49,
+        "analyst_upgrade_trend": 0.4536,
+        "strong_momentum": 0.4336,
+        "news_sentiment": 0.4971,
+        "relative_strength_bullish": 0.4278,
+        "breakout": 0.4436,
+        "macd_bearish": 0.5361,
+        "rsi_oversold": 0.491,
+        "below_sma": 0.4943,
+        "breakdown": 0.4722,
+        "analyst_downgrade_trend": 0.4765,
+        "macd_bullish": 0.5012,
+        "bearish_engulfing": 0.4834,
+        "kronos_forecast_down": 0.5377,
+        "kronos_forecast_up": 0.5514,
+        "bullish_engulfing": 0.4654,
+        "support_bounce": 0.3958,
+        "price_target_downside": 0.4972
+      },
+      "sample_size": 450
     }
   ]
 }
