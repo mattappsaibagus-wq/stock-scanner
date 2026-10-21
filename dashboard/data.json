@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-21T08:08:05.426727+00:00",
+  "generated_at": "2026-10-21T12:35:44.841068+00:00",
   "regime": {
     "regime": "risk_on",
-    "vix": 17.190000534057617,
+    "vix": 17.31999969482422,
     "spy_trend": "flat",
-    "reason": "VIX calm at 17.2",
-    "timestamp": "2026-10-21T08:00:20.697184+00:00"
+    "reason": "VIX calm at 17.3",
+    "timestamp": "2026-10-21T12:27:03.215468+00:00"
   },
   "recommendations": [
     {
@@ -20,7 +20,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425922+00:00",
+      "timestamp": "2026-10-21T12:35:44.839926+00:00",
       "name": "Tokyo Electron",
       "name_jp": "\u6771\u4eac\u30a8\u30ec\u30af\u30c8\u30ed\u30f3",
       "details": [
@@ -49,7 +49,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:41.377283+00:00"
+          "timestamp": "2026-10-21T12:27:21.340984+00:00"
         }
       ],
       "reference_price": 10160.0
@@ -66,7 +66,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426009+00:00",
+      "timestamp": "2026-10-21T12:35:44.840039+00:00",
       "name": "Daiichi Sankyo",
       "name_jp": "\u7b2c\u4e00\u4e09\u5171",
       "details": [
@@ -95,7 +95,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:08.984758+00:00"
+          "timestamp": "2026-10-21T12:28:36.239147+00:00"
         }
       ],
       "reference_price": 2841.0
@@ -112,7 +112,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426183+00:00",
+      "timestamp": "2026-10-21T12:35:44.840263+00:00",
       "name": "Alphabet",
       "details": [
         {
@@ -140,7 +140,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:25.570517+00:00"
+          "timestamp": "2026-10-21T12:31:23.718659+00:00"
         }
       ],
       "reference_price": 340.2799987792969
@@ -157,7 +157,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426186+00:00",
+      "timestamp": "2026-10-21T12:35:44.840268+00:00",
       "name": "NVIDIA",
       "details": [
         {
@@ -185,48 +185,10 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:31.517671+00:00"
+          "timestamp": "2026-10-21T12:31:29.546589+00:00"
         }
       ],
       "reference_price": 216.47000122070312
-    },
-    {
-      "symbol": "META",
-      "action": "WATCH",
-      "confidence": 1.0,
-      "signal_count": 1,
-      "alerts": [
-        "sentiment_agent"
-      ],
-      "agents": [
-        "sentiment_agent"
-      ],
-      "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426193+00:00",
-      "name": "Meta Platforms",
-      "details": [
-        {
-          "agent": "sentiment_agent",
-          "confidence": 1.0,
-          "alert": true,
-          "signals": [
-            {
-              "type": "analyst_consensus_bullish",
-              "recommendation_mean": 1.41,
-              "recommendation_key": "strong_buy",
-              "num_analysts": 58,
-              "confidence": 1.0
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:36.841669+00:00"
-        }
-      ],
-      "reference_price": 694.25
     },
     {
       "symbol": "AMZN",
@@ -240,7 +202,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426199+00:00",
+      "timestamp": "2026-10-21T12:35:44.840282+00:00",
       "name": "Amazon",
       "details": [
         {
@@ -268,7 +230,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:42.390297+00:00"
+          "timestamp": "2026-10-21T12:31:41.073121+00:00"
         }
       ],
       "reference_price": 262.6300048828125
@@ -285,7 +247,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426254+00:00",
+      "timestamp": "2026-10-21T12:35:44.840354+00:00",
       "name": "Snowflake",
       "details": [
         {
@@ -313,106 +275,10 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:31.074362+00:00"
+          "timestamp": "2026-10-21T12:32:22.685354+00:00"
         }
       ],
       "reference_price": 319.6099853515625
-    },
-    {
-      "symbol": "MSFT",
-      "action": "BUY",
-      "confidence": 0.98,
-      "signal_count": 3,
-      "alerts": [
-        "sector_agent",
-        "sentiment_agent"
-      ],
-      "agents": [
-        "momentum_agent",
-        "sector_agent",
-        "sentiment_agent"
-      ],
-      "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426179+00:00",
-      "name": "Microsoft",
-      "details": [
-        {
-          "agent": "momentum_agent",
-          "confidence": 0.6,
-          "alert": false,
-          "signals": [
-            {
-              "type": "above_sma",
-              "confidence": 0.6
-            }
-          ],
-          "price": {
-            "open": 531.8699951171875,
-            "close": 531.8699951171875,
-            "change": -1.6500244140625,
-            "change_pct": -0.31,
-            "high": 534.2100219726562,
-            "low": 525.8400268554688,
-            "volume": 14503700,
-            "previous_close": 533.52001953125
-          },
-          "indicators": {
-            "rsi": 62.31,
-            "macd_signal": null,
-            "sma20": 523.51,
-            "sma50": 506.59
-          },
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:20.983334+00:00"
-        },
-        {
-          "agent": "sector_agent",
-          "confidence": 1.0,
-          "alert": true,
-          "signals": [
-            {
-              "type": "relative_strength_bullish",
-              "vs": "Technology",
-              "relative_strength_pct": 10.86,
-              "confidence": 1.0
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": {
-            "symbol": "XLK",
-            "label": "Technology",
-            "stock_return_1mo_pct": 6.03,
-            "benchmark_return_1mo_pct": -4.83
-          },
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:22.276679+00:00"
-        },
-        {
-          "agent": "sentiment_agent",
-          "confidence": 1.0,
-          "alert": true,
-          "signals": [
-            {
-              "type": "analyst_consensus_bullish",
-              "recommendation_mean": 1.33,
-              "recommendation_key": "strong_buy",
-              "num_analysts": 53,
-              "confidence": 1.0
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:22.404202+00:00"
-        }
-      ],
-      "reference_price": 531.8699951171875
     },
     {
       "symbol": "4519.T",
@@ -426,7 +292,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426012+00:00",
+      "timestamp": "2026-10-21T12:35:44.840043+00:00",
       "name": "Chugai Pharmaceutical",
       "name_jp": "\u4e2d\u5916\u88fd\u85ac",
       "details": [
@@ -455,7 +321,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:12.121200+00:00"
+          "timestamp": "2026-10-21T12:28:38.893492+00:00"
         }
       ],
       "reference_price": 6511.0
@@ -475,7 +341,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426248+00:00",
+      "timestamp": "2026-10-21T12:35:44.840346+00:00",
       "name": "Zscaler",
       "details": [
         {
@@ -507,7 +373,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:24.042775+00:00"
+          "timestamp": "2026-10-21T12:32:16.559189+00:00"
         },
         {
           "agent": "sector_agent",
@@ -531,7 +397,7 @@
             "benchmark_return_1mo_pct": -4.83
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:25.386042+00:00"
+          "timestamp": "2026-10-21T12:32:17.761500+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -551,7 +417,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:25.504578+00:00"
+          "timestamp": "2026-10-21T12:32:17.875442+00:00"
         }
       ],
       "reference_price": 214.50999450683594
@@ -571,7 +437,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425918+00:00",
+      "timestamp": "2026-10-21T12:35:44.839920+00:00",
       "name": "Fast Retailing",
       "name_jp": "\u30d5\u30a1\u30fc\u30b9\u30c8\u30ea\u30c6\u30a4\u30ea\u30f3\u30b0",
       "details": [
@@ -604,7 +470,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:35.827803+00:00"
+          "timestamp": "2026-10-21T12:27:17.022212+00:00"
         },
         {
           "agent": "sector_agent",
@@ -628,7 +494,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:37.665566+00:00"
+          "timestamp": "2026-10-21T12:27:18.438266+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -648,7 +514,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:37.930150+00:00"
+          "timestamp": "2026-10-21T12:27:18.611914+00:00"
         }
       ],
       "reference_price": 75210.0
@@ -668,7 +534,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426206+00:00",
+      "timestamp": "2026-10-21T12:35:44.840290+00:00",
       "name": "Salesforce",
       "details": [
         {
@@ -700,7 +566,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:46.435780+00:00"
+          "timestamp": "2026-10-21T12:31:44.597532+00:00"
         },
         {
           "agent": "sector_agent",
@@ -724,7 +590,7 @@
             "benchmark_return_1mo_pct": -4.83
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:47.906140+00:00"
+          "timestamp": "2026-10-21T12:31:45.797088+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -750,7 +616,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:48.029181+00:00"
+          "timestamp": "2026-10-21T12:31:45.851139+00:00"
         }
       ],
       "reference_price": 242.42999267578125
@@ -770,7 +636,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425907+00:00",
+      "timestamp": "2026-10-21T12:35:44.839905+00:00",
       "name": "Keyence",
       "name_jp": "\u30ad\u30fc\u30a8\u30f3\u30b9",
       "details": [
@@ -799,7 +665,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:29.018304+00:00"
+          "timestamp": "2026-10-21T12:27:10.160245+00:00"
         },
         {
           "agent": "sector_agent",
@@ -823,7 +689,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:30.766925+00:00"
+          "timestamp": "2026-10-21T12:27:11.751434+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -850,7 +716,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:31.006383+00:00"
+          "timestamp": "2026-10-21T12:27:11.987616+00:00"
         }
       ],
       "reference_price": 80860.0
@@ -870,7 +736,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425977+00:00",
+      "timestamp": "2026-10-21T12:35:44.839995+00:00",
       "name": "Itochu",
       "name_jp": "\u4f0a\u85e4\u5fe0\u5546\u4e8b",
       "details": [
@@ -903,7 +769,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:30.510994+00:00"
+          "timestamp": "2026-10-21T12:28:02.987002+00:00"
         },
         {
           "agent": "sector_agent",
@@ -927,7 +793,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:32.109831+00:00"
+          "timestamp": "2026-10-21T12:28:04.408065+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -947,7 +813,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:32.354139+00:00"
+          "timestamp": "2026-10-21T12:28:04.561017+00:00"
         }
       ],
       "reference_price": 2304.0
@@ -967,7 +833,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426041+00:00",
+      "timestamp": "2026-10-21T12:35:44.840083+00:00",
       "name": "TDK",
       "name_jp": "TDK",
       "details": [
@@ -997,7 +863,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:56.625325+00:00"
+          "timestamp": "2026-10-21T12:29:18.313156+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -1024,7 +890,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:58.770656+00:00"
+          "timestamp": "2026-10-21T12:29:19.961785+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -1074,7 +940,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.421258+00:00"
+          "timestamp": "2026-10-21T12:35:44.832635+00:00"
         }
       ],
       "reference_price": 2902.5
@@ -1094,7 +960,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426114+00:00",
+      "timestamp": "2026-10-21T12:35:44.840179+00:00",
       "name": "Ajinomoto",
       "name_jp": "\u5473\u306e\u7d20",
       "details": [
@@ -1123,7 +989,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:11.046278+00:00"
+          "timestamp": "2026-10-21T12:30:18.756936+00:00"
         },
         {
           "agent": "sector_agent",
@@ -1147,7 +1013,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:12.814419+00:00"
+          "timestamp": "2026-10-21T12:30:20.239706+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -1167,10 +1033,71 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:13.078937+00:00"
+          "timestamp": "2026-10-21T12:30:20.393010+00:00"
         }
       ],
       "reference_price": 5278.0
+    },
+    {
+      "symbol": "META",
+      "action": "BUY",
+      "confidence": 0.91,
+      "signal_count": 2,
+      "alerts": [
+        "sentiment_agent"
+      ],
+      "agents": [
+        "news_scanner",
+        "sentiment_agent"
+      ],
+      "regime": "risk_on",
+      "timestamp": "2026-10-21T12:35:44.840276+00:00",
+      "name": "Meta Platforms",
+      "details": [
+        {
+          "agent": "news_scanner",
+          "confidence": 0.48,
+          "alert": false,
+          "signals": [
+            {
+              "type": "news_sentiment",
+              "direction": "positive",
+              "avg_sentiment": 0.24,
+              "confidence": 0.48,
+              "keywords": [
+                "earnings"
+              ]
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:31:35.212816+00:00"
+        },
+        {
+          "agent": "sentiment_agent",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "analyst_consensus_bullish",
+              "recommendation_mean": 1.41,
+              "recommendation_key": "strong_buy",
+              "num_analysts": 58,
+              "confidence": 1.0
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:31:36.198926+00:00"
+        }
+      ],
+      "reference_price": 694.25
     },
     {
       "symbol": "8766.T",
@@ -1188,7 +1115,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425995+00:00",
+      "timestamp": "2026-10-21T12:35:44.840020+00:00",
       "name": "Tokio Marine Holdings",
       "name_jp": "\u6771\u4eac\u6d77\u4e0a\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
       "details": [
@@ -1218,7 +1145,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:53.624753+00:00"
+          "timestamp": "2026-10-21T12:28:23.503699+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -1249,7 +1176,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:53.626306+00:00"
+          "timestamp": "2026-10-21T12:28:23.505950+00:00"
         },
         {
           "agent": "sector_agent",
@@ -1273,7 +1200,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:55.227161+00:00"
+          "timestamp": "2026-10-21T12:28:24.859656+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -1293,7 +1220,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:55.491385+00:00"
+          "timestamp": "2026-10-21T12:28:25.046870+00:00"
         }
       ],
       "reference_price": 558.5999755859375
@@ -1310,7 +1237,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426066+00:00",
+      "timestamp": "2026-10-21T12:35:44.840119+00:00",
       "name": "SCREEN Holdings",
       "name_jp": "SCREEN\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
       "details": [
@@ -1332,10 +1259,129 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:25.901936+00:00"
+          "timestamp": "2026-10-21T12:29:41.626377+00:00"
         }
       ],
       "reference_price": 12910.0
+    },
+    {
+      "symbol": "MSFT",
+      "action": "BUY",
+      "confidence": 0.89,
+      "signal_count": 4,
+      "alerts": [
+        "sector_agent",
+        "sentiment_agent"
+      ],
+      "agents": [
+        "momentum_agent",
+        "news_scanner",
+        "sector_agent",
+        "sentiment_agent"
+      ],
+      "regime": "risk_on",
+      "timestamp": "2026-10-21T12:35:44.840259+00:00",
+      "name": "Microsoft",
+      "details": [
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.6,
+          "alert": false,
+          "signals": [
+            {
+              "type": "above_sma",
+              "confidence": 0.6
+            }
+          ],
+          "price": {
+            "open": 531.8699951171875,
+            "close": 531.8699951171875,
+            "change": -1.6500244140625,
+            "change_pct": -0.31,
+            "high": 534.2100219726562,
+            "low": 525.8400268554688,
+            "volume": 14503700,
+            "previous_close": 533.52001953125
+          },
+          "indicators": {
+            "rsi": 62.31,
+            "macd_signal": null,
+            "sma20": 523.51,
+            "sma50": 506.59
+          },
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:31:19.507958+00:00"
+        },
+        {
+          "agent": "news_scanner",
+          "confidence": 0.2,
+          "alert": false,
+          "signals": [
+            {
+              "type": "news_sentiment",
+              "direction": "positive",
+              "avg_sentiment": 0.1,
+              "confidence": 0.2,
+              "keywords": [
+                "launch"
+              ]
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:31:19.740657+00:00"
+        },
+        {
+          "agent": "sector_agent",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "relative_strength_bullish",
+              "vs": "Technology",
+              "relative_strength_pct": 10.86,
+              "confidence": 1.0
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": {
+            "symbol": "XLK",
+            "label": "Technology",
+            "stock_return_1mo_pct": 6.03,
+            "benchmark_return_1mo_pct": -4.83
+          },
+          "forecast": null,
+          "timestamp": "2026-10-21T12:31:20.713225+00:00"
+        },
+        {
+          "agent": "sentiment_agent",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "analyst_consensus_bullish",
+              "recommendation_mean": 1.33,
+              "recommendation_key": "strong_buy",
+              "num_analysts": 53,
+              "confidence": 1.0
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:31:20.800793+00:00"
+        }
+      ],
+      "reference_price": 531.8699951171875
     },
     {
       "symbol": "7267.T",
@@ -1353,7 +1399,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425973+00:00",
+      "timestamp": "2026-10-21T12:35:44.839990+00:00",
       "name": "Honda Motor",
       "name_jp": "\u672c\u7530\u6280\u7814\u5de5\u696d",
       "details": [
@@ -1391,7 +1437,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:27.176221+00:00"
+          "timestamp": "2026-10-21T12:28:00.232982+00:00"
         },
         {
           "agent": "sector_agent",
@@ -1415,7 +1461,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:28.871329+00:00"
+          "timestamp": "2026-10-21T12:28:01.632807+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -1465,7 +1511,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.419843+00:00"
+          "timestamp": "2026-10-21T12:35:44.830014+00:00"
         }
       ],
       "reference_price": 1804.0
@@ -1483,7 +1529,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426002+00:00",
+      "timestamp": "2026-10-21T12:35:44.840030+00:00",
       "name": "Central Japan Railway",
       "name_jp": "\u6771\u6d77\u65c5\u5ba2\u9244\u9053",
       "details": [
@@ -1519,7 +1565,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:01.590415+00:00"
+          "timestamp": "2026-10-21T12:28:30.208706+00:00"
         },
         {
           "agent": "sector_agent",
@@ -1543,7 +1589,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:02.004420+00:00"
+          "timestamp": "2026-10-21T12:28:30.595771+00:00"
         }
       ],
       "reference_price": 3867.0
@@ -1563,7 +1609,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426076+00:00",
+      "timestamp": "2026-10-21T12:35:44.840131+00:00",
       "name": "Renesas Electronics",
       "name_jp": "\u30eb\u30cd\u30b5\u30b9 \u30a8\u30ec\u30af\u30c8\u30ed\u30cb\u30af\u30b9",
       "details": [
@@ -1596,7 +1642,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:33.942324+00:00"
+          "timestamp": "2026-10-21T12:29:48.273469+00:00"
         },
         {
           "agent": "sector_agent",
@@ -1620,7 +1666,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:35.627255+00:00"
+          "timestamp": "2026-10-21T12:29:49.611745+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -1647,7 +1693,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:35.877806+00:00"
+          "timestamp": "2026-10-21T12:29:49.777086+00:00"
         }
       ],
       "reference_price": 3000.0
@@ -1667,7 +1713,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426087+00:00",
+      "timestamp": "2026-10-21T12:35:44.840144+00:00",
       "name": "IHI Corporation",
       "name_jp": "IHI\uff08\u77f3\u5ddd\u5cf6\u64ad\u78e8\u91cd\u5de5\u696d\uff09",
       "details": [
@@ -1700,7 +1746,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:43.930675+00:00"
+          "timestamp": "2026-10-21T12:29:56.392671+00:00"
         },
         {
           "agent": "sector_agent",
@@ -1724,7 +1770,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:45.611344+00:00"
+          "timestamp": "2026-10-21T12:29:57.741996+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -1751,7 +1797,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:45.878131+00:00"
+          "timestamp": "2026-10-21T12:29:57.899489+00:00"
         }
       ],
       "reference_price": 2505.0
@@ -1769,7 +1815,7 @@
         "pattern_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426202+00:00",
+      "timestamp": "2026-10-21T12:35:44.840286+00:00",
       "name": "SPDR S&P 500 ETF",
       "details": [
         {
@@ -1804,7 +1850,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:44.521129+00:00"
+          "timestamp": "2026-10-21T12:31:42.950853+00:00"
         },
         {
           "agent": "pattern_agent",
@@ -1830,7 +1876,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:44.522440+00:00"
+          "timestamp": "2026-10-21T12:31:42.952702+00:00"
         }
       ],
       "reference_price": 769.0499877929688
@@ -1846,7 +1892,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425965+00:00",
+      "timestamp": "2026-10-21T12:35:44.839980+00:00",
       "name": "Daikin Industries",
       "name_jp": "\u30c0\u30a4\u30ad\u30f3\u5de5\u696d",
       "details": [
@@ -1879,7 +1925,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:16.982436+00:00"
+          "timestamp": "2026-10-21T12:27:52.072369+00:00"
         },
         {
           "agent": "sector_agent",
@@ -1903,7 +1949,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:18.820735+00:00"
+          "timestamp": "2026-10-21T12:27:53.495917+00:00"
         }
       ],
       "reference_price": 21345.0
@@ -1919,7 +1965,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426020+00:00",
+      "timestamp": "2026-10-21T12:35:44.840055+00:00",
       "name": "Asahi Group Holdings",
       "name_jp": "\u30a2\u30b5\u30d2\u30b0\u30eb\u30fc\u30d7\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
       "details": [
@@ -1945,7 +1991,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:25.013347+00:00"
+          "timestamp": "2026-10-21T12:28:50.855385+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -1972,7 +2018,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:25.270130+00:00"
+          "timestamp": "2026-10-21T12:28:51.031477+00:00"
         }
       ],
       "reference_price": 1670.5
@@ -1991,7 +2037,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426118+00:00",
+      "timestamp": "2026-10-21T12:35:44.840184+00:00",
       "name": "Konica Minolta",
       "name_jp": "\u30b3\u30cb\u30ab\u30df\u30ce\u30eb\u30bf",
       "details": [
@@ -2021,7 +2067,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:14.443386+00:00"
+          "timestamp": "2026-10-21T12:30:21.639135+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -2057,7 +2103,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:14.444917+00:00"
+          "timestamp": "2026-10-21T12:30:21.641531+00:00"
         },
         {
           "agent": "sector_agent",
@@ -2081,7 +2127,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:16.337199+00:00"
+          "timestamp": "2026-10-21T12:30:24.049018+00:00"
         }
       ],
       "reference_price": 672.0
@@ -2097,7 +2143,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426060+00:00",
+      "timestamp": "2026-10-21T12:35:44.840111+00:00",
       "name": "Fujifilm Holdings",
       "name_jp": "\u5bcc\u58eb\u30d5\u30a4\u30eb\u30e0\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
       "details": [
@@ -2130,7 +2176,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:10.441567+00:00"
+          "timestamp": "2026-10-21T12:29:29.356033+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -2150,7 +2196,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:12.466390+00:00"
+          "timestamp": "2026-10-21T12:29:30.834881+00:00"
         }
       ],
       "reference_price": 3391.0
@@ -2167,7 +2213,7 @@
         "kronos_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426273+00:00",
+      "timestamp": "2026-10-21T12:35:44.840382+00:00",
       "name": "Kyocera",
       "name_jp": "\u4eac\u30bb\u30e9",
       "details": [
@@ -2219,7 +2265,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.421135+00:00"
+          "timestamp": "2026-10-21T12:35:44.832380+00:00"
         }
       ],
       "reference_price": 3552.0
@@ -2236,7 +2282,7 @@
         "kronos_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426276+00:00",
+      "timestamp": "2026-10-21T12:35:44.840386+00:00",
       "name": "Komatsu",
       "name_jp": "\u30b3\u30de\u30c4",
       "details": [
@@ -2288,7 +2334,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.421565+00:00"
+          "timestamp": "2026-10-21T12:35:44.833205+00:00"
         }
       ],
       "reference_price": 7004.0
@@ -2305,7 +2351,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426037+00:00",
+      "timestamp": "2026-10-21T12:35:44.840079+00:00",
       "name": "Bridgestone",
       "name_jp": "\u30d6\u30ea\u30c2\u30b9\u30c8\u30f3",
       "details": [
@@ -2331,7 +2377,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:51.583589+00:00"
+          "timestamp": "2026-10-21T12:29:14.093279+00:00"
         }
       ],
       "reference_price": 4005.0
@@ -2348,7 +2394,7 @@
         "kronos_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426279+00:00",
+      "timestamp": "2026-10-21T12:35:44.840389+00:00",
       "name": "JFE Holdings",
       "name_jp": "JFE\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
       "details": [
@@ -2400,7 +2446,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.421685+00:00"
+          "timestamp": "2026-10-21T12:35:44.833455+00:00"
         }
       ],
       "reference_price": 1739.5
@@ -2420,7 +2466,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425927+00:00",
+      "timestamp": "2026-10-21T12:35:44.839932+00:00",
       "name": "Murata Manufacturing",
       "name_jp": "\u6751\u7530\u88fd\u4f5c\u6240",
       "details": [
@@ -2456,7 +2502,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:44.116206+00:00"
+          "timestamp": "2026-10-21T12:27:24.485972+00:00"
         },
         {
           "agent": "sector_agent",
@@ -2480,7 +2526,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:44.536408+00:00"
+          "timestamp": "2026-10-21T12:27:24.868879+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -2507,7 +2553,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:44.784532+00:00"
+          "timestamp": "2026-10-21T12:27:25.052012+00:00"
         }
       ],
       "reference_price": 6756.0
@@ -2523,7 +2569,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425961+00:00",
+      "timestamp": "2026-10-21T12:35:44.839975+00:00",
       "name": "Mitsui & Co.",
       "name_jp": "\u4e09\u4e95\u7269\u7523",
       "details": [
@@ -2556,7 +2602,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:13.477170+00:00"
+          "timestamp": "2026-10-21T12:27:49.403334+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -2576,7 +2622,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:15.662440+00:00"
+          "timestamp": "2026-10-21T12:27:50.879881+00:00"
         }
       ],
       "reference_price": 4979.0
@@ -2597,7 +2643,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426024+00:00",
+      "timestamp": "2026-10-21T12:35:44.840060+00:00",
       "name": "Suntory Beverage & Food",
       "name_jp": "\u30b5\u30f3\u30c8\u30ea\u30fc\u98df\u54c1\u30a4\u30f3\u30bf\u30fc\u30ca\u30b7\u30e7\u30ca\u30eb",
       "details": [
@@ -2635,7 +2681,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:29.942872+00:00"
+          "timestamp": "2026-10-21T12:28:54.993914+00:00"
         },
         {
           "agent": "pattern_agent",
@@ -2661,7 +2707,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:31.302366+00:00"
+          "timestamp": "2026-10-21T12:28:57.033141+00:00"
         },
         {
           "agent": "sector_agent",
@@ -2685,7 +2731,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:31.705856+00:00"
+          "timestamp": "2026-10-21T12:28:57.437664+00:00"
         }
       ],
       "reference_price": 4821.0
@@ -2701,7 +2747,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426070+00:00",
+      "timestamp": "2026-10-21T12:35:44.840123+00:00",
       "name": "Tokyo Seimitsu",
       "name_jp": "\u6771\u4eac\u7cbe\u5bc6",
       "details": [
@@ -2737,7 +2783,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:28.620332+00:00"
+          "timestamp": "2026-10-21T12:29:43.711720+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -2757,7 +2803,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:29.280179+00:00"
+          "timestamp": "2026-10-21T12:29:44.312189+00:00"
         }
       ],
       "reference_price": 17085.0
@@ -2773,7 +2819,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426166+00:00",
+      "timestamp": "2026-10-21T12:35:44.840245+00:00",
       "name": "COVER Corporation",
       "name_jp": "\u30ab\u30d0\u30fc",
       "details": [
@@ -2809,7 +2855,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:09.148257+00:00"
+          "timestamp": "2026-10-21T12:31:09.217253+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -2829,10 +2875,115 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:09.807964+00:00"
+          "timestamp": "2026-10-21T12:31:09.730484+00:00"
         }
       ],
       "reference_price": 1625.0
+    },
+    {
+      "symbol": "AMD",
+      "action": "WATCH",
+      "confidence": 0.83,
+      "signal_count": 4,
+      "alerts": [
+        "sector_agent",
+        "sentiment_agent"
+      ],
+      "agents": [
+        "dd_agent",
+        "sector_agent",
+        "sentiment_agent"
+      ],
+      "regime": "risk_on",
+      "timestamp": "2026-10-21T12:35:44.840272+00:00",
+      "name": "Advanced Micro Devices",
+      "details": [
+        {
+          "agent": "dd_agent",
+          "confidence": 0.5,
+          "alert": false,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 136.41325,
+              "confidence": 0.5
+            }
+          ],
+          "price": {
+            "open": 530.7949829101562,
+            "close": 534.5999755859375,
+            "change": -3.45001220703125,
+            "change_pct": -0.64,
+            "high": 548.1068725585938,
+            "low": 524.5999755859375,
+            "volume": 13254582,
+            "previous_close": 538.0499877929688
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 872949678080.0,
+            "pe_ratio": 136.41325,
+            "float_shares": 1623529079.0,
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "beta": 2.454
+          },
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:31:32.420785+00:00"
+        },
+        {
+          "agent": "sector_agent",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "relative_strength_bearish",
+              "vs": "Technology",
+              "relative_strength_pct": -8.29,
+              "confidence": 1.0
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": {
+            "symbol": "XLK",
+            "label": "Technology",
+            "stock_return_1mo_pct": -13.12,
+            "benchmark_return_1mo_pct": -4.83
+          },
+          "forecast": null,
+          "timestamp": "2026-10-21T12:31:32.813116+00:00"
+        },
+        {
+          "agent": "sentiment_agent",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "analyst_consensus_bullish",
+              "recommendation_mean": 1.49,
+              "recommendation_key": "strong_buy",
+              "num_analysts": 50,
+              "confidence": 1.0
+            },
+            {
+              "type": "analyst_upgrade_trend",
+              "upgrades": 1,
+              "downgrades": 0,
+              "confidence": 0.65
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:31:32.891590+00:00"
+        }
+      ],
+      "reference_price": 534.739990234375
     },
     {
       "symbol": "4063.T",
@@ -2848,7 +2999,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425968+00:00",
+      "timestamp": "2026-10-21T12:35:44.839984+00:00",
       "name": "Shin-Etsu Chemical",
       "name_jp": "\u4fe1\u8d8a\u5316\u5b66\u5de5\u696d",
       "details": [
@@ -2870,7 +3021,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:22.587126+00:00"
+          "timestamp": "2026-10-21T12:27:56.302653+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -2920,7 +3071,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.419688+00:00"
+          "timestamp": "2026-10-21T12:35:44.829731+00:00"
         }
       ],
       "reference_price": 5882.0
@@ -2936,7 +3087,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426153+00:00",
+      "timestamp": "2026-10-21T12:35:44.840228+00:00",
       "name": "Nexon",
       "name_jp": "\u30cd\u30af\u30bd\u30f3",
       "details": [
@@ -2969,7 +3120,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:54.244339+00:00"
+          "timestamp": "2026-10-21T12:30:57.159110+00:00"
         },
         {
           "agent": "sector_agent",
@@ -2993,7 +3144,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:56.059776+00:00"
+          "timestamp": "2026-10-21T12:30:58.493504+00:00"
         }
       ],
       "reference_price": 2797.5
@@ -3010,7 +3161,7 @@
         "momentum_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425946+00:00",
+      "timestamp": "2026-10-21T12:35:44.839954+00:00",
       "name": "Nippon Telegraph & Telephone",
       "name_jp": "\u65e5\u672c\u96fb\u4fe1\u96fb\u8a71",
       "details": [
@@ -3048,7 +3199,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:52.751650+00:00"
+          "timestamp": "2026-10-21T12:27:32.024759+00:00"
         }
       ],
       "reference_price": 176.1999969482422
@@ -3065,7 +3216,7 @@
         "kronos_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426271+00:00",
+      "timestamp": "2026-10-21T12:35:44.840379+00:00",
       "name": "Nippon Steel",
       "name_jp": "\u65e5\u672c\u88fd\u9244",
       "details": [
@@ -3117,7 +3268,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.420026+00:00"
+          "timestamp": "2026-10-21T12:35:44.830317+00:00"
         }
       ],
       "reference_price": 663.0999755859375
@@ -3141,7 +3292,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426050+00:00",
+      "timestamp": "2026-10-21T12:35:44.840096+00:00",
       "name": "Hoya",
       "name_jp": "HOYA",
       "details": [
@@ -3176,7 +3327,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:00.122549+00:00"
+          "timestamp": "2026-10-21T12:29:21.346168+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -3212,7 +3363,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:00.124075+00:00"
+          "timestamp": "2026-10-21T12:29:21.348379+00:00"
         },
         {
           "agent": "pattern_agent",
@@ -3240,7 +3391,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:01.512645+00:00"
+          "timestamp": "2026-10-21T12:29:22.370677+00:00"
         },
         {
           "agent": "sector_agent",
@@ -3264,7 +3415,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:01.965257+00:00"
+          "timestamp": "2026-10-21T12:29:22.747613+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -3284,7 +3435,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:02.281344+00:00"
+          "timestamp": "2026-10-21T12:29:22.894063+00:00"
         }
       ],
       "reference_price": 26505.0
@@ -3306,7 +3457,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426149+00:00",
+      "timestamp": "2026-10-21T12:35:44.840224+00:00",
       "name": "Mixi",
       "name_jp": "\u30df\u30af\u30b7\u30a3",
       "details": [
@@ -3344,7 +3495,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:50.904359+00:00"
+          "timestamp": "2026-10-21T12:30:54.559038+00:00"
         },
         {
           "agent": "dd_agent",
@@ -3378,7 +3529,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:52.279765+00:00"
+          "timestamp": "2026-10-21T12:30:55.483272+00:00"
         },
         {
           "agent": "sector_agent",
@@ -3402,7 +3553,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:52.688218+00:00"
+          "timestamp": "2026-10-21T12:30:55.887441+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -3452,7 +3603,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.422996+00:00"
+          "timestamp": "2026-10-21T12:35:44.835877+00:00"
         }
       ],
       "reference_price": 3985.0
@@ -3471,7 +3622,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426031+00:00",
+      "timestamp": "2026-10-21T12:35:44.840069+00:00",
       "name": "Seven & I Holdings",
       "name_jp": "\u30bb\u30d6\u30f3&\u30a2\u30a4\u30fb\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
       "details": [
@@ -3505,7 +3656,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:39.813010+00:00"
+          "timestamp": "2026-10-21T12:29:04.422635+00:00"
         },
         {
           "agent": "sector_agent",
@@ -3529,7 +3680,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:41.538550+00:00"
+          "timestamp": "2026-10-21T12:29:05.720733+00:00"
         }
       ],
       "reference_price": 2094.0
@@ -3551,7 +3702,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426125+00:00",
+      "timestamp": "2026-10-21T12:35:44.840193+00:00",
       "name": "Money Forward",
       "name_jp": "\u30de\u30cd\u30fc\u30d5\u30a9\u30ef\u30fc\u30c9",
       "details": [
@@ -3589,7 +3740,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:21.130508+00:00"
+          "timestamp": "2026-10-21T12:30:28.232246+00:00"
         },
         {
           "agent": "dd_agent",
@@ -3628,7 +3779,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:22.522012+00:00"
+          "timestamp": "2026-10-21T12:30:29.256552+00:00"
         },
         {
           "agent": "sector_agent",
@@ -3652,7 +3803,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:22.918459+00:00"
+          "timestamp": "2026-10-21T12:30:29.687349+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -3702,7 +3853,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.422493+00:00"
+          "timestamp": "2026-10-21T12:35:44.834947+00:00"
         }
       ],
       "reference_price": 6700.0
@@ -3723,7 +3874,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426094+00:00",
+      "timestamp": "2026-10-21T12:35:44.840152+00:00",
       "name": "Recruit Holdings",
       "name_jp": "\u30ea\u30af\u30eb\u30fc\u30c8\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
       "details": [
@@ -3761,7 +3912,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:50.470456+00:00"
+          "timestamp": "2026-10-21T12:30:01.739209+00:00"
         },
         {
           "agent": "sector_agent",
@@ -3785,7 +3936,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:52.210712+00:00"
+          "timestamp": "2026-10-21T12:30:03.127260+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -3805,7 +3956,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:52.466927+00:00"
+          "timestamp": "2026-10-21T12:30:03.307773+00:00"
         }
       ],
       "reference_price": 18845.0
@@ -3823,7 +3974,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426132+00:00",
+      "timestamp": "2026-10-21T12:35:44.840202+00:00",
       "name": "Socionext",
       "name_jp": "\u30bd\u30b7\u30aa\u30cd\u30af\u30b9\u30c8",
       "details": [
@@ -3849,7 +4000,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:32.760697+00:00"
+          "timestamp": "2026-10-21T12:30:39.768027+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -3869,7 +4020,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:33.020681+00:00"
+          "timestamp": "2026-10-21T12:30:39.996763+00:00"
         }
       ],
       "reference_price": 1858.5
@@ -3893,7 +4044,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426242+00:00",
+      "timestamp": "2026-10-21T12:35:44.840338+00:00",
       "name": "Vertiv Holdings",
       "details": [
         {
@@ -3930,7 +4081,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:18.291481+00:00"
+          "timestamp": "2026-10-21T12:32:11.760178+00:00"
         },
         {
           "agent": "news_scanner",
@@ -3942,7 +4093,9 @@
               "direction": "positive",
               "avg_sentiment": 0.1,
               "confidence": 0.2,
-              "keywords": []
+              "keywords": [
+                "launch"
+              ]
             }
           ],
           "price": null,
@@ -3950,7 +4103,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:18.692632+00:00"
+          "timestamp": "2026-10-21T12:32:11.939146+00:00"
         },
         {
           "agent": "pattern_agent",
@@ -3978,7 +4131,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:19.460882+00:00"
+          "timestamp": "2026-10-21T12:32:12.478896+00:00"
         },
         {
           "agent": "sector_agent",
@@ -4002,7 +4155,7 @@
             "benchmark_return_1mo_pct": -1.87
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:19.859944+00:00"
+          "timestamp": "2026-10-21T12:32:12.844859+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -4035,7 +4188,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:19.943050+00:00"
+          "timestamp": "2026-10-21T12:32:12.899985+00:00"
         }
       ],
       "reference_price": 203.55999755859375
@@ -4056,7 +4209,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426097+00:00",
+      "timestamp": "2026-10-21T12:35:44.840156+00:00",
       "name": "CyberAgent",
       "name_jp": "\u30b5\u30a4\u30d0\u30fc\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8",
       "details": [
@@ -4090,7 +4243,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:53.767980+00:00"
+          "timestamp": "2026-10-21T12:30:04.522686+00:00"
         },
         {
           "agent": "sector_agent",
@@ -4114,7 +4267,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:55.483212+00:00"
+          "timestamp": "2026-10-21T12:30:05.845185+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -4141,7 +4294,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:55.809181+00:00"
+          "timestamp": "2026-10-21T12:30:06.003522+00:00"
         }
       ],
       "reference_price": 1328.0
@@ -4165,7 +4318,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426136+00:00",
+      "timestamp": "2026-10-21T12:35:44.840207+00:00",
       "name": "PeptiDream",
       "name_jp": "\u30da\u30d7\u30c1\u30c9\u30ea\u30fc\u30e0",
       "details": [
@@ -4200,7 +4353,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:34.336438+00:00"
+          "timestamp": "2026-10-21T12:30:41.135361+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -4236,7 +4389,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:34.337947+00:00"
+          "timestamp": "2026-10-21T12:30:41.137640+00:00"
         },
         {
           "agent": "sector_agent",
@@ -4260,7 +4413,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:36.093393+00:00"
+          "timestamp": "2026-10-21T12:30:42.411233+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -4287,7 +4440,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:36.351837+00:00"
+          "timestamp": "2026-10-21T12:30:42.615831+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -4337,7 +4490,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.422677+00:00"
+          "timestamp": "2026-10-21T12:35:44.835282+00:00"
         }
       ],
       "reference_price": 1084.5
@@ -4360,7 +4513,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425958+00:00",
+      "timestamp": "2026-10-21T12:35:44.839970+00:00",
       "name": "Nintendo",
       "name_jp": "\u4efb\u5929\u5802",
       "details": [
@@ -4394,7 +4547,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:03.089262+00:00"
+          "timestamp": "2026-10-21T12:27:41.380696+00:00"
         },
         {
           "agent": "pattern_agent",
@@ -4422,7 +4575,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:04.489527+00:00"
+          "timestamp": "2026-10-21T12:27:42.294866+00:00"
         },
         {
           "agent": "sector_agent",
@@ -4446,7 +4599,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:04.904279+00:00"
+          "timestamp": "2026-10-21T12:27:42.668858+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -4466,7 +4619,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:05.153982+00:00"
+          "timestamp": "2026-10-21T12:27:42.820650+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -4516,7 +4669,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.419479+00:00"
+          "timestamp": "2026-10-21T12:35:44.829309+00:00"
         }
       ],
       "reference_price": 8715.0
@@ -4537,7 +4690,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426054+00:00",
+      "timestamp": "2026-10-21T12:35:44.840102+00:00",
       "name": "Terumo",
       "name_jp": "\u30c6\u30eb\u30e2",
       "details": [
@@ -4563,7 +4716,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:05.470974+00:00"
+          "timestamp": "2026-10-21T12:29:25.390626+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -4590,7 +4743,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:05.719593+00:00"
+          "timestamp": "2026-10-21T12:29:25.527655+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -4640,7 +4793,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.421403+00:00"
+          "timestamp": "2026-10-21T12:35:44.832903+00:00"
         }
       ],
       "reference_price": 2405.0
@@ -4663,7 +4816,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425914+00:00",
+      "timestamp": "2026-10-21T12:35:44.839914+00:00",
       "name": "SoftBank Group",
       "name_jp": "\u30bd\u30d5\u30c8\u30d0\u30f3\u30af\u30b0\u30eb\u30fc\u30d7",
       "details": [
@@ -4697,7 +4850,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:32.447608+00:00"
+          "timestamp": "2026-10-21T12:27:13.172077+00:00"
         },
         {
           "agent": "dd_agent",
@@ -4731,7 +4884,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:33.838267+00:00"
+          "timestamp": "2026-10-21T12:27:15.250059+00:00"
         },
         {
           "agent": "sector_agent",
@@ -4755,7 +4908,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:34.258465+00:00"
+          "timestamp": "2026-10-21T12:27:15.657788+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -4782,7 +4935,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:34.522005+00:00"
+          "timestamp": "2026-10-21T12:27:15.832356+00:00"
         }
       ],
       "reference_price": 4622.0
@@ -4804,7 +4957,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426213+00:00",
+      "timestamp": "2026-10-21T12:35:44.840299+00:00",
       "name": "ServiceNow",
       "details": [
         {
@@ -4833,7 +4986,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:51.944483+00:00"
+          "timestamp": "2026-10-21T12:31:49.558873+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -4864,7 +5017,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:51.946017+00:00"
+          "timestamp": "2026-10-21T12:31:49.561097+00:00"
         },
         {
           "agent": "dd_agent",
@@ -4898,7 +5051,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:52.859956+00:00"
+          "timestamp": "2026-10-21T12:31:50.313849+00:00"
         },
         {
           "agent": "sector_agent",
@@ -4922,7 +5075,7 @@
             "benchmark_return_1mo_pct": -4.83
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:53.250998+00:00"
+          "timestamp": "2026-10-21T12:31:50.683344+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -4942,7 +5095,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:53.345014+00:00"
+          "timestamp": "2026-10-21T12:31:50.755863+00:00"
         }
       ],
       "reference_price": 149.5399932861328
@@ -4961,7 +5114,7 @@
         "pattern_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426006+00:00",
+      "timestamp": "2026-10-21T12:35:44.840034+00:00",
       "name": "Denso",
       "name_jp": "\u30c7\u30f3\u30bd\u30fc",
       "details": [
@@ -4989,7 +5142,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:04.924215+00:00"
+          "timestamp": "2026-10-21T12:28:32.912697+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -5039,7 +5192,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.420407+00:00"
+          "timestamp": "2026-10-21T12:35:44.831024+00:00"
         }
       ],
       "reference_price": 1861.5
@@ -5063,7 +5216,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426209+00:00",
+      "timestamp": "2026-10-21T12:35:44.840295+00:00",
       "name": "Adobe",
       "details": [
         {
@@ -5092,7 +5245,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:49.287791+00:00"
+          "timestamp": "2026-10-21T12:31:47.046216+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -5124,7 +5277,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:49.289336+00:00"
+          "timestamp": "2026-10-21T12:31:47.048470+00:00"
         },
         {
           "agent": "pattern_agent",
@@ -5152,7 +5305,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:50.206778+00:00"
+          "timestamp": "2026-10-21T12:31:47.963851+00:00"
         },
         {
           "agent": "sector_agent",
@@ -5176,7 +5329,7 @@
             "benchmark_return_1mo_pct": -4.83
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:50.608973+00:00"
+          "timestamp": "2026-10-21T12:31:48.335824+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -5195,10 +5348,201 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:50.708832+00:00"
+          "timestamp": "2026-10-21T12:31:48.395328+00:00"
         }
       ],
       "reference_price": 256.7300109863281
+    },
+    {
+      "symbol": "MU",
+      "action": "BUY",
+      "confidence": 0.73,
+      "signal_count": 4,
+      "alerts": [
+        "momentum_agent",
+        "sector_agent",
+        "sentiment_agent"
+      ],
+      "agents": [
+        "momentum_agent",
+        "sector_agent",
+        "sentiment_agent"
+      ],
+      "regime": "risk_on",
+      "timestamp": "2026-10-21T12:35:44.840333+00:00",
+      "name": "Micron Technology",
+      "details": [
+        {
+          "agent": "momentum_agent",
+          "confidence": 0.8,
+          "alert": true,
+          "signals": [
+            {
+              "type": "rsi_oversold",
+              "value": 29.13,
+              "confidence": 0.8
+            }
+          ],
+          "price": {
+            "open": 896.0700073242188,
+            "close": 896.0700073242188,
+            "change": -8.83001708984375,
+            "change_pct": -0.98,
+            "high": 918.8900146484375,
+            "low": 881.52001953125,
+            "volume": 20068400,
+            "previous_close": 904.9000244140625
+          },
+          "indicators": {
+            "rsi": 29.13,
+            "macd_signal": null,
+            "sma20": 1015.92,
+            "sma50": 984.23
+          },
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:09.347209+00:00"
+        },
+        {
+          "agent": "sector_agent",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "relative_strength_bearish",
+              "vs": "Technology",
+              "relative_strength_pct": -9.32,
+              "confidence": 1.0
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": {
+            "symbol": "XLK",
+            "label": "Technology",
+            "stock_return_1mo_pct": -14.15,
+            "benchmark_return_1mo_pct": -4.83
+          },
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:10.500845+00:00"
+        },
+        {
+          "agent": "sentiment_agent",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "analyst_consensus_bullish",
+              "recommendation_mean": 1.37,
+              "recommendation_key": "strong_buy",
+              "num_analysts": 46,
+              "confidence": 1.0
+            },
+            {
+              "type": "price_target_upside",
+              "target_mean": 1560.57,
+              "current_price": 896.07,
+              "upside_pct": 74.2,
+              "confidence": 1.0
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:10.573050+00:00"
+        }
+      ],
+      "reference_price": 896.0700073242188
+    },
+    {
+      "symbol": "CELH",
+      "action": "WATCH",
+      "confidence": 0.73,
+      "signal_count": 4,
+      "alerts": [
+        "sentiment_agent"
+      ],
+      "agents": [
+        "dd_agent",
+        "sentiment_agent"
+      ],
+      "regime": "risk_on",
+      "timestamp": "2026-10-21T12:35:44.840364+00:00",
+      "name": "Celsius Holdings",
+      "details": [
+        {
+          "agent": "dd_agent",
+          "confidence": 0.5,
+          "alert": false,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 130.26086,
+              "confidence": 0.5
+            }
+          ],
+          "price": {
+            "open": 29.66990089416504,
+            "close": 29.950000762939453,
+            "change": 0.23000144958496094,
+            "change_pct": 0.77,
+            "high": 30.209999084472656,
+            "low": 29.5,
+            "volume": 3954454,
+            "previous_close": 29.719999313354492
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 7580929536.0,
+            "pe_ratio": 130.26086,
+            "float_shares": 216248812.0,
+            "sector": "Consumer Defensive",
+            "industry": "Beverages - Non-Alcoholic",
+            "beta": 1.003
+          },
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:29.911172+00:00"
+        },
+        {
+          "agent": "sentiment_agent",
+          "confidence": 0.96,
+          "alert": true,
+          "signals": [
+            {
+              "type": "analyst_consensus_bullish",
+              "recommendation_mean": 1.75,
+              "recommendation_key": "buy",
+              "num_analysts": 21,
+              "confidence": 0.75
+            },
+            {
+              "type": "analyst_downgrade_trend",
+              "upgrades": 0,
+              "downgrades": 2,
+              "confidence": 0.8
+            },
+            {
+              "type": "price_target_upside",
+              "target_mean": 41.43,
+              "current_price": 29.96,
+              "upside_pct": 38.3,
+              "confidence": 0.9569901535380506
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:30.835697+00:00"
+        }
+      ],
+      "reference_price": 29.959999084472656
     },
     {
       "symbol": "ARM",
@@ -5219,7 +5563,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426262+00:00",
+      "timestamp": "2026-10-21T12:35:44.840368+00:00",
       "name": "Arm Holdings",
       "details": [
         {
@@ -5248,7 +5592,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:41.690789+00:00"
+          "timestamp": "2026-10-21T12:32:31.994485+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -5280,7 +5624,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:41.692319+00:00"
+          "timestamp": "2026-10-21T12:32:31.996704+00:00"
         },
         {
           "agent": "dd_agent",
@@ -5314,7 +5658,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:42.665027+00:00"
+          "timestamp": "2026-10-21T12:32:32.856539+00:00"
         },
         {
           "agent": "pattern_agent",
@@ -5342,7 +5686,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:42.666356+00:00"
+          "timestamp": "2026-10-21T12:32:32.858366+00:00"
         },
         {
           "agent": "sector_agent",
@@ -5366,7 +5710,7 @@
             "benchmark_return_1mo_pct": -4.83
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:43.060740+00:00"
+          "timestamp": "2026-10-21T12:32:33.217371+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -5393,7 +5737,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:43.145316+00:00"
+          "timestamp": "2026-10-21T12:32:33.262921+00:00"
         }
       ],
       "reference_price": 221.05999755859375
@@ -5414,7 +5758,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425953+00:00",
+      "timestamp": "2026-10-21T12:35:44.839964+00:00",
       "name": "Advantest",
       "name_jp": "\u30a2\u30c9\u30d0\u30f3\u30c6\u30b9\u30c8",
       "details": [
@@ -5450,7 +5794,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:01.073002+00:00"
+          "timestamp": "2026-10-21T12:27:39.540259+00:00"
         },
         {
           "agent": "sector_agent",
@@ -5474,7 +5818,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:01.500795+00:00"
+          "timestamp": "2026-10-21T12:27:39.953643+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -5501,7 +5845,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:01.773461+00:00"
+          "timestamp": "2026-10-21T12:27:40.173765+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -5541,7 +5885,7 @@
               },
               {
                 "date": "2026-10-23",
-                "close": 31333.44
+                "close": 31333.45
               },
               {
                 "date": "2026-10-26",
@@ -5551,7 +5895,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.419349+00:00"
+          "timestamp": "2026-10-21T12:35:44.829070+00:00"
         }
       ],
       "reference_price": 34440.0
@@ -5573,7 +5917,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426143+00:00",
+      "timestamp": "2026-10-21T12:35:44.840215+00:00",
       "name": "freee",
       "name_jp": "\u30d5\u30ea\u30fc",
       "details": [
@@ -5603,7 +5947,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:40.978156+00:00"
+          "timestamp": "2026-10-21T12:30:46.421688+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -5640,7 +5984,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:40.979620+00:00"
+          "timestamp": "2026-10-21T12:30:46.423889+00:00"
         },
         {
           "agent": "dd_agent",
@@ -5679,7 +6023,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:42.287330+00:00"
+          "timestamp": "2026-10-21T12:30:47.426717+00:00"
         },
         {
           "agent": "sector_agent",
@@ -5703,7 +6047,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:42.684693+00:00"
+          "timestamp": "2026-10-21T12:30:47.797381+00:00"
         }
       ],
       "reference_price": 3920.0
@@ -5725,7 +6069,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425985+00:00",
+      "timestamp": "2026-10-21T12:35:44.840007+00:00",
       "name": "Panasonic Holdings",
       "name_jp": "\u30d1\u30ca\u30bd\u30cb\u30c3\u30af \u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
       "details": [
@@ -5759,7 +6103,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:43.620376+00:00"
+          "timestamp": "2026-10-21T12:28:13.997143+00:00"
         },
         {
           "agent": "sector_agent",
@@ -5783,7 +6127,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:45.169443+00:00"
+          "timestamp": "2026-10-21T12:28:16.456318+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -5810,7 +6154,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:45.486079+00:00"
+          "timestamp": "2026-10-21T12:28:16.641482+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -5860,7 +6204,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.420177+00:00"
+          "timestamp": "2026-10-21T12:35:44.830615+00:00"
         }
       ],
       "reference_price": 3905.0
@@ -5879,7 +6223,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426157+00:00",
+      "timestamp": "2026-10-21T12:35:44.840233+00:00",
       "name": "Gunosy",
       "name_jp": "\u30b0\u30ce\u30b7\u30fc",
       "details": [
@@ -5912,7 +6256,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:57.642977+00:00"
+          "timestamp": "2026-10-21T12:30:59.839455+00:00"
         },
         {
           "agent": "dd_agent",
@@ -5946,7 +6290,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:59.008229+00:00"
+          "timestamp": "2026-10-21T12:31:00.817861+00:00"
         },
         {
           "agent": "sector_agent",
@@ -5970,136 +6314,10 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:59.401353+00:00"
+          "timestamp": "2026-10-21T12:31:01.186567+00:00"
         }
       ],
       "reference_price": 356.0
-    },
-    {
-      "symbol": "AMD",
-      "action": "WATCH",
-      "confidence": 0.71,
-      "signal_count": 5,
-      "alerts": [
-        "sector_agent",
-        "sentiment_agent"
-      ],
-      "agents": [
-        "dd_agent",
-        "news_scanner",
-        "sector_agent",
-        "sentiment_agent"
-      ],
-      "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426190+00:00",
-      "name": "Advanced Micro Devices",
-      "details": [
-        {
-          "agent": "news_scanner",
-          "confidence": 0.33,
-          "alert": false,
-          "signals": [
-            {
-              "type": "news_sentiment",
-              "direction": "positive",
-              "avg_sentiment": 0.167,
-              "confidence": 0.33,
-              "keywords": []
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:33.038939+00:00"
-        },
-        {
-          "agent": "dd_agent",
-          "confidence": 0.5,
-          "alert": false,
-          "signals": [
-            {
-              "type": "potentially_overvalued",
-              "pe_ratio": 136.41325,
-              "confidence": 0.5
-            }
-          ],
-          "price": {
-            "open": 530.7949829101562,
-            "close": 534.5999755859375,
-            "change": -3.45001220703125,
-            "change_pct": -0.64,
-            "high": 548.1068725585938,
-            "low": 524.5999755859375,
-            "volume": 13254582,
-            "previous_close": 538.0499877929688
-          },
-          "indicators": null,
-          "fundamentals": {
-            "market_cap": 872949678080.0,
-            "pe_ratio": 136.41325,
-            "float_shares": 1623529079.0,
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "beta": 2.454
-          },
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:33.719870+00:00"
-        },
-        {
-          "agent": "sector_agent",
-          "confidence": 1.0,
-          "alert": true,
-          "signals": [
-            {
-              "type": "relative_strength_bearish",
-              "vs": "Technology",
-              "relative_strength_pct": -8.29,
-              "confidence": 1.0
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": {
-            "symbol": "XLK",
-            "label": "Technology",
-            "stock_return_1mo_pct": -13.12,
-            "benchmark_return_1mo_pct": -4.83
-          },
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:34.121527+00:00"
-        },
-        {
-          "agent": "sentiment_agent",
-          "confidence": 1.0,
-          "alert": true,
-          "signals": [
-            {
-              "type": "analyst_consensus_bullish",
-              "recommendation_mean": 1.49,
-              "recommendation_key": "strong_buy",
-              "num_analysts": 50,
-              "confidence": 1.0
-            },
-            {
-              "type": "analyst_upgrade_trend",
-              "upgrades": 1,
-              "downgrades": 0,
-              "confidence": 0.65
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:34.210828+00:00"
-        }
-      ],
-      "reference_price": 534.739990234375
     },
     {
       "symbol": "AXON",
@@ -6119,7 +6337,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426232+00:00",
+      "timestamp": "2026-10-21T12:35:44.840325+00:00",
       "name": "Axon Enterprise",
       "details": [
         {
@@ -6148,7 +6366,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:09.280123+00:00"
+          "timestamp": "2026-10-21T12:32:03.980869+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -6179,7 +6397,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:09.281657+00:00"
+          "timestamp": "2026-10-21T12:32:03.983095+00:00"
         },
         {
           "agent": "dd_agent",
@@ -6213,7 +6431,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:10.283938+00:00"
+          "timestamp": "2026-10-21T12:32:04.738791+00:00"
         },
         {
           "agent": "pattern_agent",
@@ -6240,7 +6458,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:10.285247+00:00"
+          "timestamp": "2026-10-21T12:32:04.740554+00:00"
         },
         {
           "agent": "sector_agent",
@@ -6264,7 +6482,7 @@
             "benchmark_return_1mo_pct": -1.87
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:11.288110+00:00"
+          "timestamp": "2026-10-21T12:32:05.616763+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -6291,7 +6509,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:11.375586+00:00"
+          "timestamp": "2026-10-21T12:32:05.698528+00:00"
         }
       ],
       "reference_price": 392.6400146484375
@@ -6313,7 +6531,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425936+00:00",
+      "timestamp": "2026-10-21T12:35:44.839942+00:00",
       "name": "Hitachi",
       "name_jp": "\u65e5\u7acb\u88fd\u4f5c\u6240",
       "details": [
@@ -6346,7 +6564,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:46.099204+00:00"
+          "timestamp": "2026-10-21T12:27:26.259427+00:00"
         },
         {
           "agent": "sector_agent",
@@ -6370,7 +6588,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:47.865221+00:00"
+          "timestamp": "2026-10-21T12:27:27.708985+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -6390,7 +6608,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:48.124425+00:00"
+          "timestamp": "2026-10-21T12:27:27.864200+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -6440,7 +6658,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.418857+00:00"
+          "timestamp": "2026-10-21T12:35:44.828212+00:00"
         }
       ],
       "reference_price": 5840.0
@@ -6461,7 +6679,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426245+00:00",
+      "timestamp": "2026-10-21T12:35:44.840342+00:00",
       "name": "Datadog",
       "details": [
         {
@@ -6475,8 +6693,8 @@
               "avg_sentiment": 0.133,
               "confidence": 0.27,
               "keywords": [
-                "earnings",
-                "upgrade"
+                "upgrade",
+                "earnings"
               ]
             }
           ],
@@ -6485,7 +6703,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:21.482772+00:00"
+          "timestamp": "2026-10-21T12:32:14.389729+00:00"
         },
         {
           "agent": "dd_agent",
@@ -6519,7 +6737,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:22.252110+00:00"
+          "timestamp": "2026-10-21T12:32:14.925840+00:00"
         },
         {
           "agent": "sector_agent",
@@ -6543,7 +6761,7 @@
             "benchmark_return_1mo_pct": -4.83
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:22.648075+00:00"
+          "timestamp": "2026-10-21T12:32:15.286373+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -6569,7 +6787,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:22.734051+00:00"
+          "timestamp": "2026-10-21T12:32:15.345743+00:00"
         }
       ],
       "reference_price": 256.42999267578125
@@ -6592,7 +6810,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425857+00:00",
+      "timestamp": "2026-10-21T12:35:44.839867+00:00",
       "name": "Toyota Motor",
       "name_jp": "\u30c8\u30e8\u30bf\u81ea\u52d5\u8eca",
       "details": [
@@ -6626,7 +6844,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:21.773167+00:00"
+          "timestamp": "2026-10-21T12:27:04.142134+00:00"
         },
         {
           "agent": "dd_agent",
@@ -6660,7 +6878,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:23.136356+00:00"
+          "timestamp": "2026-10-21T12:27:05.201164+00:00"
         },
         {
           "agent": "sector_agent",
@@ -6684,7 +6902,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:24.027948+00:00"
+          "timestamp": "2026-10-21T12:27:06.060231+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -6704,7 +6922,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:24.279330+00:00"
+          "timestamp": "2026-10-21T12:27:06.222803+00:00"
         }
       ],
       "reference_price": 3094.0
@@ -6723,7 +6941,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425992+00:00",
+      "timestamp": "2026-10-21T12:35:44.840016+00:00",
       "name": "Mitsubishi Electric",
       "name_jp": "\u4e09\u83f1\u96fb\u6a5f",
       "details": [
@@ -6756,7 +6974,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:50.276082+00:00"
+          "timestamp": "2026-10-21T12:28:20.744517+00:00"
         },
         {
           "agent": "sector_agent",
@@ -6780,7 +6998,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:52.055667+00:00"
+          "timestamp": "2026-10-21T12:28:22.183024+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -6807,7 +7025,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:52.303072+00:00"
+          "timestamp": "2026-10-21T12:28:22.322454+00:00"
         }
       ],
       "reference_price": 4947.0
@@ -6827,7 +7045,7 @@
         "pattern_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426035+00:00",
+      "timestamp": "2026-10-21T12:35:44.840075+00:00",
       "name": "SoftBank Corp",
       "name_jp": "\u30bd\u30d5\u30c8\u30d0\u30f3\u30af",
       "details": [
@@ -6860,7 +7078,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:46.572813+00:00"
+          "timestamp": "2026-10-21T12:29:09.804830+00:00"
         },
         {
           "agent": "pattern_agent",
@@ -6886,7 +7104,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:47.932609+00:00"
+          "timestamp": "2026-10-21T12:29:10.788597+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -6936,7 +7154,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.420990+00:00"
+          "timestamp": "2026-10-21T12:35:44.832109+00:00"
         }
       ],
       "reference_price": 246.60000610351562
@@ -6957,7 +7175,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426057+00:00",
+      "timestamp": "2026-10-21T12:35:44.840107+00:00",
       "name": "Olympus",
       "name_jp": "\u30aa\u30ea\u30f3\u30d1\u30b9",
       "details": [
@@ -6987,7 +7205,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:07.175064+00:00"
+          "timestamp": "2026-10-21T12:29:26.708938+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -7023,7 +7241,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:07.176587+00:00"
+          "timestamp": "2026-10-21T12:29:26.711160+00:00"
         },
         {
           "agent": "sector_agent",
@@ -7047,7 +7265,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:08.843305+00:00"
+          "timestamp": "2026-10-21T12:29:27.987269+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -7067,7 +7285,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:09.104958+00:00"
+          "timestamp": "2026-10-21T12:29:28.160991+00:00"
         }
       ],
       "reference_price": 1698.5
@@ -7088,7 +7306,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426251+00:00",
+      "timestamp": "2026-10-21T12:35:44.840351+00:00",
       "name": "Cloudflare",
       "details": [
         {
@@ -7117,7 +7335,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:26.732205+00:00"
+          "timestamp": "2026-10-21T12:32:19.010281+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -7149,7 +7367,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:26.733720+00:00"
+          "timestamp": "2026-10-21T12:32:19.012533+00:00"
         },
         {
           "agent": "sector_agent",
@@ -7173,7 +7391,7 @@
             "benchmark_return_1mo_pct": -4.83
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:28.112345+00:00"
+          "timestamp": "2026-10-21T12:32:20.194936+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -7193,7 +7411,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:28.284714+00:00"
+          "timestamp": "2026-10-21T12:32:20.287130+00:00"
         }
       ],
       "reference_price": 291.69000244140625
@@ -7208,7 +7426,7 @@
         "dd_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426160+00:00",
+      "timestamp": "2026-10-21T12:35:44.840237+00:00",
       "name": "GungHo Online Entertainment",
       "name_jp": "\u30ac\u30f3\u30db\u30fc\u30fb\u30aa\u30f3\u30e9\u30a4\u30f3\u30fb\u30a8\u30f3\u30bf\u30fc\u30c6\u30a4\u30e1\u30f3\u30c8",
       "details": [
@@ -7249,7 +7467,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:02.340437+00:00"
+          "timestamp": "2026-10-21T12:31:03.557454+00:00"
         }
       ],
       "reference_price": 2440.0
@@ -7267,7 +7485,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426219+00:00",
+      "timestamp": "2026-10-21T12:35:44.840308+00:00",
       "name": "Uber Technologies",
       "details": [
         {
@@ -7299,7 +7517,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:57.332036+00:00"
+          "timestamp": "2026-10-21T12:31:54.448781+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -7326,7 +7544,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:58.733302+00:00"
+          "timestamp": "2026-10-21T12:31:55.784389+00:00"
         }
       ],
       "reference_price": 68.94000244140625
@@ -7345,7 +7563,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426122+00:00",
+      "timestamp": "2026-10-21T12:35:44.840189+00:00",
       "name": "Mercari",
       "name_jp": "\u30e1\u30eb\u30ab\u30ea",
       "details": [
@@ -7375,7 +7593,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:17.847732+00:00"
+          "timestamp": "2026-10-21T12:30:25.335663+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -7406,7 +7624,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:17.849297+00:00"
+          "timestamp": "2026-10-21T12:30:25.337916+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -7426,7 +7644,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:19.881919+00:00"
+          "timestamp": "2026-10-21T12:30:26.977144+00:00"
         }
       ],
       "reference_price": 3528.0
@@ -7447,7 +7665,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426163+00:00",
+      "timestamp": "2026-10-21T12:35:44.840241+00:00",
       "name": "ANYCOLOR",
       "name_jp": "\u30a8\u30cb\u30fc\u30ab\u30e9\u30fc",
       "details": [
@@ -7485,7 +7703,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:04.277310+00:00"
+          "timestamp": "2026-10-21T12:31:05.250531+00:00"
         },
         {
           "agent": "dd_agent",
@@ -7519,7 +7737,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:05.771285+00:00"
+          "timestamp": "2026-10-21T12:31:06.360701+00:00"
         },
         {
           "agent": "sector_agent",
@@ -7543,7 +7761,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:06.170822+00:00"
+          "timestamp": "2026-10-21T12:31:06.732693+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -7570,7 +7788,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:06.497609+00:00"
+          "timestamp": "2026-10-21T12:31:06.951817+00:00"
         }
       ],
       "reference_price": 3230.0
@@ -7589,7 +7807,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426225+00:00",
+      "timestamp": "2026-10-21T12:35:44.840316+00:00",
       "name": "Palantir Technologies",
       "details": [
         {
@@ -7624,7 +7842,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:04.673972+00:00"
+          "timestamp": "2026-10-21T12:32:00.016987+00:00"
         },
         {
           "agent": "sector_agent",
@@ -7648,7 +7866,7 @@
             "benchmark_return_1mo_pct": -4.83
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:05.069272+00:00"
+          "timestamp": "2026-10-21T12:32:00.385789+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -7674,7 +7892,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:05.155211+00:00"
+          "timestamp": "2026-10-21T12:32:00.443732+00:00"
         }
       ],
       "reference_price": 192.60000610351562
@@ -7693,7 +7911,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426063+00:00",
+      "timestamp": "2026-10-21T12:35:44.840115+00:00",
       "name": "DISCO",
       "name_jp": "\u30c7\u30a3\u30b9\u30b3",
       "details": [
@@ -7723,7 +7941,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:20.348734+00:00"
+          "timestamp": "2026-10-21T12:29:37.347391+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -7754,7 +7972,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:20.350268+00:00"
+          "timestamp": "2026-10-21T12:29:37.349712+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -7781,7 +7999,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:22.420430+00:00"
+          "timestamp": "2026-10-21T12:29:38.846611+00:00"
         }
       ],
       "reference_price": 53570.0
@@ -7799,7 +8017,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426100+00:00",
+      "timestamp": "2026-10-21T12:35:44.840160+00:00",
       "name": "Lasertec",
       "name_jp": "\u30ec\u30fc\u30b6\u30fc\u30c6\u30c3\u30af",
       "details": [
@@ -7821,7 +8039,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:59.180965+00:00"
+          "timestamp": "2026-10-21T12:30:08.878442+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -7871,236 +8089,10 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.422148+00:00"
+          "timestamp": "2026-10-21T12:35:44.834285+00:00"
         }
       ],
       "reference_price": 39770.0
-    },
-    {
-      "symbol": "AAPL",
-      "action": "WATCH",
-      "confidence": 0.66,
-      "signal_count": 4,
-      "alerts": [
-        "momentum_agent"
-      ],
-      "agents": [
-        "momentum_agent",
-        "sector_agent",
-        "sentiment_agent"
-      ],
-      "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426176+00:00",
-      "name": "Apple",
-      "details": [
-        {
-          "agent": "momentum_agent",
-          "confidence": 0.7,
-          "alert": true,
-          "signals": [
-            {
-              "type": "macd_bearish",
-              "confidence": 0.7
-            },
-            {
-              "type": "above_sma",
-              "confidence": 0.6
-            }
-          ],
-          "price": {
-            "open": 339.5,
-            "close": 339.5,
-            "change": -3.44000244140625,
-            "change_pct": -1.0,
-            "high": 343.05999755859375,
-            "low": 338.70001220703125,
-            "volume": 35764400,
-            "previous_close": 342.94000244140625
-          },
-          "indicators": {
-            "rsi": 60.49,
-            "macd_signal": "bearish",
-            "sma20": 337.61,
-            "sma50": 326.92
-          },
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:17.725867+00:00"
-        },
-        {
-          "agent": "sector_agent",
-          "confidence": 0.62,
-          "alert": false,
-          "signals": [
-            {
-              "type": "relative_strength_bullish",
-              "vs": "Technology",
-              "relative_strength_pct": 4.98,
-              "confidence": 0.6228444722032482
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": {
-            "symbol": "XLK",
-            "label": "Technology",
-            "stock_return_1mo_pct": 0.15,
-            "benchmark_return_1mo_pct": -4.83
-          },
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:19.556316+00:00"
-        },
-        {
-          "agent": "sentiment_agent",
-          "confidence": 0.65,
-          "alert": false,
-          "signals": [
-            {
-              "type": "analyst_downgrade_trend",
-              "upgrades": 0,
-              "downgrades": 1,
-              "confidence": 0.65
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:19.685658+00:00"
-        }
-      ],
-      "reference_price": 339.5
-    },
-    {
-      "symbol": "MU",
-      "action": "BUY",
-      "confidence": 0.66,
-      "signal_count": 5,
-      "alerts": [
-        "momentum_agent",
-        "sector_agent",
-        "sentiment_agent"
-      ],
-      "agents": [
-        "momentum_agent",
-        "news_scanner",
-        "sector_agent",
-        "sentiment_agent"
-      ],
-      "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426238+00:00",
-      "name": "Micron Technology",
-      "details": [
-        {
-          "agent": "momentum_agent",
-          "confidence": 0.8,
-          "alert": true,
-          "signals": [
-            {
-              "type": "rsi_oversold",
-              "value": 29.13,
-              "confidence": 0.8
-            }
-          ],
-          "price": {
-            "open": 896.0700073242188,
-            "close": 896.0700073242188,
-            "change": -8.83001708984375,
-            "change_pct": -0.98,
-            "high": 918.8900146484375,
-            "low": 881.52001953125,
-            "volume": 20068400,
-            "previous_close": 904.9000244140625
-          },
-          "indicators": {
-            "rsi": 29.13,
-            "macd_signal": null,
-            "sma20": 1015.92,
-            "sma50": 984.23
-          },
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:06:15.570780+00:00"
-        },
-        {
-          "agent": "news_scanner",
-          "confidence": 0.27,
-          "alert": false,
-          "signals": [
-            {
-              "type": "news_sentiment",
-              "direction": "positive",
-              "avg_sentiment": 0.133,
-              "confidence": 0.27,
-              "keywords": [
-                "earnings"
-              ]
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:06:15.781865+00:00"
-        },
-        {
-          "agent": "sector_agent",
-          "confidence": 1.0,
-          "alert": true,
-          "signals": [
-            {
-              "type": "relative_strength_bearish",
-              "vs": "Technology",
-              "relative_strength_pct": -9.32,
-              "confidence": 1.0
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": {
-            "symbol": "XLK",
-            "label": "Technology",
-            "stock_return_1mo_pct": -14.15,
-            "benchmark_return_1mo_pct": -4.83
-          },
-          "forecast": null,
-          "timestamp": "2026-10-21T08:06:16.915130+00:00"
-        },
-        {
-          "agent": "sentiment_agent",
-          "confidence": 1.0,
-          "alert": true,
-          "signals": [
-            {
-              "type": "analyst_consensus_bullish",
-              "recommendation_mean": 1.37,
-              "recommendation_key": "strong_buy",
-              "num_analysts": 46,
-              "confidence": 1.0
-            },
-            {
-              "type": "price_target_upside",
-              "target_mean": 1560.57,
-              "current_price": 896.07,
-              "upside_pct": 74.2,
-              "confidence": 1.0
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:06:17.040108+00:00"
-        }
-      ],
-      "reference_price": 896.0700073242188
     },
     {
       "symbol": "2432.T",
@@ -8116,7 +8108,7 @@
         "momentum_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426146+00:00",
+      "timestamp": "2026-10-21T12:35:44.840219+00:00",
       "name": "DeNA",
       "name_jp": "\u30c7\u30a3\u30fc\u30fb\u30a8\u30cc\u30fb\u30a8\u30fc",
       "details": [
@@ -8149,7 +8141,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:47.711301+00:00"
+          "timestamp": "2026-10-21T12:30:51.913473+00:00"
         },
         {
           "agent": "dd_agent",
@@ -8183,7 +8175,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:48.968938+00:00"
+          "timestamp": "2026-10-21T12:30:52.851628+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -8233,10 +8225,165 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.422859+00:00"
+          "timestamp": "2026-10-21T12:35:44.835648+00:00"
         }
       ],
       "reference_price": 2547.0
+    },
+    {
+      "symbol": "ANET",
+      "action": "WATCH",
+      "confidence": 0.64,
+      "signal_count": 6,
+      "alerts": [
+        "sector_agent",
+        "sentiment_agent"
+      ],
+      "agents": [
+        "dd_agent",
+        "news_scanner",
+        "pattern_agent",
+        "sector_agent",
+        "sentiment_agent"
+      ],
+      "regime": "risk_on",
+      "timestamp": "2026-10-21T12:35:44.840329+00:00",
+      "name": "Arista Networks",
+      "details": [
+        {
+          "agent": "news_scanner",
+          "confidence": 0.2,
+          "alert": false,
+          "signals": [
+            {
+              "type": "news_sentiment",
+              "direction": "positive",
+              "avg_sentiment": 0.1,
+              "confidence": 0.2,
+              "keywords": []
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:07.044624+00:00"
+        },
+        {
+          "agent": "dd_agent",
+          "confidence": 0.5,
+          "alert": false,
+          "signals": [
+            {
+              "type": "potentially_overvalued",
+              "pe_ratio": 57.157726,
+              "confidence": 0.5
+            }
+          ],
+          "price": {
+            "open": 179.97999572753906,
+            "close": 181.19000244140625,
+            "change": -1.7599945068359375,
+            "change_pct": -0.96,
+            "high": 183.3300018310547,
+            "low": 177.36000061035156,
+            "volume": 4618600,
+            "previous_close": 182.9499969482422
+          },
+          "indicators": null,
+          "fundamentals": {
+            "market_cap": 228521312256.0,
+            "pe_ratio": 57.157726,
+            "float_shares": 1050574907.0,
+            "sector": "Technology",
+            "industry": "Computer Hardware",
+            "beta": 1.605
+          },
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:07.648205+00:00"
+        },
+        {
+          "agent": "pattern_agent",
+          "confidence": 0.65,
+          "alert": false,
+          "signals": [
+            {
+              "type": "support_bounce",
+              "level": 176.77,
+              "confidence": 0.65
+            }
+          ],
+          "price": {
+            "open": 181.19000244140625,
+            "close": 181.19000244140625,
+            "change": -1.7599945068359375,
+            "change_pct": -0.96,
+            "high": 183.3300018310547,
+            "low": 177.36000061035156,
+            "volume": 6160400,
+            "previous_close": 182.9499969482422
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:07.650070+00:00"
+        },
+        {
+          "agent": "sector_agent",
+          "confidence": 0.87,
+          "alert": true,
+          "signals": [
+            {
+              "type": "relative_strength_bearish",
+              "vs": "Technology",
+              "relative_strength_pct": -6.97,
+              "confidence": 0.8707483128046428
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": {
+            "symbol": "XLK",
+            "label": "Technology",
+            "stock_return_1mo_pct": -11.8,
+            "benchmark_return_1mo_pct": -4.83
+          },
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:08.010236+00:00"
+        },
+        {
+          "agent": "sentiment_agent",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "analyst_consensus_bullish",
+              "recommendation_mean": 1.28,
+              "recommendation_key": "strong_buy",
+              "num_analysts": 29,
+              "confidence": 1.0
+            },
+            {
+              "type": "price_target_upside",
+              "target_mean": 243.59,
+              "current_price": 181.19,
+              "upside_pct": 34.4,
+              "confidence": 0.8609270655113417
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:08.075421+00:00"
+        }
+      ],
+      "reference_price": 181.19000244140625
     },
     {
       "symbol": "6758.T",
@@ -8256,7 +8403,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425868+00:00",
+      "timestamp": "2026-10-21T12:35:44.839879+00:00",
       "name": "Sony Group",
       "name_jp": "\u30bd\u30cb\u30fc\u30b0\u30eb\u30fc\u30d7",
       "details": [
@@ -8294,7 +8441,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:25.591212+00:00"
+          "timestamp": "2026-10-21T12:27:07.418302+00:00"
         },
         {
           "agent": "sector_agent",
@@ -8318,7 +8465,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:27.438486+00:00"
+          "timestamp": "2026-10-21T12:27:08.818234+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -8345,7 +8492,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:27.699987+00:00"
+          "timestamp": "2026-10-21T12:27:08.966152+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -8395,7 +8542,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.418561+00:00"
+          "timestamp": "2026-10-21T12:35:44.827709+00:00"
         }
       ],
       "reference_price": 4012.0
@@ -8415,7 +8562,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426017+00:00",
+      "timestamp": "2026-10-21T12:35:44.840050+00:00",
       "name": "ANA Holdings",
       "name_jp": "ANA\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
       "details": [
@@ -8453,7 +8600,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:20.035776+00:00"
+          "timestamp": "2026-10-21T12:28:45.552761+00:00"
         },
         {
           "agent": "dd_agent",
@@ -8487,7 +8634,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:21.365724+00:00"
+          "timestamp": "2026-10-21T12:28:46.541146+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -8507,7 +8654,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:22.103547+00:00"
+          "timestamp": "2026-10-21T12:28:47.158082+00:00"
         }
       ],
       "reference_price": 2879.5
@@ -8530,7 +8677,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426091+00:00",
+      "timestamp": "2026-10-21T12:35:44.840148+00:00",
       "name": "Fujikura",
       "name_jp": "\u30d5\u30b8\u30af\u30e9",
       "details": [
@@ -8560,7 +8707,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:47.185825+00:00"
+          "timestamp": "2026-10-21T12:29:59.129984+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -8596,7 +8743,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:47.187346+00:00"
+          "timestamp": "2026-10-21T12:29:59.132301+00:00"
         },
         {
           "agent": "sector_agent",
@@ -8620,7 +8767,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:48.930538+00:00"
+          "timestamp": "2026-10-21T12:30:00.377602+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -8647,7 +8794,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:49.190447+00:00"
+          "timestamp": "2026-10-21T12:30:00.550392+00:00"
         }
       ],
       "reference_price": 4347.0
@@ -8668,7 +8815,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426216+00:00",
+      "timestamp": "2026-10-21T12:35:44.840303+00:00",
       "name": "Intuit",
       "details": [
         {
@@ -8697,7 +8844,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:54.610106+00:00"
+          "timestamp": "2026-10-21T12:31:51.948764+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -8729,7 +8876,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:54.611707+00:00"
+          "timestamp": "2026-10-21T12:31:51.950977+00:00"
         },
         {
           "agent": "sector_agent",
@@ -8753,7 +8900,7 @@
             "benchmark_return_1mo_pct": -4.83
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:56.021678+00:00"
+          "timestamp": "2026-10-21T12:31:53.226021+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -8773,7 +8920,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:56.107312+00:00"
+          "timestamp": "2026-10-21T12:31:53.284188+00:00"
         }
       ],
       "reference_price": 335.2900085449219
@@ -8792,7 +8939,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426106+00:00",
+      "timestamp": "2026-10-21T12:35:44.840168+00:00",
       "name": "Nitto Denko",
       "name_jp": "\u65e5\u6771\u96fb\u5de5",
       "details": [
@@ -8830,7 +8977,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:04.020820+00:00"
+          "timestamp": "2026-10-21T12:30:12.823392+00:00"
         },
         {
           "agent": "sector_agent",
@@ -8854,7 +9001,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:05.911871+00:00"
+          "timestamp": "2026-10-21T12:30:14.250327+00:00"
         }
       ],
       "reference_price": 3681.0
@@ -8876,7 +9023,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426268+00:00",
+      "timestamp": "2026-10-21T12:35:44.840376+00:00",
       "name": "Rocket Lab",
       "details": [
         {
@@ -8913,7 +9060,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:47.205497+00:00"
+          "timestamp": "2026-10-21T12:32:36.924463+00:00"
         },
         {
           "agent": "pattern_agent",
@@ -8940,7 +9087,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:48.136911+00:00"
+          "timestamp": "2026-10-21T12:32:37.741703+00:00"
         },
         {
           "agent": "sector_agent",
@@ -8964,7 +9111,7 @@
             "benchmark_return_1mo_pct": -1.87
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:48.529787+00:00"
+          "timestamp": "2026-10-21T12:32:38.130725+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -8991,7 +9138,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:48.612744+00:00"
+          "timestamp": "2026-10-21T12:32:38.198237+00:00"
         }
       ],
       "reference_price": 50.900001525878906
@@ -9012,7 +9159,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425941+00:00",
+      "timestamp": "2026-10-21T12:35:44.839948+00:00",
       "name": "Mitsubishi UFJ Financial Group",
       "name_jp": "\u4e09\u83f1UFJ\u30d5\u30a3\u30ca\u30f3\u30b7\u30e3\u30eb\u30fb\u30b0\u30eb\u30fc\u30d7",
       "details": [
@@ -9042,7 +9189,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:49.420820+00:00"
+          "timestamp": "2026-10-21T12:27:29.053688+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -9073,7 +9220,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:49.422389+00:00"
+          "timestamp": "2026-10-21T12:27:29.055887+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -9093,7 +9240,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:51.391301+00:00"
+          "timestamp": "2026-10-21T12:27:30.806609+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -9143,7 +9290,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.419026+00:00"
+          "timestamp": "2026-10-21T12:35:44.828506+00:00"
         }
       ],
       "reference_price": 3431.0
@@ -9162,7 +9309,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425988+00:00",
+      "timestamp": "2026-10-21T12:35:44.840011+00:00",
       "name": "Canon",
       "name_jp": "\u30ad\u30e4\u30ce\u30f3",
       "details": [
@@ -9200,7 +9347,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:46.847901+00:00"
+          "timestamp": "2026-10-21T12:28:17.815044+00:00"
         },
         {
           "agent": "sector_agent",
@@ -9224,7 +9371,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:48.588862+00:00"
+          "timestamp": "2026-10-21T12:28:19.160850+00:00"
         }
       ],
       "reference_price": 4816.0
@@ -9244,7 +9391,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426228+00:00",
+      "timestamp": "2026-10-21T12:35:44.840320+00:00",
       "name": "CrowdStrike",
       "details": [
         {
@@ -9277,7 +9424,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:06.481168+00:00"
+          "timestamp": "2026-10-21T12:32:01.547781+00:00"
         },
         {
           "agent": "dd_agent",
@@ -9311,7 +9458,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:07.537939+00:00"
+          "timestamp": "2026-10-21T12:32:02.372317+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -9331,7 +9478,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:08.039749+00:00"
+          "timestamp": "2026-10-21T12:32:02.805821+00:00"
         }
       ],
       "reference_price": 227.3699951171875
@@ -9352,7 +9499,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426073+00:00",
+      "timestamp": "2026-10-21T12:35:44.840127+00:00",
       "name": "Ebara",
       "name_jp": "\u834f\u539f",
       "details": [
@@ -9390,7 +9537,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:30.599258+00:00"
+          "timestamp": "2026-10-21T12:29:45.499878+00:00"
         },
         {
           "agent": "sector_agent",
@@ -9414,7 +9561,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:32.281989+00:00"
+          "timestamp": "2026-10-21T12:29:46.956661+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -9441,132 +9588,10 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:32.655952+00:00"
+          "timestamp": "2026-10-21T12:29:47.098082+00:00"
         }
       ],
       "reference_price": 4003.0
-    },
-    {
-      "symbol": "HOOD",
-      "action": "BUY",
-      "confidence": 0.59,
-      "signal_count": 5,
-      "alerts": [
-        "sector_agent",
-        "sentiment_agent"
-      ],
-      "agents": [
-        "news_scanner",
-        "pattern_agent",
-        "sector_agent",
-        "sentiment_agent"
-      ],
-      "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426258+00:00",
-      "name": "Robinhood Markets",
-      "details": [
-        {
-          "agent": "news_scanner",
-          "confidence": 0.33,
-          "alert": false,
-          "signals": [
-            {
-              "type": "news_sentiment",
-              "direction": "positive",
-              "avg_sentiment": 0.167,
-              "confidence": 0.33,
-              "keywords": [
-                "earnings"
-              ]
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:06:35.375359+00:00"
-        },
-        {
-          "agent": "pattern_agent",
-          "confidence": 0.65,
-          "alert": false,
-          "signals": [
-            {
-              "type": "support_bounce",
-              "level": 94.52,
-              "confidence": 0.65
-            }
-          ],
-          "price": {
-            "open": 98.20999908447266,
-            "close": 98.20999908447266,
-            "change": 1.69000244140625,
-            "change_pct": 1.75,
-            "high": 101.10299682617188,
-            "low": 94.7699966430664,
-            "volume": 13930300,
-            "previous_close": 96.5199966430664
-          },
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:06:36.052570+00:00"
-        },
-        {
-          "agent": "sector_agent",
-          "confidence": 1.0,
-          "alert": true,
-          "signals": [
-            {
-              "type": "relative_strength_bearish",
-              "vs": "Financial Services",
-              "relative_strength_pct": -20.03,
-              "confidence": 1.0
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": {
-            "symbol": "XLF",
-            "label": "Financial Services",
-            "stock_return_1mo_pct": -20.35,
-            "benchmark_return_1mo_pct": -0.32
-          },
-          "forecast": null,
-          "timestamp": "2026-10-21T08:06:37.038190+00:00"
-        },
-        {
-          "agent": "sentiment_agent",
-          "confidence": 0.93,
-          "alert": true,
-          "signals": [
-            {
-              "type": "analyst_consensus_bullish",
-              "recommendation_mean": 1.66,
-              "recommendation_key": "buy",
-              "num_analysts": 30,
-              "confidence": 0.84375
-            },
-            {
-              "type": "price_target_upside",
-              "target_mean": 134.8,
-              "current_price": 98.21,
-              "upside_pct": 37.3,
-              "confidence": 0.9315413399857448
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:06:37.128255+00:00"
-        }
-      ],
-      "reference_price": 98.20999908447266
     },
     {
       "symbol": "APP",
@@ -9584,7 +9609,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426265+00:00",
+      "timestamp": "2026-10-21T12:35:44.840372+00:00",
       "name": "AppLovin",
       "details": [
         {
@@ -9620,7 +9645,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:44.372741+00:00"
+          "timestamp": "2026-10-21T12:32:34.396826+00:00"
         },
         {
           "agent": "sector_agent",
@@ -9644,7 +9669,7 @@
             "benchmark_return_1mo_pct": -3.97
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:45.796419+00:00"
+          "timestamp": "2026-10-21T12:32:35.749014+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -9671,7 +9696,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:45.964040+00:00"
+          "timestamp": "2026-10-21T12:32:35.797311+00:00"
         }
       ],
       "reference_price": 272.4599914550781
@@ -9694,7 +9719,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426079+00:00",
+      "timestamp": "2026-10-21T12:35:44.840135+00:00",
       "name": "Nidec",
       "name_jp": "\u30cb\u30c7\u30c3\u30af",
       "details": [
@@ -9732,7 +9757,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:37.200824+00:00"
+          "timestamp": "2026-10-21T12:29:50.946709+00:00"
         },
         {
           "agent": "sector_agent",
@@ -9756,7 +9781,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:38.922596+00:00"
+          "timestamp": "2026-10-21T12:29:52.426150+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -9776,7 +9801,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:39.223722+00:00"
+          "timestamp": "2026-10-21T12:29:52.600650+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -9826,10 +9851,130 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.421920+00:00"
+          "timestamp": "2026-10-21T12:35:44.833871+00:00"
         }
       ],
       "reference_price": 1762.0
+    },
+    {
+      "symbol": "HOOD",
+      "action": "BUY",
+      "confidence": 0.57,
+      "signal_count": 5,
+      "alerts": [
+        "sector_agent",
+        "sentiment_agent"
+      ],
+      "agents": [
+        "news_scanner",
+        "pattern_agent",
+        "sector_agent",
+        "sentiment_agent"
+      ],
+      "regime": "risk_on",
+      "timestamp": "2026-10-21T12:35:44.840360+00:00",
+      "name": "Robinhood Markets",
+      "details": [
+        {
+          "agent": "news_scanner",
+          "confidence": 0.2,
+          "alert": false,
+          "signals": [
+            {
+              "type": "news_sentiment",
+              "direction": "positive",
+              "avg_sentiment": 0.1,
+              "confidence": 0.2,
+              "keywords": []
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:26.452976+00:00"
+        },
+        {
+          "agent": "pattern_agent",
+          "confidence": 0.65,
+          "alert": false,
+          "signals": [
+            {
+              "type": "support_bounce",
+              "level": 94.52,
+              "confidence": 0.65
+            }
+          ],
+          "price": {
+            "open": 98.20999908447266,
+            "close": 98.20999908447266,
+            "change": 1.69000244140625,
+            "change_pct": 1.75,
+            "high": 101.10299682617188,
+            "low": 94.7699966430664,
+            "volume": 13930300,
+            "previous_close": 96.5199966430664
+          },
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:27.032741+00:00"
+        },
+        {
+          "agent": "sector_agent",
+          "confidence": 1.0,
+          "alert": true,
+          "signals": [
+            {
+              "type": "relative_strength_bearish",
+              "vs": "Financial Services",
+              "relative_strength_pct": -20.03,
+              "confidence": 1.0
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": {
+            "symbol": "XLF",
+            "label": "Financial Services",
+            "stock_return_1mo_pct": -20.35,
+            "benchmark_return_1mo_pct": -0.32
+          },
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:27.860889+00:00"
+        },
+        {
+          "agent": "sentiment_agent",
+          "confidence": 0.93,
+          "alert": true,
+          "signals": [
+            {
+              "type": "analyst_consensus_bullish",
+              "recommendation_mean": 1.66,
+              "recommendation_key": "buy",
+              "num_analysts": 30,
+              "confidence": 0.84375
+            },
+            {
+              "type": "price_target_upside",
+              "target_mean": 134.8,
+              "current_price": 98.21,
+              "upside_pct": 37.3,
+              "confidence": 0.9315413399857448
+            }
+          ],
+          "price": null,
+          "indicators": null,
+          "fundamentals": null,
+          "benchmark": null,
+          "forecast": null,
+          "timestamp": "2026-10-21T12:32:27.915768+00:00"
+        }
+      ],
+      "reference_price": 98.20999908447266
     },
     {
       "symbol": "4452.T",
@@ -9849,7 +9994,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426027+00:00",
+      "timestamp": "2026-10-21T12:35:44.840065+00:00",
       "name": "Kao Corporation",
       "name_jp": "\u82b1\u738b",
       "details": [
@@ -9887,7 +10032,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:36.584693+00:00"
+          "timestamp": "2026-10-21T12:29:01.618456+00:00"
         },
         {
           "agent": "sector_agent",
@@ -9911,7 +10056,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:38.227920+00:00"
+          "timestamp": "2026-10-21T12:29:03.063556+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -9931,7 +10076,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:02:38.477248+00:00"
+          "timestamp": "2026-10-21T12:29:03.206186+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -9981,110 +10126,10 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.420814+00:00"
+          "timestamp": "2026-10-21T12:35:44.831812+00:00"
         }
       ],
       "reference_price": 3725.0
-    },
-    {
-      "symbol": "NFLX",
-      "action": "BUY",
-      "confidence": 0.55,
-      "signal_count": 4,
-      "alerts": [
-        "sentiment_agent"
-      ],
-      "agents": [
-        "momentum_agent",
-        "news_scanner",
-        "sentiment_agent"
-      ],
-      "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426196+00:00",
-      "name": "Netflix",
-      "details": [
-        {
-          "agent": "momentum_agent",
-          "confidence": 0.6,
-          "alert": false,
-          "signals": [
-            {
-              "type": "below_sma",
-              "confidence": 0.6
-            }
-          ],
-          "price": {
-            "open": 68.69000244140625,
-            "close": 68.69000244140625,
-            "change": -1.1599960327148438,
-            "change_pct": -1.66,
-            "high": 70.66000366210938,
-            "low": 68.19999694824219,
-            "volume": 65673700,
-            "previous_close": 69.8499984741211
-          },
-          "indicators": {
-            "rsi": 47.0,
-            "macd_signal": null,
-            "sma20": 69.97,
-            "sma50": 74.85
-          },
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:38.086969+00:00"
-        },
-        {
-          "agent": "news_scanner",
-          "confidence": 0.4,
-          "alert": false,
-          "signals": [
-            {
-              "type": "news_sentiment",
-              "direction": "positive",
-              "avg_sentiment": 0.2,
-              "confidence": 0.4,
-              "keywords": [
-                "earnings"
-              ]
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:38.299853+00:00"
-        },
-        {
-          "agent": "sentiment_agent",
-          "confidence": 0.8,
-          "alert": true,
-          "signals": [
-            {
-              "type": "analyst_consensus_bullish",
-              "recommendation_mean": 1.86,
-              "recommendation_key": "buy",
-              "num_analysts": 45,
-              "confidence": 0.6399999999999999
-            },
-            {
-              "type": "price_target_upside",
-              "target_mean": 90.75,
-              "current_price": 68.69,
-              "upside_pct": 32.1,
-              "confidence": 0.8028421167564421
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:05:39.600031+00:00"
-        }
-      ],
-      "reference_price": 68.69000244140625
     },
     {
       "symbol": "9020.T",
@@ -10101,7 +10146,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425998+00:00",
+      "timestamp": "2026-10-21T12:35:44.840025+00:00",
       "name": "East Japan Railway",
       "name_jp": "\u6771\u65e5\u672c\u65c5\u5ba2\u9244\u9053",
       "details": [
@@ -10135,7 +10180,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:56.800035+00:00"
+          "timestamp": "2026-10-21T12:28:26.323708+00:00"
         },
         {
           "agent": "pattern_agent",
@@ -10163,7 +10208,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:58.059132+00:00"
+          "timestamp": "2026-10-21T12:28:27.449630+00:00"
         },
         {
           "agent": "sector_agent",
@@ -10187,7 +10232,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:58.466625+00:00"
+          "timestamp": "2026-10-21T12:28:27.842353+00:00"
         }
       ],
       "reference_price": 3578.0
@@ -10208,7 +10253,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426128+00:00",
+      "timestamp": "2026-10-21T12:35:44.840197+00:00",
       "name": "Plaid",
       "name_jp": "\u30d7\u30ec\u30a4\u30c9",
       "details": [
@@ -10243,7 +10288,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:24.476450+00:00"
+          "timestamp": "2026-10-21T12:30:30.957236+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -10279,7 +10324,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:24.478023+00:00"
+          "timestamp": "2026-10-21T12:30:30.959542+00:00"
         },
         {
           "agent": "dd_agent",
@@ -10318,7 +10363,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:25.788519+00:00"
+          "timestamp": "2026-10-21T12:30:32.978591+00:00"
         },
         {
           "agent": "sector_agent",
@@ -10342,7 +10387,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:26.186337+00:00"
+          "timestamp": "2026-10-21T12:30:33.366575+00:00"
         }
       ],
       "reference_price": 775.0
@@ -10362,7 +10407,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426170+00:00",
+      "timestamp": "2026-10-21T12:35:44.840249+00:00",
       "name": "ispace",
       "name_jp": "\u30a2\u30a4\u30b9\u30da\u30fc\u30b9",
       "details": [
@@ -10392,7 +10437,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:11.102652+00:00"
+          "timestamp": "2026-10-21T12:31:11.091540+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -10423,7 +10468,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:11.104181+00:00"
+          "timestamp": "2026-10-21T12:31:11.093753+00:00"
         },
         {
           "agent": "sector_agent",
@@ -10447,7 +10492,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:12.772835+00:00"
+          "timestamp": "2026-10-21T12:31:12.521471+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -10497,7 +10542,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.423223+00:00"
+          "timestamp": "2026-10-21T12:35:44.836356+00:00"
         }
       ],
       "reference_price": 385.0
@@ -10515,7 +10560,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426173+00:00",
+      "timestamp": "2026-10-21T12:35:44.840253+00:00",
       "name": "Timee",
       "name_jp": "\u30bf\u30a4\u30df\u30fc",
       "details": [
@@ -10551,7 +10596,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:15.771730+00:00"
+          "timestamp": "2026-10-21T12:31:14.846298+00:00"
         },
         {
           "agent": "sector_agent",
@@ -10575,7 +10620,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:16.165969+00:00"
+          "timestamp": "2026-10-21T12:31:15.249733+00:00"
         }
       ],
       "reference_price": 1509.0
@@ -10597,7 +10642,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426083+00:00",
+      "timestamp": "2026-10-21T12:35:44.840140+00:00",
       "name": "SBI Holdings",
       "name_jp": "SBI\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
       "details": [
@@ -10627,7 +10672,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:40.523334+00:00"
+          "timestamp": "2026-10-21T12:29:53.751771+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -10658,7 +10703,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:40.524835+00:00"
+          "timestamp": "2026-10-21T12:29:53.754209+00:00"
         },
         {
           "agent": "dd_agent",
@@ -10692,7 +10737,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:41.922266+00:00"
+          "timestamp": "2026-10-21T12:29:54.652181+00:00"
         },
         {
           "agent": "sector_agent",
@@ -10716,7 +10761,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:42.351531+00:00"
+          "timestamp": "2026-10-21T12:29:55.029201+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -10743,7 +10788,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:03:42.600716+00:00"
+          "timestamp": "2026-10-21T12:29:55.168858+00:00"
         }
       ],
       "reference_price": 3024.0
@@ -10765,7 +10810,7 @@
         "sector_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426139+00:00",
+      "timestamp": "2026-10-21T12:35:44.840211+00:00",
       "name": "IPS",
       "name_jp": "\u30a2\u30a4\u30fb\u30d4\u30fc\u30fb\u30a8\u30b9",
       "details": [
@@ -10794,7 +10839,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:37.640351+00:00"
+          "timestamp": "2026-10-21T12:30:43.804531+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -10830,7 +10875,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:37.641848+00:00"
+          "timestamp": "2026-10-21T12:30:43.806821+00:00"
         },
         {
           "agent": "dd_agent",
@@ -10864,7 +10909,7 @@
           },
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:39.060477+00:00"
+          "timestamp": "2026-10-21T12:30:44.747341+00:00"
         },
         {
           "agent": "sector_agent",
@@ -10888,7 +10933,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:39.461947+00:00"
+          "timestamp": "2026-10-21T12:30:45.124266+00:00"
         }
       ],
       "reference_price": 3340.0
@@ -10907,7 +10952,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426222+00:00",
+      "timestamp": "2026-10-21T12:35:44.840311+00:00",
       "name": "Airbnb",
       "details": [
         {
@@ -10940,7 +10985,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:05:59.963122+00:00"
+          "timestamp": "2026-10-21T12:31:56.885636+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -10966,7 +11011,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:06:01.472295+00:00"
+          "timestamp": "2026-10-21T12:31:58.171290+00:00"
         }
       ],
       "reference_price": 176.94000244140625
@@ -10987,7 +11032,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426103+00:00",
+      "timestamp": "2026-10-21T12:35:44.840164+00:00",
       "name": "Rohm",
       "name_jp": "\u30ed\u30fc\u30e0",
       "details": [
@@ -11025,7 +11070,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:00.522507+00:00"
+          "timestamp": "2026-10-21T12:30:10.077485+00:00"
         },
         {
           "agent": "sector_agent",
@@ -11049,7 +11094,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:02.383738+00:00"
+          "timestamp": "2026-10-21T12:30:11.433895+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -11069,7 +11114,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:04:02.652289+00:00"
+          "timestamp": "2026-10-21T12:30:11.574908+00:00"
         }
       ],
       "reference_price": 3958.0
@@ -11091,7 +11136,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425950+00:00",
+      "timestamp": "2026-10-21T12:35:44.839959+00:00",
       "name": "Takeda Pharmaceutical",
       "name_jp": "\u6b66\u7530\u85ac\u54c1\u5de5\u696d",
       "details": [
@@ -11129,7 +11174,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:56.273214+00:00"
+          "timestamp": "2026-10-21T12:27:35.812153+00:00"
         },
         {
           "agent": "sector_agent",
@@ -11153,7 +11198,7 @@
             "benchmark_return_1mo_pct": -1.36
           },
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:58.062306+00:00"
+          "timestamp": "2026-10-21T12:27:37.235914+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -11173,7 +11218,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:00:58.316715+00:00"
+          "timestamp": "2026-10-21T12:27:37.386490+00:00"
         },
         {
           "agent": "kronos_agent",
@@ -11223,7 +11268,7 @@
             "last_bar_date": "2026-10-21",
             "context_bars": 200
           },
-          "timestamp": "2026-10-21T08:08:05.419213+00:00"
+          "timestamp": "2026-10-21T12:35:44.828825+00:00"
         }
       ],
       "reference_price": 6315.0
@@ -11241,7 +11286,7 @@
         "sentiment_agent"
       ],
       "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.425981+00:00",
+      "timestamp": "2026-10-21T12:35:44.840001+00:00",
       "name": "Sumitomo Mitsui Financial Group",
       "name_jp": "\u4e09\u4e95\u4f4f\u53cb\u30d5\u30a3\u30ca\u30f3\u30b7\u30e3\u30eb\u30b0\u30eb\u30fc\u30d7",
       "details": [
@@ -11271,7 +11316,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:33.738475+00:00"
+          "timestamp": "2026-10-21T12:28:05.727848+00:00"
         },
         {
           "agent": "momentum_agent",
@@ -11302,7 +11347,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:33.740051+00:00"
+          "timestamp": "2026-10-21T12:28:05.730081+00:00"
         },
         {
           "agent": "pattern_agent",
@@ -11329,7 +11374,7 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:35.027368+00:00"
+          "timestamp": "2026-10-21T12:28:06.706716+00:00"
         },
         {
           "agent": "sentiment_agent",
@@ -11349,161 +11394,27 @@
           "fundamentals": null,
           "benchmark": null,
           "forecast": null,
-          "timestamp": "2026-10-21T08:01:35.705620+00:00"
+          "timestamp": "2026-10-21T12:28:07.282588+00:00"
         }
       ],
       "reference_price": 3221.0
-    },
-    {
-      "symbol": "ANET",
-      "action": "BUY",
-      "confidence": 0.5,
-      "signal_count": 5,
-      "alerts": [
-        "sector_agent",
-        "sentiment_agent"
-      ],
-      "agents": [
-        "dd_agent",
-        "pattern_agent",
-        "sector_agent",
-        "sentiment_agent"
-      ],
-      "regime": "risk_on",
-      "timestamp": "2026-10-21T08:08:05.426235+00:00",
-      "name": "Arista Networks",
-      "details": [
-        {
-          "agent": "dd_agent",
-          "confidence": 0.5,
-          "alert": false,
-          "signals": [
-            {
-              "type": "potentially_overvalued",
-              "pe_ratio": 57.157726,
-              "confidence": 0.5
-            }
-          ],
-          "price": {
-            "open": 179.97999572753906,
-            "close": 181.19000244140625,
-            "change": -1.7599945068359375,
-            "change_pct": -0.96,
-            "high": 183.3300018310547,
-            "low": 177.36000061035156,
-            "volume": 4618600,
-            "previous_close": 182.9499969482422
-          },
-          "indicators": null,
-          "fundamentals": {
-            "market_cap": 228521312256.0,
-            "pe_ratio": 57.157726,
-            "float_shares": 1050574907.0,
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "beta": 1.605
-          },
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:06:13.782065+00:00"
-        },
-        {
-          "agent": "pattern_agent",
-          "confidence": 0.65,
-          "alert": false,
-          "signals": [
-            {
-              "type": "support_bounce",
-              "level": 176.77,
-              "confidence": 0.65
-            }
-          ],
-          "price": {
-            "open": 181.19000244140625,
-            "close": 181.19000244140625,
-            "change": -1.7599945068359375,
-            "change_pct": -0.96,
-            "high": 183.3300018310547,
-            "low": 177.36000061035156,
-            "volume": 6160400,
-            "previous_close": 182.9499969482422
-          },
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:06:13.783478+00:00"
-        },
-        {
-          "agent": "sector_agent",
-          "confidence": 0.87,
-          "alert": true,
-          "signals": [
-            {
-              "type": "relative_strength_bearish",
-              "vs": "Technology",
-              "relative_strength_pct": -6.97,
-              "confidence": 0.8707483128046428
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": {
-            "symbol": "XLK",
-            "label": "Technology",
-            "stock_return_1mo_pct": -11.8,
-            "benchmark_return_1mo_pct": -4.83
-          },
-          "forecast": null,
-          "timestamp": "2026-10-21T08:06:14.180335+00:00"
-        },
-        {
-          "agent": "sentiment_agent",
-          "confidence": 1.0,
-          "alert": true,
-          "signals": [
-            {
-              "type": "analyst_consensus_bullish",
-              "recommendation_mean": 1.28,
-              "recommendation_key": "strong_buy",
-              "num_analysts": 29,
-              "confidence": 1.0
-            },
-            {
-              "type": "price_target_upside",
-              "target_mean": 243.59,
-              "current_price": 181.19,
-              "upside_pct": 34.4,
-              "confidence": 0.8609270655113417
-            }
-          ],
-          "price": null,
-          "indicators": null,
-          "fundamentals": null,
-          "benchmark": null,
-          "forecast": null,
-          "timestamp": "2026-10-21T08:06:14.266708+00:00"
-        }
-      ],
-      "reference_price": 181.19000244140625
     }
   ],
-  "total_recommendations": 105,
+  "total_recommendations": 104,
   "learning_stats": {
     "total_recommendations_logged": 5000,
-    "resolved_recommendations": 2300,
-    "correct_recommendations": 327,
-    "accuracy_pct": 14.2,
+    "resolved_recommendations": 2355,
+    "correct_recommendations": 349,
+    "accuracy_pct": 14.8,
     "total_signal_predictions_logged": 5000,
     "resolved_signal_predictions": 0
   },
   "track_record": {
     "horizon": "~1 trading session",
     "dedupe": "same signal on the same stock counted once per day",
-    "tracking_since": "2026-10-16T04:21:14.585419+00:00",
+    "tracking_since": "2026-10-16T05:20:09.673008+00:00",
     "pending_signals": 5000,
-    "pending_recommendations": 1479,
+    "pending_recommendations": 1364,
     "overall_signals": {
       "n": 0,
       "win_rate_pct": null,
@@ -11511,19 +11422,19 @@
     },
     "by_action": {
       "BUY": {
-        "n": 260,
-        "win_rate_pct": 38.1,
-        "avg_return_pct": -0.6
+        "n": 263,
+        "win_rate_pct": 38.4,
+        "avg_return_pct": -0.57
       },
       "SELL": {
         "n": 75,
-        "win_rate_pct": 40.0,
-        "avg_return_pct": 0.03
+        "win_rate_pct": 41.3,
+        "avg_return_pct": 0.02
       },
       "WATCH": {
         "n": 233,
-        "win_rate_pct": 47.6,
-        "avg_return_pct": -0.08
+        "win_rate_pct": 47.2,
+        "avg_return_pct": -0.07
       }
     },
     "by_signal": [],
@@ -11559,7 +11470,7 @@
         "alerts": 6
       },
       "news_scanner": {
-        "results": 9,
+        "results": 10,
         "alerts": 0
       },
       "kronos_agent": {
@@ -11573,7 +11484,7 @@
       "forecast": 88,
       "signals": 27,
       "skipped": {},
-      "seconds": 74.9
+      "seconds": 184.3
     }
   }
 }
