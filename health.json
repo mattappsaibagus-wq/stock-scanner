@@ -1,0 +1,200 @@
+{
+  "checked_at": "2026-11-28T17:31:02.048436+00:00",
+  "status": "ok",
+  "checks": [
+    {
+      "id": "freshness",
+      "name": "Data freshness",
+      "status": "ok",
+      "detail": "Last scan 11-28 12:34 JST (13h 56m ago). Expected run: 11-28 06:30 JST.",
+      "generated_at": "2026-11-28T03:34:48.645796+00:00"
+    },
+    {
+      "id": "scan_run",
+      "name": "Last scan run",
+      "status": "ok",
+      "detail": "#677 (schedule, attempt 1) 14h 03m ago: succeeded.",
+      "url": "https://github.com/mattappsaibagus-wq/stock-scanner/actions/runs/46102964178"
+    },
+    {
+      "id": "agents",
+      "name": "Agents reporting",
+      "status": "ok",
+      "detail": "All 8 signal agents produced output (agent results: early_detector 62, momentum 113, pattern 6, sector 95, sentiment 89, news_scanner 11, dd 46, kronos 25)."
+    },
+    {
+      "id": "data",
+      "name": "Data sanity",
+      "status": "ok",
+      "detail": "116 recommendations, 120/120 symbols priced. Looks normal."
+    },
+    {
+      "id": "learning",
+      "name": "Learning loop",
+      "status": "ok",
+      "detail": "2524 resolved of 5000 logged calls, accuracy 24.2%."
+    },
+    {
+      "id": "sites",
+      "name": "Live sites",
+      "status": "ok",
+      "detail": "GitHub Pages: up to date (11-28 12:34 JST). Netlify (kaitoisland): up to date (11-28 12:34 JST). Render (tokyostockradar): up to date (11-28 12:34 JST).",
+      "sites": [
+        {
+          "site": "GitHub Pages",
+          "url": "https://mattappsaibagus-wq.github.io/stock-scanner/",
+          "status": "ok"
+        },
+        {
+          "site": "Netlify (kaitoisland)",
+          "url": "https://kaitoisland.netlify.app/",
+          "status": "ok"
+        },
+        {
+          "site": "Render (tokyostockradar)",
+          "url": "https://tokyostockradar.onrender.com/",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "id": "config",
+      "name": "Secrets & warnings",
+      "status": "ok",
+      "detail": "No missing secrets or scan warnings."
+    }
+  ],
+  "fixes": [],
+  "doctor_run": "https://github.com/mattappsaibagus-wq/stock-scanner/actions/runs/46170880121",
+  "history": [
+    {
+      "generated_at": "2026-11-26T03:18:28.143834+00:00",
+      "recs": 115
+    },
+    {
+      "generated_at": "2026-11-26T03:51:31.580402+00:00",
+      "recs": 115
+    },
+    {
+      "generated_at": "2026-11-26T04:20:34.494080+00:00",
+      "recs": 115
+    },
+    {
+      "generated_at": "2026-11-26T04:29:23.252304+00:00",
+      "recs": 115
+    },
+    {
+      "generated_at": "2026-11-26T05:19:46.855602+00:00",
+      "recs": 115
+    },
+    {
+      "generated_at": "2026-11-26T06:19:58.389623+00:00",
+      "recs": 115
+    },
+    {
+      "generated_at": "2026-11-26T06:54:51.233370+00:00",
+      "recs": 116
+    },
+    {
+      "generated_at": "2026-11-26T11:38:35.812519+00:00",
+      "recs": 117
+    },
+    {
+      "generated_at": "2026-11-26T14:10:50.035395+00:00",
+      "recs": 116
+    },
+    {
+      "generated_at": "2026-11-26T17:28:31.577079+00:00",
+      "recs": 111
+    },
+    {
+      "generated_at": "2026-11-26T21:20:01.618370+00:00",
+      "recs": 110
+    },
+    {
+      "generated_at": "2026-11-26T23:02:17.212338+00:00",
+      "recs": 116
+    },
+    {
+      "generated_at": "2026-11-26T23:13:59.573740+00:00",
+      "recs": 116
+    },
+    {
+      "generated_at": "2026-11-27T00:20:00.711763+00:00",
+      "recs": 116
+    },
+    {
+      "generated_at": "2026-11-27T01:19:24.655190+00:00",
+      "recs": 116
+    },
+    {
+      "generated_at": "2026-11-27T02:19:48.585339+00:00",
+      "recs": 116
+    },
+    {
+      "generated_at": "2026-11-27T02:39:04.569755+00:00",
+      "recs": 115
+    },
+    {
+      "generated_at": "2026-11-27T03:17:40.497255+00:00",
+      "recs": 115
+    },
+    {
+      "generated_at": "2026-11-27T03:53:37.922620+00:00",
+      "recs": 115
+    },
+    {
+      "generated_at": "2026-11-27T04:20:28.668648+00:00",
+      "recs": 114
+    },
+    {
+      "generated_at": "2026-11-27T05:19:11.576622+00:00",
+      "recs": 115
+    },
+    {
+      "generated_at": "2026-11-27T05:28:40.599839+00:00",
+      "recs": 114
+    },
+    {
+      "generated_at": "2026-11-27T06:20:15.968502+00:00",
+      "recs": 113
+    },
+    {
+      "generated_at": "2026-11-27T06:53:50.755419+00:00",
+      "recs": 113
+    },
+    {
+      "generated_at": "2026-11-27T11:34:47.319480+00:00",
+      "recs": 112
+    },
+    {
+      "generated_at": "2026-11-27T14:10:11.013958+00:00",
+      "recs": 112
+    },
+    {
+      "generated_at": "2026-11-27T17:07:28.206447+00:00",
+      "recs": 108
+    },
+    {
+      "generated_at": "2026-11-27T21:20:38.094816+00:00",
+      "recs": 107
+    },
+    {
+      "generated_at": "2026-11-27T22:44:03.103230+00:00",
+      "recs": 116
+    },
+    {
+      "generated_at": "2026-11-28T03:34:48.645796+00:00",
+      "recs": 116
+    }
+  ],
+  "state": {
+    "resolved": 2524,
+    "logged": 5000,
+    "resolved_changed_at": "2026-11-28T03:36:00.429186+00:00",
+    "problem_sig": [],
+    "last_dispatch_at": "2026-11-14T01:26:41.243534+00:00",
+    "last_render_at": "2026-11-25T19:14:16.700464+00:00",
+    "last_rerun_id": 45944189288
+  }
+}
